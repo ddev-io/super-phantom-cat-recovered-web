@@ -1,0 +1,2449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>PlayerCat_ShunYi_In_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 1}, {81, 87}}</string>
+			<key>offset</key>
+			<string>{17, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{77, 9}, {81, 87}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>PlayerCat_ShunYi_In_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{318, 1}, {60, 87}}</string>
+			<key>offset</key>
+			<string>{31, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{101, 9}, {60, 87}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>PlayerCat_ShunYi_Out_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{130, 1}, {97, 87}}</string>
+			<key>offset</key>
+			<string>{-46, -2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{5, 9}, {97, 87}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>PlayerCat_ShunYi_Out_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {127, 81}}</string>
+			<key>offset</key>
+			<string>{-8, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{28, 11}, {127, 81}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>hero_ari_hurt_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{167, 256}, {60, 78}}</string>
+			<key>offset</key>
+			<string>{-3, -4}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 7}, {60, 78}}</string>
+			<key>sourceSize</key>
+			<string>{67, 85}</string>
+		</dict>
+		<key>hero_ari_hurt_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{550, 638}, {61, 79}}</string>
+			<key>offset</key>
+			<string>{0, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 6}, {61, 79}}</string>
+			<key>sourceSize</key>
+			<string>{67, 85}</string>
+		</dict>
+		<key>hero_ari_hurt_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{318, 63}, {63, 81}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 4}, {63, 81}}</string>
+			<key>sourceSize</key>
+			<string>{67, 85}</string>
+		</dict>
+		<key>hero_ari_idle_0_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 444}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{721, 468}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{164, 824}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{303, 823}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 457}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_13.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{888, 405}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_14.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{967, 651}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_15.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{724, 297}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_16.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{805, 409}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_17.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{387, 536}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_18.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{558, 355}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{475, 428}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{393, 422}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{554, 526}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{557, 469}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{640, 357}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{631, 638}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{874, 755}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_0_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{630, 752}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 615}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{311, 370}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{304, 709}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{222, 787}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{639, 471}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_13.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{732, 240}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_14.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{896, 348}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_15.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{803, 523}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_16.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{642, 243}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_17.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{723, 354}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_18.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{721, 525}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_19.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{559, 298}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{222, 562}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_20.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{223, 448}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_21.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{804, 466}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_22.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 387}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_23.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 498}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_24.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{968, 569}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_25.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 662}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_26.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{549, 701}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_27.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{548, 758}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{468, 653}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_29.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{385, 761}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{886, 519}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_30.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{393, 365}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_31.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{305, 484}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_32.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{803, 580}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_33.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{226, 391}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_34.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{222, 505}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_35.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{885, 633}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_36.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{814, 295}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 571}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{476, 314}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{472, 485}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 896}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{467, 710}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_1_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{222, 730}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_2_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{557, 412}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{641, 300}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{712, 692}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{82, 853}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{793, 761}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_13.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{631, 695}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_14.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{793, 704}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_15.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{711, 806}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_16.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{909, 180}, {55, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_17.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{739, 183}, {55, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_18.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{567, 128}, {55, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_19.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{826, 182}, {55, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 580}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_20.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{909, 237}, {54, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {54, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_21.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{822, 239}, {54, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {54, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_22.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{174, 90}, {53, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_23.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{551, 583}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_24.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{715, 637}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_25.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{547, 815}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_26.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{302, 880}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_27.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 953}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{465, 824}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_29.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{221, 901}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{639, 414}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_30.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{304, 654}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_31.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 729}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_32.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{636, 528}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_33.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{222, 675}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_34.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{469, 542}, {54, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {54, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_35.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{222, 619}, {54, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {54, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_36.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{633, 583}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{14, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_37.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{386, 593}, {54, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {54, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_38.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{718, 582}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_39.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{905, 293}, {53, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{806, 352}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_40.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{567, 185}, {53, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_41.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 741}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_42.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{468, 598}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_43.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{970, 405}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_44.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{384, 875}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_45.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{82, 910}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_46.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{629, 809}, {53, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {53, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_47.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 784}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_48.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{386, 649}, {53, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {53, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_49.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{969, 487}, {54, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {54, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 839}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_50.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 685}, {54, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {54, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_51.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{304, 598}, {54, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {54, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_52.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{390, 479}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_53.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{885, 576}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_54.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 501}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{221, 844}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{712, 749}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{303, 766}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_2_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 796}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_idle_3_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{304, 541}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{722, 411}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{573, 65}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{312, 128}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{743, 1}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_13.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{484, 126}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_14.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 199}, {62, 81}}</string>
+			<key>offset</key>
+			<string>{-5, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 5}, {62, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_15.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{826, 1}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_16.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{395, 184}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_17.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{312, 191}, {60, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {60, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_18.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{84, 281}, {59, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 5}, {59, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_19.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{743, 64}, {59, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 5}, {59, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 558}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_20.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{167, 173}, {60, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {60, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_21.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 263}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_22.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{909, 1}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_23.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 135}, {62, 81}}</string>
+			<key>offset</key>
+			<string>{-5, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 5}, {62, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_24.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{407, 56}, {63, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 5}, {63, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_25.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 84}, {63, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 5}, {63, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_26.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{84, 154}, {62, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {62, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_27.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{660, 1}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{660, 64}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_29.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{401, 121}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{560, 240}, {56, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {56, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_30.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{490, 62}, {62, 81}}</string>
+			<key>offset</key>
+			<string>{-5, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 5}, {62, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_31.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 149}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_32.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 326}, {59, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {59, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_33.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{395, 247}, {58, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 6}, {58, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_34.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{308, 427}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_35.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{887, 462}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_36.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 672}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{743, 125}, {56, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 5}, {56, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{909, 122}, {56, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 5}, {56, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{84, 218}, {61, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {61, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{91, 90}, {62, 81}}</string>
+			<key>offset</key>
+			<string>{-5, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 5}, {62, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{577, 1}, {62, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 5}, {62, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_idle_3_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 212}, {60, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 5}, {60, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 86}</string>
+		</dict>
+		<key>hero_ari_jump_down_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{478, 189}, {65, 80}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 2}, {65, 80}}</string>
+			<key>sourceSize</key>
+			<string>{70, 85}</string>
+		</dict>
+		<key>hero_ari_jump_down_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{797, 637}, {65, 79}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 2}, {65, 79}}</string>
+			<key>sourceSize</key>
+			<string>{70, 85}</string>
+		</dict>
+		<key>hero_ari_jump_up_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{650, 185}, {56, 80}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 2}, {56, 80}}</string>
+			<key>sourceSize</key>
+			<string>{73, 85}</string>
+		</dict>
+		<key>hero_ari_jump_up_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{220, 956}, {61, 72}}</string>
+			<key>offset</key>
+			<string>{0, -4}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 10}, {61, 72}}</string>
+			<key>sourceSize</key>
+			<string>{73, 85}</string>
+		</dict>
+		<key>hero_ari_jump_up_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{407, 1}, {53, 84}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 1}, {53, 84}}</string>
+			<key>sourceSize</key>
+			<string>{70, 85}</string>
+		</dict>
+		<key>hero_ari_jump_up_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{493, 1}, {59, 82}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 2}, {59, 82}}</string>
+			<key>sourceSize</key>
+			<string>{70, 85}</string>
+		</dict>
+		<key>hero_ari_jump_up_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{959, 733}, {63, 78}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{4, 4}, {63, 78}}</string>
+			<key>sourceSize</key>
+			<string>{70, 85}</string>
+		</dict>
+		<key>hero_ari_jump_up_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{878, 690}, {63, 79}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 3}, {63, 79}}</string>
+			<key>sourceSize</key>
+			<string>{70, 85}</string>
+		</dict>
+		<key>hero_ari_run_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{909, 64}, {56, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 6}, {56, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{475, 371}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{384, 818}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 514}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{656, 127}, {56, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 6}, {56, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{386, 704}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{163, 905}, {55, 78}}</string>
+			<key>offset</key>
+			<string>{-3, -4}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 8}, {55, 78}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{466, 767}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{477, 256}, {56, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {56, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{826, 64}, {58, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 6}, {58, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{312, 253}, {57, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {57, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 743}, {55, 79}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 7}, {55, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{82, 965}, {55, 78}}</string>
+			<key>offset</key>
+			<string>{-3, -4}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 8}, {55, 78}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{826, 124}, {56, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 5}, {56, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{394, 307}, {56, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {56, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{311, 312}, {56, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {56, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 274}, {57, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {57, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 417}, {56, 79}}</string>
+			<key>offset</key>
+			<string>{-2, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {56, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{167, 336}, {57, 79}}</string>
+			<key>offset</key>
+			<string>{-1, -3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 7}, {57, 79}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 333}, {56, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 6}, {56, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{84, 342}, {56, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {56, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 628}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>hero_ari_run_brake_9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 400}, {55, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 6}, {55, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 87}</string>
+		</dict>
+		<key>maomao-fall_end_0.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 84}, {88, 49}}</string>
+			<key>offset</key>
+			<string>{2, -17}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{6, 34}, {88, 49}}</string>
+			<key>sourceSize</key>
+			<string>{96, 83}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>Player_ari_test.png</string>
+	</dict>
+</dict>
+</plist>

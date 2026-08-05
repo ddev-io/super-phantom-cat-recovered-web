@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="140" height="50" tilewidth="64" tileheight="64" nextobjectid="186">
+ <properties>
+  <property name="armorSlime" value="1"/>
+  <property name="bg" value="lyBG_black_1"/>
+  <property name="bgm" value="bgm_3"/>
+ </properties>
+ <tileset firstgid="1" name="forest" tilewidth="70" tileheight="70">
+  <tileoffset x="-3" y="3"/>
+  <image source="forest.png" width="700" height="980"/>
+ </tileset>
+ <layer name="main" width="140" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2k1qwzAQhmGfpHcJdOOlc4BueoTcH0ogBjGd0YzGkq2Q9wERt5ZdN/oy8k+WBQAAAAAAAFdYrz4AvB0ygyiyglZkBlEzZmV7td590cdsmYlmYDOWMc5sWXmiZsztysysomFuo8fIqxOrsay5VX6W6zDOqMxs4tX72/vybbGz4NUi5rKxyvf9JtpT+f7LcayRY2aNoZyPrBzciv6L049aM5b8XPfIy75t+Ro5BpkDq7ZwrnMNr74syvrVWK+Jzg21HHi1xTte9NVaX7xxkP0i29T2Ux6nzJS234ezHnmZ85dIndHOS7ymqY23PFbt+LNZha1WX0o9akaG9Xe0nGnXR5zv9HOkvmTOZ3qSxy7JuQx9ZM9fzq4zkjaf3Z31OKbl+kjjZehh/Fxub/WJHkuZhzLf5GSM6PnL7rdY9vLi1aLMNtb/IPdLVvprqS/fSsuMbzYvtX3utWSvL9SWcY5eH1nt3mEfrZkp84L+Mvd3z5h7MplpedaNvFH1ZXQ74uF3gaK83tTGQ1s+MwO9MjM6f5+ifIYn3z95/+LIuGefDfQY58i2cj8z159NtFZfr5ZRy8Ps97uO1K7a76KZLN+jaG5b+o9yJC/vrsc8F92f1k9+1krac/Ja/7N8cl5aeTWzdQ5unau1/mcjL3HeNbdc3zrnZVtErV9L7shLXDYvO+07ptpyy/pl8cc7Ot9FkJeYyHe0tD5yHI7mw7qmGVm/fhob4vd/r5qTrjwHxn9WXuRzLqsfY/lZotc+s993AgAAAAAAc/oDVaLfxA==
+  </data>
+ </layer>
+ <layer name="extra_area1" width="140" height="50">
+  <properties>
+   <property name="maxX" value="72"/>
+   <property name="maxY" value="39"/>
+   <property name="x" value="71"/>
+   <property name="y" value="36"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt1UEJAAAIBMGrZv9SfmzgQ5AZ2AybAAAAAAAAAAAAAAAAAAAAAAAAAAAbNQHAJT8CAAAAAOCLBhHdAQU=
+  </data>
+ </layer>
+ <layer name="extra_area2" width="140" height="50">
+  <properties>
+   <property name="isShow" value="1"/>
+   <property name="maxX" value="59"/>
+   <property name="maxY" value="30"/>
+   <property name="x" value="58"/>
+   <property name="y" value="27"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAIAzCs8eFfEc887GmTzgAAAAAAAAAAAAAAAAAAAG2bANB0CQAAAAAAAAAAAABND55rARM=
+  </data>
+ </layer>
+ <objectgroup name="objConfig">
+  <object id="154" name="0,0,2,0" type="enemy" gid="101" x="2496" y="1728"/>
+  <object id="155" name="-3,0,2,0" type="enemy" gid="101" x="7488" y="2496"/>
+  <object id="168" type="player" gid="120" x="8256" y="2496"/>
+  <object id="173" name="-2,0,1,0" type="enemy" gid="101" x="3776" y="1408"/>
+  <object id="181" name="-2,0,0,0" type="enemy" gid="101" x="1920" y="1728"/>
+  <object id="182" name="0,0,2,0" type="enemy" gid="101" x="2752" y="1728"/>
+  <object id="183" name="-3,0,2,0" type="enemy" gid="101" x="5952" y="2304"/>
+  <object id="184" name="-3,0,2,0" type="enemy" gid="101" x="4864" y="2176"/>
+  <object id="185" name="-3,0,2,0" type="enemy" gid="101" x="4352" y="2048"/>
+  <object id="180" name="-2,0,0,0" type="enemy" gid="101" x="2176" y="1728"/>
+ </objectgroup>
+ <objectgroup name="triggerConfig">
+  <object id="162" name="1" type="BigCoin" gid="105" x="1856" y="1920"/>
+  <object id="163" name="2" type="BigCoin" gid="105" x="3712" y="1664"/>
+  <object id="164" name="3" type="BigCoin" gid="105" x="4544" y="2688"/>
+  <object id="166" name="12,0,0,0" type="Applause" gid="105" x="896" y="1408"/>
+  <object id="167" name="12,0,0,0" type="Applause" gid="105" x="960" y="1408"/>
+  <object id="169" name="extra_area1" type="ShowExtra" gid="104" x="4544" y="2624"/>
+  <object id="170" name="extra_area1" type="ShowExtra" gid="104" x="4608" y="2624"/>
+  <object id="171" name="extra_area1" type="ShowExtra" gid="104" x="4672" y="2624"/>
+  <object id="172" name="extra_area1" type="ShowExtra" gid="104" x="4480" y="2624"/>
+  <object id="174" name="extra_area2" type="HideExtra" gid="103" x="3648" y="1600"/>
+  <object id="175" name="extra_area2" type="HideExtra" gid="103" x="3712" y="1600"/>
+  <object id="176" name="extra_area2" type="HideExtra" gid="103" x="3840" y="1600"/>
+  <object id="177" name="extra_area2" type="HideExtra" gid="103" x="3776" y="1600"/>
+  <object id="178" name="8,0,0,0" type="Applause" gid="105" x="3712" y="1920"/>
+  <object id="179" name="8,0,0,0" type="Applause" gid="105" x="3776" y="1920"/>
+ </objectgroup>
+ <layer name="dangerous" width="140" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztzjENADAMBLGnkvIHUWgNiiaDLd1+CQAAAAAAAAAAAAAAAAAAAAAAAAAAwF8nudVNfwAAAAAAAPs8LrkBxA==
+  </data>
+ </layer>
+</map>

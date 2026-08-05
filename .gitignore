@@ -1,0 +1,10 @@
+__pycache__/
+.verification/
+*.py[cod]
+*.log
+.DS_Store
+Thumbs.db
+dist/
+sc-prof/
+tmp-*-profile/
+webv1-cdp-report.json

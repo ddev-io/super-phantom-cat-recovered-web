@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>4_emo_cry@3x_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{569, 427}, {141, 168}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{31, 14}, {141, 168}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{285, 685}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{863, 1}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{283, 343}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{516, 142}, {140, 170}}</string>
+			<key>offset</key>
+			<string>{2, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {140, 170}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{688, 143}, {139, 170}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {139, 170}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 348}, {139, 171}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{32, 11}, {139, 171}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{172, 1}, {139, 171}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 11}, {139, 171}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {139, 172}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{32, 11}, {139, 172}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{345, 1}, {139, 171}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {139, 171}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{691, 1}, {140, 170}}</string>
+			<key>offset</key>
+			<string>{2, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {140, 170}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{142, 515}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{285, 514}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{343, 856}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{740, 343}, {141, 168}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{31, 14}, {141, 168}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{142, 686}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{426, 343}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 867}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{172, 142}, {140, 170}}</string>
+			<key>offset</key>
+			<string>{2, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {140, 170}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{142, 343}, {139, 170}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {139, 170}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 694}, {139, 171}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{32, 11}, {139, 171}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{518, 1}, {139, 171}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 11}, {139, 171}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 175}, {139, 171}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{32, 11}, {139, 171}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 521}, {139, 171}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {139, 171}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{344, 142}, {140, 170}}</string>
+			<key>offset</key>
+			<string>{2, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 12}, {140, 170}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{569, 284}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{860, 172}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{172, 857}, {141, 169}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{31, 13}, {141, 169}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>4_emo_cry@3x_0029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{739, 486}, {141, 168}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{31, 14}, {141, 168}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>img_emo_cry.png</string>
+	</dict>
+</dict>
+</plist>
