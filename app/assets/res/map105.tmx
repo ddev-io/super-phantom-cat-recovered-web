@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="160" height="50" tilewidth="64" tileheight="64" nextobjectid="170">
+ <properties>
+  <property name="armorSlime" value="1"/>
+  <property name="bg" value="lyBG2"/>
+  <property name="bgm" value="bgm_3"/>
+ </properties>
+ <tileset firstgid="1" name="forest" tilewidth="70" tileheight="70">
+  <tileoffset x="-3" y="3"/>
+  <image source="forest.png" width="700" height="980"/>
+ </tileset>
+ <layer name="main" width="160" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2k1ugzAQhuGcpHdh6SU5QDZddtn7S1UlkKyRbcZgz9jwPpIFCgnk52NscF4vAAAAAAAAAE8TvN8AHo8MwgvZgzcyCC9kD97IILyQPXjLZfDH9F3giah/8EYG4SWXvWVbrlub1SqWGE+cwUVsmzl/Mnuzfo47S9U/mcFZhKgtmSZpnoO+7lL/QrQs5Uo+Rv789Bz/BUVrqZS/nSZfZNBWqf7NJNf/7mo+28zfw0yOxn8z9b8l2jyRO3t7BlPfvUX+fhvsQ/bp72ibPJ80yKGN1te/uetObTsriGXqvNHehyF7tlqO/7Q5W0W7mkHNvZfafZPD/rzqX1yDZP68f3fv4z9NPP6zrH/7GC2VP+8MeB//KTzrX67/9c4g2bPlUf9qXmeF3NkrjdtfmXXZPpnXplzNZcisH6k9LmyU5qzkXJm2tqV+T81cXGpe7uzxYi32cSdfWxtBKV8952pbSeWotkbWnFcz5TQ3dzBS/u6gRWbumr1UBsnfGM7Wd02tDcrtvTJO/sYXMuv/avvkq63HGIf+d2wyf6X6sz+emkNOrddsjzN45Mp/Nb63JfnzV3vNHbuat33dsr5+DNpM42Nvpb43p0cu8Eyp/L3Fc8gKeqm5tw4AAAAAAACM7g8l5KTu
+  </data>
+ </layer>
+ <objectgroup name="objConfig">
+  <object id="153" type="player" gid="120" x="1472" y="2048"/>
+  <object id="154" name="-3,0,2,0" type="enemy" gid="101" x="2496" y="1664"/>
+  <object id="155" name="-3,0,2,0" type="enemy" gid="101" x="7296" y="2496"/>
+ </objectgroup>
+ <objectgroup name="triggerConfig">
+  <object id="162" name="1" type="BigCoin" gid="105" x="2368" y="1920"/>
+  <object id="163" name="2" type="BigCoin" gid="105" x="3840" y="1664"/>
+  <object id="164" name="3" type="BigCoin" gid="105" x="4672" y="2688"/>
+  <object id="165" name="12,0,0,0" type="Applause" gid="105" x="8000" y="2304"/>
+  <object id="166" name="12,0,0,0" type="Applause" gid="105" x="896" y="1408"/>
+  <object id="167" name="12,0,0,0" type="Applause" gid="105" x="960" y="1408"/>
+  <object id="168" name="12;MOON;Access to a different world.;10;(4,3)" type="ShowTextOnce" gid="105" x="832" y="1024">
+   <properties>
+    <property name="moon" value="1"/>
+   </properties>
+  </object>
+  <object id="169" name="12; ;Come back later.;10;(4,3)" type="ShowTextOnce" gid="105" x="832" y="1024"/>
+ </objectgroup>
+</map>

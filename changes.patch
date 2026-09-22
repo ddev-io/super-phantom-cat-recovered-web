@@ -1,0 +1,610 @@
+--- a/webos/app/appinfo.json
++++ b/webos/app/appinfo.json
+@@ -1,6 +1,6 @@
+ {
+   "id": "com.veewo.supercat.webos",
+-  "version": "1.0.7",
++  "version": "1.0.8",
+   "vendor": "VeeWo",
+   "type": "web",
+   "main": "assets/index.webv1.html",
+--- /dev/null
++++ b/webos/app/assets/image-sizes.js
+@@ -0,0 +1,2 @@
++// Generated from the packaged images. Geometry only; no decoded images.
++window.__supercatImageSizes = {"res/0_shots/level_1.png":[400,400],"res/0_shots/level_2.png":[400,400],"res/Bee.png":[128,128],"res/Bee2.png":[128,128],"res/Bee3.png":[256,256],"res/Bpreplay.png":[512,256],"res/CiGangKui.png":[128,128],"res/DaPao.png":[512,512],"res/Default-768.png":[1136,768],"res/DiShu.png":[256,256],"res/Drawer.png":[128,128],"res/Drilldog.png":[256,256],"res/E_anim_00000.png":[100,100],"res/E_anim_00001.png":[100,100],"res/E_anim_00002.png":[100,100],"res/E_anim_00003.png":[100,100],"res/E_anim_00004.png":[100,100],"res/E_anim_00005.png":[100,100],"res/E_anim_00006.png":[100,100],"res/E_anim_00007.png":[100,100],"res/E_anim_00008.png":[100,100],"res/E_anim_00009.png":[100,100],"res/E_anim_00010.png":[100,100],"res/E_anim_00011.png":[100,100],"res/E_anim_00012.png":[100,100],"res/E_anim_00013.png":[100,100],"res/E_anim_00014.png":[100,100],"res/E_anim_00015.png":[100,100],"res/E_anim_00016.png":[100,100],"res/E_anim_00017.png":[100,100],"res/E_anim_00018.png":[100,100],"res/E_anim_00019.png":[100,100],"res/E_anim_00020.png":[100,100],"res/E_anim_00021.png":[100,100],"res/E_anim_00022.png":[100,100],"res/E_anim_00023.png":[100,100],"res/FengGou.png":[256,256],"res/Fish.png":[128,128],"res/Fish2.png":[128,128],"res/GangKui.png":[256,256],"res/Guai.png":[512,512],"res/I_anim_00000.png":[100,100],"res/I_anim_00001.png":[100,100],"res/I_anim_00002.png":[100,100],"res/I_anim_00003.png":[100,100],"res/I_anim_00004.png":[100,100],"res/I_anim_00005.png":[100,100],"res/I_anim_00006.png":[100,100],"res/I_anim_00007.png":[100,100],"res/I_anim_00008.png":[100,100],"res/I_anim_00009.png":[100,100],"res/I_anim_00010.png":[100,100],"res/I_anim_00011.png":[100,100],"res/I_anim_00012.png":[100,100],"res/I_anim_00013.png":[100,100],"res/I_anim_00014.png":[100,100],"res/I_anim_00015.png":[100,100],"res/I_anim_00016.png":[100,100],"res/I_anim_00017.png":[100,100],"res/I_anim_00018.png":[100,100],"res/I_anim_00019.png":[100,100],"res/I_anim_00020.png":[100,100],"res/I_anim_00021.png":[100,100],"res/N_anim_00000.png":[100,100],"res/N_anim_00001.png":[100,100],"res/N_anim_00002.png":[100,100],"res/N_anim_00003.png":[100,100],"res/N_anim_00004.png":[100,100],"res/N_anim_00005.png":[100,100],"res/N_anim_00006.png":[100,100],"res/N_anim_00007.png":[100,100],"res/N_anim_00008.png":[100,100],"res/N_anim_00009.png":[100,100],"res/N_anim_00010.png":[100,100],"res/N_anim_00011.png":[100,100],"res/N_anim_00012.png":[100,100],"res/N_anim_00013.png":[100,100],"res/N_anim_00014.png":[100,100],"res/N_anim_00015.png":[100,100],"res/N_anim_00016.png":[100,100],"res/N_anim_00017.png":[100,100],"res/N_anim_00018.png":[100,100],"res/N_anim_00019.png":[100,100],"res/N_anim_00020.png":[100,100],"res/N_anim_00021.png":[100,100],"res/N_anim_00022.png":[100,100],"res/O_anim_00000.png":[100,100],"res/O_anim_00001.png":[100,100],"res/O_anim_00002.png":[100,100],"res/O_anim_00003.png":[100,100],"res/O_anim_00004.png":[100,100],"res/O_anim_00005.png":[100,100],"res/O_anim_00006.png":[100,100],"res/O_anim_00007.png":[100,100],"res/O_anim_00008.png":[100,100],"res/O_anim_00009.png":[100,100],"res/O_anim_00010.png":[100,100],"res/O_anim_00011.png":[100,100],"res/O_anim_00012.png":[100,100],"res/O_anim_00013.png":[100,100],"res/O_anim_00014.png":[100,100],"res/O_anim_00015.png":[100,100],"res/O_anim_00016.png":[100,100],"res/O_anim_00017.png":[100,100],"res/O_anim_00018.png":[100,100],"res/O_anim_00019.png":[100,100],"res/O_anim_00020.png":[100,100],"res/O_anim_00021.png":[100,100],"res/O_anim_00022.png":[100,100],"res/O_anim_00023.png":[100,100],"res/PlayerBlackCat.png":[1024,1024],"res/PlayerBlue.png":[1024,1024],"res/PlayerCat.png":[1024,1024],"res/PlayerHuman.png":[1024,1024],"res/PlayerRed.png":[1024,1024],"res/PlayerSkeleton.png":[1024,1024],"res/Player_Android_ShunYi_In_0002.png":[200,100],"res/Player_Android_ShunYi_Out_0002.png":[200,100],"res/Player_Android_ShunYi_Out_0003.png":[200,100],"res/Player_Android_huxi2_0001.png":[100,150],"res/Player_Android_huxi2_0002.png":[100,150],"res/Player_Android_huxi2_0003.png":[100,150],"res/Player_Android_huxi2_0004.png":[100,150],"res/Player_Android_huxi2_0005.png":[100,150],"res/Player_Android_huxi2_0006.png":[100,150],"res/Player_Android_huxi2_0007.png":[100,150],"res/Player_Android_huxi2_0008.png":[100,150],"res/Player_Android_huxi2_0009.png":[100,150],"res/Player_Android_huxi2_0010.png":[100,150],"res/Player_Android_huxi2_0011.png":[100,150],"res/Player_Android_huxi2_0012.png":[100,150],"res/Player_Android_huxi2_0013.png":[100,150],"res/Player_Android_huxi2_0014.png":[100,150],"res/Player_Android_huxi2_0015.png":[100,150],"res/Player_Android_huxi2_0016.png":[100,150],"res/Player_Android_huxi2_0017.png":[100,150],"res/Player_Android_huxi2_0018.png":[100,150],"res/Player_Android_huxi2_0019.png":[100,150],"res/Player_Android_huxi2_0020.png":[100,150],"res/Player_Android_huxi2_0021.png":[100,150],"res/Player_Android_huxi2_0022.png":[100,150],"res/Player_Android_huxi2_0023.png":[100,150],"res/Player_Android_huxi2_0024.png":[100,150],"res/Player_Android_huxi2_0025.png":[100,150],"res/Player_Android_huxi2_0026.png":[100,150],"res/Player_Android_huxi2_0027.png":[100,150],"res/Player_Android_huxi2_0028.png":[100,150],"res/Player_Android_huxi2_0029.png":[100,150],"res/Player_Android_huxi2_0030.png":[100,150],"res/Player_Android_huxi2_0031.png":[100,150],"res/Player_Android_huxi2_0032.png":[100,150],"res/Player_Android_huxi2_0033.png":[100,150],"res/Player_Android_huxi2_0034.png":[100,150],"res/Player_Android_huxi2_0035.png":[100,150],"res/Player_Android_huxi2_0036.png":[100,150],"res/Player_Android_huxi2_0037.png":[100,150],"res/Player_Android_huxi2_0038.png":[100,150],"res/Player_Android_huxi2_0039.png":[100,150],"res/Player_Android_huxi2_0040.png":[100,150],"res/Player_Android_huxi2_0041.png":[100,150],"res/Player_Android_huxi2_0042.png":[100,150],"res/Player_Android_huxi2_0043.png":[100,150],"res/Player_Android_huxi2_0044.png":[100,150],"res/Player_Android_huxi2_0045.png":[100,150],"res/Player_Android_huxi2_0046.png":[100,150],"res/Player_Android_huxi2_0047.png":[100,150],"res/Player_Android_huxi2_0048.png":[100,150],"res/Player_Android_huxi2_0049.png":[100,150],"res/Player_Android_huxi2_0050.png":[100,150],"res/Player_Android_huxi2_0051.png":[100,150],"res/Player_Android_huxi2_0052.png":[100,150],"res/Player_Android_huxi_0001.png":[100,150],"res/Player_Android_huxi_0002.png":[100,150],"res/Player_Android_huxi_0003.png":[100,150],"res/Player_Android_huxi_0004.png":[100,150],"res/Player_Android_huxi_0005.png":[100,150],"res/Player_Android_jump_0001.png":[100,150],"res/Player_Android_jump_0002.png":[100,150],"res/Player_Android_jump_0003.png":[100,150],"res/Player_Android_jump_0004.png":[100,150],"res/Player_Android_jump_0005.png":[100,150],"res/Player_Android_jump_0006.png":[100,150],"res/Player_Android_pazhe.png":[100,150],"res/Player_Android_run_0001.png":[100,150],"res/Player_Android_run_0002.png":[100,150],"res/Player_Android_run_0003.png":[100,150],"res/Player_Android_run_0004.png":[100,150],"res/Player_Android_run_0005.png":[100,150],"res/Player_Android_run_0006.png":[100,150],"res/Player_Android_run_0007.png":[100,150],"res/Player_Android_run_0008.png":[100,150],"res/Player_Android_run_0009.png":[100,150],"res/Player_Android_run_0010.png":[100,150],"res/Player_Android_run_0011.png":[100,150],"res/Player_Android_run_0012.png":[100,150],"res/Player_Android_run_0013.png":[100,150],"res/Player_Android_run_0014.png":[100,150],"res/Player_Android_run_0015.png":[100,150],"res/Player_Android_run_0016.png":[100,150],"res/Player_Android_run_0017.png":[100,150],"res/Player_Android_shoushang_0001.png":[100,150],"res/Player_Android_shoushang_0002.png":[100,150],"res/Player_Android_shoushang_0003.png":[100,150],"res/Player_Beer.png":[1024,1024],"res/Player_Blast.png":[1024,1024],"res/Player_DaVinci.png":[1024,1024],"res/Player_Dracula.png":[1024,1024],"res/Player_Girl.png":[1024,1024],"res/Player_J.png":[512,512],"res/Player_M.png":[1024,1024],"res/Player_Marvin.png":[1024,1024],"res/Player_NASA.png":[1024,1024],"res/Player_Rabbit.png":[1024,1024],"res/Player_Robot.png":[256,256],"res/Player_SmallCat.png":[1024,1024],"res/Player_SmallCat2_huxi2_0001.png":[100,150],"res/Player_SmallCat2_huxi2_0002.png":[100,150],"res/Player_SmallCat2_huxi2_0003.png":[100,150],"res/Player_SmallCat2_huxi2_0004.png":[100,150],"res/Player_SmallCat2_huxi2_0005.png":[100,150],"res/Player_SmallCat2_huxi2_0006.png":[100,150],"res/Player_SmallCat2_huxi2_0007.png":[100,150],"res/Player_SmallCat2_huxi2_0008.png":[100,150],"res/Player_SmallCat2_huxi2_0009.png":[100,150],"res/Player_SmallCat2_huxi2_0010.png":[100,150],"res/Player_SmallCat2_huxi2_0011.png":[100,150],"res/Player_SmallCat2_huxi2_0012.png":[100,150],"res/Player_SmallCat2_huxi2_0013.png":[100,150],"res/Player_SmallCat2_huxi2_0014.png":[100,150],"res/Player_SmallCat2_huxi2_0015.png":[100,150],"res/Player_SmallCat2_huxi2_0016.png":[100,150],"res/Player_SmallCat2_huxi2_0017.png":[100,150],"res/Player_SmallCat2_huxi2_0018.png":[100,150],"res/Player_SmallCat2_huxi2_0019.png":[100,150],"res/Player_SmallCat2_huxi2_0020.png":[100,150],"res/Player_SmallCat2_huxi2_0021.png":[100,150],"res/Player_SmallCat2_huxi2_0022.png":[100,150],"res/Player_SmallCat2_huxi2_0023.png":[100,150],"res/Player_SmallCat2_huxi2_0024.png":[100,150],"res/Player_SmallCat2_huxi2_0025.png":[100,150],"res/Player_SmallCat2_huxi2_0026.png":[100,150],"res/Player_SmallCat2_huxi2_0027.png":[100,150],"res/Player_SmallCat2_huxi2_0028.png":[100,150],"res/Player_SmallCat2_huxi2_0029.png":[100,150],"res/Player_SmallCat2_huxi2_0030.png":[100,150],"res/Player_SmallCat2_huxi2_0031.png":[100,150],"res/Player_SmallCat2_huxi2_0032.png":[100,150],"res/Player_SmallCat2_huxi2_0033.png":[100,150],"res/Player_SmallCat2_huxi2_0034.png":[100,150],"res/Player_SmallCat2_huxi2_0035.png":[100,150],"res/Player_SmallCat2_huxi2_0036.png":[100,150],"res/Player_SmallCat2_huxi2_0037.png":[100,150],"res/Player_SmallCat2_huxi2_0038.png":[100,150],"res/Player_SmallCat2_huxi2_0039.png":[100,150],"res/Player_SmallCat2_huxi2_0040.png":[100,150],"res/Player_SmallCat2_huxi2_0041.png":[100,150],"res/Player_SmallCat2_huxi2_0042.png":[100,150],"res/Player_SmallCat2_huxi2_0043.png":[100,150],"res/Player_SmallCat2_huxi2_0044.png":[100,150],"res/Player_SmallCat2_huxi2_0045.png":[100,150],"res/Player_SmallCat2_huxi2_0046.png":[100,150],"res/Player_SmallCat2_huxi2_0047.png":[100,150],"res/Player_SmallCat2_huxi2_0048.png":[100,150],"res/Player_SmallCat2_huxi2_0049.png":[100,150],"res/Player_SmallCat2_huxi2_0050.png":[100,150],"res/Player_SmallCat2_huxi2_0051.png":[100,150],"res/Player_SmallCat2_huxi2_0052.png":[100,150],"res/Player_SmallCat2_huxi2_0053.png":[100,150],"res/Player_SmallCat2_huxi2_0054.png":[100,150],"res/Player_SmallCat2_huxi2_0055.png":[100,150],"res/Player_SmallCat2_huxi2_0056.png":[100,150],"res/Player_SmallCat2_huxi2_0057.png":[100,150],"res/Player_SmallCat2_huxi2_0058.png":[100,150],"res/Player_SmallCat2_huxi2_0059.png":[100,150],"res/Player_SmallCat2_huxi2_0060.png":[100,150],"res/Player_SmallCat2_huxi2_0061.png":[100,150],"res/Player_SmallCat2_huxi2_0062.png":[100,150],"res/Player_SmallCat2_huxi2_0063.png":[100,150],"res/Player_SmallCat2_huxi2_0064.png":[100,150],"res/Player_SmallCat2_huxi2_0065.png":[100,150],"res/Player_SmallCat2_huxi2_0066.png":[100,150],"res/Player_SmallCat2_huxi2_0067.png":[100,150],"res/Player_SmallCat2_huxi2_0068.png":[100,150],"res/Player_SmallCat2_huxi2_0069.png":[100,150],"res/Player_SmallCat2_huxi2_0070.png":[100,150],"res/Player_SmallCat2_huxi2_0071.png":[100,150],"res/Player_SmallCat2_huxi2_0072.png":[100,150],"res/Player_SmallCat2_huxi2_0073.png":[100,150],"res/Player_SmallCat2_huxi2_0074.png":[100,150],"res/Player_SmallCat2_huxi2_0075.png":[100,150],"res/Player_SmallCat2_huxi2_0076.png":[100,150],"res/Player_SmallCat2_huxi2_0077.png":[100,150],"res/Player_SmallCat2_huxi2_0078.png":[100,150],"res/Player_SmallCat2_huxi2_0079.png":[100,150],"res/Player_SmallCat2_huxi2_0080.png":[100,150],"res/Player_SmallCat2_huxi2_0081.png":[100,150],"res/Player_SmallCat2_huxi2_0082.png":[100,150],"res/Player_SmallCat2_huxi2_0083.png":[100,150],"res/Player_SmallCat2_huxi2_0084.png":[100,150],"res/Player_SmallCat2_huxi2_0085.png":[100,150],"res/Player_SmallCat2_huxi2_0086.png":[100,150],"res/Player_SmallCat2_huxi2_0087.png":[100,150],"res/Player_SmallCat2_huxi2_0088.png":[100,150],"res/Player_SmallCat2_huxi2_0089.png":[100,150],"res/Player_SmallCat2_huxi2_0090.png":[100,150],"res/Player_SmallCat2_huxi2_0091.png":[100,150],"res/Player_SmallCat2_huxi2_0092.png":[100,150],"res/Player_SmallCat2_jump_0001.png":[100,150],"res/Player_SmallCat2_jump_0002.png":[100,150],"res/Player_SmallCat2_jump_0003.png":[100,150],"res/Player_SmallCat2_jump_0004.png":[100,150],"res/Player_SmallCat2_jump_0005.png":[100,150],"res/Player_SmallCat2_jump_0006.png":[100,150],"res/Player_SmallCat2_pazhe.png":[100,150],"res/Player_SmallCat2_run_0001.png":[100,150],"res/Player_SmallCat2_run_0002.png":[100,150],"res/Player_SmallCat2_run_0003.png":[100,150],"res/Player_SmallCat2_run_0004.png":[100,150],"res/Player_SmallCat2_run_0005.png":[100,150],"res/Player_SmallCat2_run_0006.png":[100,150],"res/Player_SmallCat2_run_0007.png":[100,150],"res/Player_SmallCat2_run_0008.png":[100,150],"res/Player_SmallCat2_run_0009.png":[100,150],"res/Player_SmallCat2_run_0010.png":[100,150],"res/Player_SmallCat2_run_0011.png":[100,150],"res/Player_SmallCat2_run_0012.png":[100,150],"res/Player_SmallCat2_run_0013.png":[100,150],"res/Player_SmallCat2_run_0014.png":[100,150],"res/Player_SmallCat2_run_0015.png":[100,150],"res/Player_SmallCat2_run_0016.png":[100,150],"res/Player_SmallCat2_run_0017.png":[100,150],"res/Player_SmallCat2_shoushang_0001.png":[100,150],"res/Player_SmallCat2_shoushang_0002.png":[100,150],"res/Player_SmallCat2_shoushang_0003.png":[100,150],"res/Player_TiaoZi.png":[1024,1024],"res/Player_Zhai.png":[512,512],"res/Player_ari_test.png":[1024,1024],"res/Player_fox.png":[512,512],"res/Player_smallfox.png":[512,512],"res/R_anim_00000.png":[100,100],"res/R_anim_00001.png":[100,100],"res/R_anim_00002.png":[100,100],"res/R_anim_00003.png":[100,100],"res/R_anim_00004.png":[100,100],"res/R_anim_00005.png":[100,100],"res/R_anim_00006.png":[100,100],"res/R_anim_00007.png":[100,100],"res/R_anim_00008.png":[100,100],"res/R_anim_00009.png":[100,100],"res/R_anim_00010.png":[100,100],"res/R_anim_00011.png":[100,100],"res/R_anim_00012.png":[100,100],"res/R_anim_00013.png":[100,100],"res/R_anim_00014.png":[100,100],"res/R_anim_00015.png":[100,100],"res/R_anim_00016.png":[100,100],"res/R_anim_00017.png":[100,100],"res/R_anim_00018.png":[100,100],"res/R_anim_00019.png":[100,100],"res/R_anim_00020.png":[100,100],"res/RuanNiGuai.png":[256,256],"res/ShuangZiGuai.png":[128,128],"res/Spider.png":[128,128],"res/UFO.png":[256,256],"res/U_anim_00000.png":[100,100],"res/U_anim_00001.png":[100,100],"res/U_anim_00002.png":[100,100],"res/U_anim_00003.png":[100,100],"res/U_anim_00004.png":[100,100],"res/U_anim_00005.png":[100,100],"res/U_anim_00006.png":[100,100],"res/U_anim_00007.png":[100,100],"res/U_anim_00008.png":[100,100],"res/U_anim_00009.png":[100,100],"res/U_anim_00010.png":[100,100],"res/U_anim_00011.png":[100,100],"res/U_anim_00012.png":[100,100],"res/U_anim_00013.png":[100,100],"res/U_anim_00014.png":[100,100],"res/U_anim_00015.png":[100,100],"res/U_anim_00016.png":[100,100],"res/U_anim_00017.png":[100,100],"res/U_anim_00018.png":[100,100],"res/U_anim_00019.png":[100,100],"res/U_anim_00020.png":[100,100],"res/Unlock_avatar_box_bg.png":[241,209],"res/Unlock_avatar_box_line.png":[737,143],"res/W_anim_00000.png":[100,100],"res/W_anim_00001.png":[100,100],"res/W_anim_00002.png":[100,100],"res/W_anim_00003.png":[100,100],"res/W_anim_00004.png":[100,100],"res/W_anim_00005.png":[100,100],"res/W_anim_00006.png":[100,100],"res/W_anim_00007.png":[100,100],"res/W_anim_00008.png":[100,100],"res/W_anim_00009.png":[100,100],"res/W_anim_00010.png":[100,100],"res/W_anim_00011.png":[100,100],"res/W_anim_00012.png":[100,100],"res/W_anim_00013.png":[100,100],"res/W_anim_00014.png":[100,100],"res/W_anim_00015.png":[100,100],"res/W_anim_00016.png":[100,100],"res/W_anim_00017.png":[100,100],"res/W_anim_00018.png":[100,100],"res/W_anim_00019.png":[100,100],"res/W_anim_00020.png":[100,100],"res/W_anim_00021.png":[100,100],"res/W_anim_00022.png":[100,100],"res/W_anim_00023.png":[100,100],"res/W_anim_00024.png":[100,100],"res/W_anim_00025.png":[100,100],"res/Y_anim_00000.png":[100,100],"res/Y_anim_00001.png":[100,100],"res/Y_anim_00002.png":[100,100],"res/Y_anim_00003.png":[100,100],"res/Y_anim_00004.png":[100,100],"res/Y_anim_00005.png":[100,100],"res/Y_anim_00006.png":[100,100],"res/Y_anim_00007.png":[100,100],"res/Y_anim_00008.png":[100,100],"res/Y_anim_00009.png":[100,100],"res/Y_anim_00010.png":[100,100],"res/Y_anim_00011.png":[100,100],"res/Y_anim_00012.png":[100,100],"res/Y_anim_00013.png":[100,100],"res/Y_anim_00014.png":[100,100],"res/Y_anim_00015.png":[100,100],"res/Y_anim_00016.png":[100,100],"res/Y_anim_00017.png":[100,100],"res/Y_anim_00018.png":[100,100],"res/Y_anim_00019.png":[100,100],"res/Y_anim_00020.png":[100,100],"res/Y_anim_00021.png":[100,100],"res/Y_anim_00022.png":[100,100],"res/ad_veewo_quit.jpg":[768,1136],"res/alert_icon_video.png":[74,60],"res/alert_img_lock.png":[153,46],"res/alert_lock.png":[302,193],"res/alert_lock_2.png":[127,101],"res/ava_hero_bg.png":[508,200],"res/avatar_bg_line.png":[10,384],"res/banner_icon_cover.png":[92,92],"res/banner_icon_veewo.png":[114,114],"res/bg_2.png":[484,484],"res/bg_2_ball.png":[218,208],"res/bg_2_black.png":[484,483],"res/bg_color.png":[2,640],"res/bg_light.png":[649,648],"res/bg_line.png":[4,640],"res/bg_line_2.png":[4,640],"res/bg_particle_1.png":[33,24],"res/bg_particle_2.png":[12,12],"res/bg_power_bat.png":[568,384],"res/bg_unlocked_moon.png":[776,409],"res/bg_unlocked_moon_2.png":[721,440],"res/black_hole.png":[100,100],"res/blank.png":[100,100],"res/block_fall_1.png":[64,64],"res/block_fall_2.png":[64,64],"res/block_fall_3.png":[64,64],"res/block_fall_4.png":[64,64],"res/block_fall_5.png":[64,64],"res/block_fall_6.png":[64,64],"res/block_move_1.png":[64,64],"res/block_move_2.png":[64,64],"res/block_move_3.png":[64,64],"res/block_move_4.png":[64,64],"res/block_move_5.png":[64,64],"res/block_move_6.png":[64,64],"res/btn_HD_high.png":[110,127],"res/btn_HD_off.png":[110,127],"res/btn_HD_on.png":[110,127],"res/btn_a.png":[200,220],"res/btn_a_1_fall.png":[200,220],"res/btn_a_1_fall_on.png":[200,220],"res/btn_a_2_shoot.png":[200,220],"res/btn_a_2_shoot_on.png":[200,220],"res/btn_a_3_blink.png":[200,220],"res/btn_a_3_blink_on.png":[200,220],"res/btn_a_4_bomb.png":[200,220],"res/btn_a_4_bomb_on.png":[200,220],"res/btn_a_cus.png":[200,220],"res/btn_action_light.png":[200,220],"res/btn_ad_close.png":[80,80],"res/btn_alert_Rectangle.png":[170,80],"res/btn_alert_bg.png":[700,468],"res/btn_alert_green.png":[286,216],"res/btn_alert_red.png":[170,80],"res/btn_alert_yellow.png":[286,216],"res/btn_ava_buy_0.99.png":[214,86],"res/btn_ava_buy_1.png":[130,50],"res/btn_ava_buy_2.png":[130,50],"res/btn_ava_buy_FB.png":[140,200],"res/btn_ava_buy_owned.png":[130,50],"res/btn_ava_buy_selected.png":[140,200],"res/btn_ava_buy_video.png":[140,200],"res/btn_ava_progress.png":[130,50],"res/btn_ava_progress_lock.png":[130,50],"res/btn_b.png":[200,220],"res/btn_b_cus.png":[200,220],"res/btn_b_on.png":[200,220],"res/btn_battle.png":[120,55],"res/btn_battle_cancel.png":[248,96],"res/btn_battle_cat.png":[55,80],"res/btn_battle_crown.png":[222,222],"res/btn_battle_easy.png":[155,155],"res/btn_battle_hard.png":[155,155],"res/btn_battle_lost connection.png":[234,123],"res/btn_battle_normal.png":[155,155],"res/btn_battle_quitgame.png":[234,123],"res/btn_battle_start.png":[208,96],"res/btn_battle_startF.png":[208,96],"res/btn_battle_startF_gary.png":[208,96],"res/btn_circle.png":[200,200],"res/btn_close.png":[90,90],"res/btn_close_black.png":[90,90],"res/btn_close_gray.png":[42,42],"res/btn_close_white.png":[90,90],"res/btn_coin_small.png":[64,64],"res/btn_custom_1x.png":[130,84],"res/btn_custom_2x.png":[130,84],"res/btn_custom_done.png":[130,84],"res/btn_custom_high.png":[130,84],"res/btn_custom_reset.png":[130,84],"res/btn_fill_FB.png":[170,80],"res/btn_fill_energy.png":[170,80],"res/btn_fill_watch.png":[170,80],"res/btn_fill_watch_off.png":[170,80],"res/btn_fill_watch_weixin.png":[170,80],"res/btn_ga_save.png":[160,80],"res/btn_help.png":[130,130],"res/btn_hero_power_ok.png":[210,80],"res/btn_hero_power_watch.png":[210,80],"res/btn_hero_power_watch_weixin.png":[210,80],"res/btn_home_add.png":[70,70],"res/btn_home_code.png":[112,96],"res/btn_home_index_quit.png":[69,61],"res/btn_home_ktplay.png":[102,102],"res/btn_home_qq.png":[112,96],"res/btn_home_shop.png":[142,125],"res/btn_home_tourist.png":[84,72],"res/btn_home_weixin.png":[112,96],"res/btn_index_control.png":[69,61],"res/btn_index_google_play.png":[69,61],"res/btn_index_help.png":[69,61],"res/btn_index_info.png":[69,61],"res/btn_index_play.png":[128,148],"res/btn_index_save.png":[69,61],"res/btn_level_close.png":[72,72],"res/btn_level_lock.png":[110,110],"res/btn_level_moon_lock.png":[110,110],"res/btn_level_normal.png":[110,110],"res/btn_level_now.png":[110,110],"res/btn_lock_high.png":[130,130],"res/btn_lock_off.png":[130,130],"res/btn_lock_on.png":[130,130],"res/btn_moregame.png":[120,126],"res/btn_move.png":[440,220],"res/btn_move_cus.png":[440,220],"res/btn_move_light.png":[440,220],"res/btn_move_on_left.png":[440,220],"res/btn_move_on_right.png":[440,220],"res/btn_music_high.png":[110,127],"res/btn_music_off.png":[110,127],"res/btn_music_on.png":[110,127],"res/btn_ok.png":[110,110],"res/btn_over_ad.png":[115,132],"res/btn_over_hero.png":[115,132],"res/btn_over_ktplay.png":[123,142],"res/btn_over_retry.png":[123,142],"res/btn_over_revive.png":[123,142],"res/btn_over_revive_lock.png":[123,142],"res/btn_pa_control.png":[110,127],"res/btn_pa_quit.png":[110,127],"res/btn_pa_resume.png":[128,148],"res/btn_pa_resume_on.png":[128,148],"res/btn_pause.png":[70,60],"res/btn_power_2_0.99.png":[170,80],"res/btn_power_2_watch.png":[170,80],"res/btn_power_2_watch_weixin.png":[170,80],"res/btn_power_2_watch_weixin_sb.png":[170,80],"res/btn_rate_star.png":[77,72],"res/btn_rate_star_emp.png":[77,72],"res/btn_rec.png":[18,18],"res/btn_rec_bg.png":[100,58],"res/btn_rec_light.png":[10,10],"res/btn_rec_light_outer.png":[28,28],"res/btn_record_record.png":[78,78],"res/btn_record_stop.png":[78,78],"res/btn_remove_ad.png":[200,126],"res/btn_restore.png":[120,126],"res/btn_ring.png":[42,42],"res/btn_skip.png":[66,30],"res/btn_sound_high.png":[110,127],"res/btn_sound_off.png":[110,127],"res/btn_sound_on.png":[110,127],"res/btn_stop.png":[16,16],"res/btn_story_skip.png":[120,86],"res/btn_swich_bg.png":[282,92],"res/btn_swich_gesture.png":[128,72],"res/btn_swich_gesture_off.png":[128,72],"res/btn_swich_gesture_on.png":[128,72],"res/btn_swich_handle.png":[128,72],"res/btn_swich_handle_off.png":[128,72],"res/btn_swich_handle_on.png":[128,72],"res/btn_swich_high_bg.png":[128,72],"res/btn_tip_0.png":[64,64],"res/btn_tip_1.png":[64,64],"res/btn_tips_1_off.png":[90,105],"res/btn_tips_1_on.png":[90,105],"res/btn_tips_2_off.png":[90,105],"res/btn_tips_2_on.png":[90,105],"res/btn_tips_3_off.png":[90,105],"res/btn_tips_3_on.png":[90,105],"res/btn_unlock_switch.png":[200,100],"res/btn_warn_coin.png":[210,80],"res/btn_warn_ok.png":[170,80],"res/btn_warn_ok_blank.png":[170,80],"res/btn_warn_unlock.png":[170,80],"res/btn_win_ktplay.png":[110,127],"res/btn_win_next.png":[124,143],"res/btn_win_next_on.png":[124,143],"res/btn_win_quit.png":[90,90],"res/btn_win_retry.png":[110,127],"res/btn_win_share.png":[110,127],"res/btn_world_moon.png":[72,72],"res/btn_world_new.png":[64,26],"res/btn_world_sun.png":[72,72],"res/btn_worlld_bg.png":[142,125],"res/btn_worlld_bg_black.png":[142,125],"res/btn_worlld_bg_white.png":[142,125],"res/daily_mission_1.2.3.png":[375,255],"res/daily_mission_ad.png":[115,132],"res/daily_mission_bg.png":[746,420],"res/daily_mission_bg_2.png":[333,201],"res/daily_sign-in.png":[65,76],"res/daily_sign-in_day1.png":[94,109],"res/daily_sign-in_highlight.png":[65,75],"res/daily_sign-in_noad.png":[66,64],"res/daily_sign-in_noad_2.png":[69,64],"res/daily_sign-in_noad_3.png":[66,65],"res/daily_sign-in_noad_4.png":[69,65],"res/edit_line.png":[512,512],"res/efx_3.png":[128,9],"res/efx_4.png":[72,72],"res/efx_5.png":[24,20],"res/efx_6.png":[64,64],"res/efx_BigCoin.png":[512,512],"res/efx_arrow.png":[64,36],"res/efx_baozha.png":[512,1024],"res/efx_bg.png":[1024,1024],"res/efx_bg_line_1.png":[64,64],"res/efx_black_aurora.png":[1136,640],"res/efx_black_aurora_small.png":[35,277],"res/efx_black_galaxy.png":[1126,525],"res/efx_block.png":[240,240],"res/efx_box/efx_round_1.png":[24,24],"res/efx_box.png":[1024,1024],"res/efx_box_bg.png":[1024,1024],"res/efx_coin_particle.png":[256,256],"res/efx_coin_star_frames.png":[256,256],"res/efx_gradient.png":[32,32],"res/efx_one.png":[32,32],"res/efx_round_big_500px.png":[500,500],"res/empty_block.png":[1,1],"res/enemy.png":[512,512],"res/forest.png":[700,980],"res/forest10.png":[700,980],"res/forest1_1.png":[700,980],"res/forest1_3.png":[700,980],"res/forest2.png":[700,980],"res/forest2_2.png":[700,980],"res/forest3.png":[700,980],"res/forest4.png":[700,980],"res/forest5_1.png":[700,980],"res/forest6.png":[700,980],"res/forest7.png":[700,980],"res/forest8.png":[700,980],"res/forest9.png":[700,980],"res/forestChildren.png":[700,980],"res/forest_intro.png":[700,980],"res/forest_intro_2.png":[700,980],"res/forest_moon.png":[700,1100],"res/forest_spring1.png":[700,980],"res/forest_spring2.png":[700,980],"res/forest_spring3.png":[700,980],"res/forest_story.png":[700,980],"res/ga_bubble.png":[128,128],"res/ga_efx_brick.png":[64,64],"res/ga_icon_heart.png":[46,36],"res/ga_save_body.png":[50,75],"res/ga_save_cross.png":[24,32],"res/ga_save_diamond.png":[24,24],"res/ga_save_icon_heart.png":[69,45],"res/ga_save_light.png":[32,115],"res/ga_save_line.png":[4,32],"res/ga_ui_Childheart.png":[23,40],"res/ga_ui_coin.png":[64,64],"res/ga_ui_star.png":[32,30],"res/ga_ui_starChild.png":[32,30],"res/ga_ui_starChild_off.png":[32,30],"res/ga_ui_star_off_2.png":[32,30],"res/galist_icon_cover.png":[120,120],"res/game_banner.png":[766,120],"res/glist_btn_close.png":[70,70],"res/glist_btn_install.png":[120,120],"res/glist_btn_play.png":[120,120],"res/glist_btn_veewo.png":[70,70],"res/glist_line.png":[603,1],"res/glist_logo.png":[144,30],"res/glist_stars.png":[98,20],"res/hero_dead_10_tiny.png":[100,80],"res/hero_dead_11_android.png":[100,80],"res/hero_dead_12_m.png":[100,80],"res/hero_dead_13_smallcat2.png":[100,80],"res/hero_dead_14_rabbit.png":[100,80],"res/hero_dead_15_holloween.png":[100,80],"res/hero_dead_16_blast.png":[100,80],"res/hero_dead_1_cat.png":[100,80],"res/hero_dead_2_kevo.png":[100,80],"res/hero_dead_3_flash.png":[100,80],"res/hero_dead_4_cat.png":[100,80],"res/hero_dead_5_space.png":[100,80],"res/hero_dead_6_girl.png":[100,80],"res/hero_dead_7_vampire.png":[100,80],"res/hero_dead_8_marvin.png":[100,80],"res/hero_dead_9_bear.png":[100,80],"res/hero_dead_Fox1.png":[100,150],"res/hero_dead_Fox2.png":[100,150],"res/hero_dead__battle_blue_flash.png":[101,81],"res/hero_dead_battle_blue_flash.png":[101,81],"res/hero_dead_battle_red_cat.png":[101,81],"res/hero_head_10_tiny.png":[90,90],"res/hero_head_11_android.png":[90,90],"res/hero_head_12_m.png":[90,90],"res/hero_head_13_fox.png":[90,90],"res/hero_head_13_smallcat2.png":[90,90],"res/hero_head_14_rabbit.png":[90,90],"res/hero_head_15_holloween.png":[90,90],"res/hero_head_16_blast.png":[90,90],"res/hero_head_1_cat.png":[90,90],"res/hero_head_2_kevo.png":[90,90],"res/hero_head_3_flash.png":[90,90],"res/hero_head_4_cap.png":[90,90],"res/hero_head_5_space.png":[90,90],"res/hero_head_6_girl.png":[90,90],"res/hero_head_7_vampire.png":[90,90],"res/hero_head_8_marvin.png":[90,90],"res/hero_head_9_bear.png":[90,90],"res/hero_head_small_10_tiny.png":[36,42],"res/hero_power_avatar_box.png":[273,245],"res/hero_power_avatar_box_line.png":[737,143],"res/hero_power_role.png":[96,147],"res/hero_show_10_tiny.png":[80,100],"res/hero_show_11_android.png":[80,100],"res/hero_show_12_m.png":[80,100],"res/hero_show_13_fox.png":[80,100],"res/hero_show_13_smallcat2.png":[80,100],"res/hero_show_14_rabbit.png":[80,100],"res/hero_show_15_holloween.png":[80,100],"res/hero_show_16_blast.png":[80,100],"res/hero_show_1_cat.png":[80,100],"res/hero_show_2_kevo.png":[80,100],"res/hero_show_3_flash.png":[80,100],"res/hero_show_4_cat.png":[80,100],"res/hero_show_5_space.png":[80,100],"res/hero_show_6_girl.png":[80,100],"res/hero_show_7_vampire.png":[80,100],"res/hero_show_8_marvin.png":[80,100],"res/hero_show_9_bear.png":[80,100],"res/home_btn_go_achi.png":[115,132],"res/home_btn_go_rank.png":[115,132],"res/home_icon_battery_off.png":[18,34],"res/home_icon_battery_on.png":[18,34],"res/home_icon_battery_retry.png":[59,30],"res/home_icon_coin.png":[30,30],"res/home_icon_energy_off.png":[29,48],"res/home_icon_energy_on.png":[29,48],"res/home_icon_lock.png":[102,116],"res/home_icon_lock_bg.png":[118,134],"res/home_icon_lock_mid.png":[48,55],"res/home_icon_lock_star.png":[24,22],"res/home_icon_star.png":[32,30],"res/icon_index_play.png":[45,52],"res/image_UI_lose.png":[512,512],"res/image_UI_win.png":[1024,1024],"res/image_redot.png":[20,20],"res/image_setting.png":[300,100],"res/img_Logo_a.png":[512,512],"res/img_Logo_h.png":[512,512],"res/img_Logo_m.png":[1024,1024],"res/img_Logo_n.png":[1024,1024],"res/img_Logo_o.png":[1024,1024],"res/img_Logo_p.png":[512,512],"res/img_Logo_t.png":[512,512],"res/img_Logo_txt_cat.png":[1024,1024],"res/img_Transition.png":[50,50],"res/img_ava_unlock.png":[245,79],"res/img_avatar_gifts.png":[262,446],"res/img_avatar_gifts_1.png":[103,137],"res/img_avatar_gifts_2.png":[73,106],"res/img_avatar_gifts_3.png":[96,137],"res/img_avatar_gifts_4.png":[72,86],"res/img_avatar_gifts_5.png":[76,97],"res/img_avatar_gifts_6.png":[67,97],"res/img_avatar_gifts_bg.png":[30,30],"res/img_avatar_gifts_box.png":[45,45],"res/img_avatar_gifts_light.png":[362,362],"res/img_avatar_gifts_radiation.png":[294,440],"res/img_battle_hold.png":[65,57],"res/img_battle_ready.png":[30,30],"res/img_battle_win_blue_head.png":[37,34],"res/img_battle_win_red_cat_head.png":[37,34],"res/img_btn_watch_one.png":[36,36],"res/img_challenge_bang.png":[117,123],"res/img_challenge_fist.png":[70,62],"res/img_discorun.png":[700,535],"res/img_emo_cry.png":[1024,1024],"res/img_guide_level_bg.png":[68,68],"res/img_logo_beard.png":[88,97],"res/img_logo_cat.png":[699,242],"res/img_logo_super.png":[368,20],"res/img_monster_trap_1.png":[40,76],"res/img_monster_trap_2.png":[40,76],"res/img_moon_cat.png":[138,198],"res/img_moon_lock.png":[200,200],"res/img_new_moon_picture.png":[632,438],"res/img_notice.png":[36,36],"res/img_power_2_box_0.99.png":[286,216],"res/img_power_2_box_free.png":[240,170],"res/img_power_2_cat.png":[44,45],"res/img_power_bar.png":[319,74],"res/img_power_bar_icon_1.png":[44,38],"res/img_power_bar_icon_2.png":[42,42],"res/img_power_bar_icon_3.png":[46,46],"res/img_power_bar_icon_4.png":[38,38],"res/img_power_bar_icon_hero.png":[78,84],"res/img_power_bar_light.png":[106,106],"res/img_power_bar_on.png":[249,4],"res/img_power_cat.png":[29,30],"res/img_power_cat_off.png":[29,30],"res/img_power_middle.png":[676,176],"res/img_power_middle_coke.png":[52,77],"res/img_power_middle_cokex3.png":[133,69],"res/img_power_moon_bar.png":[712,160],"res/img_power_moon_bar_icon.png":[56,67],"res/img_power_moon_bar_light.png":[537,184],"res/img_power_time_box.png":[222,66],"res/img_power_time_box_max.png":[33,19],"res/img_scaleblock.png":[128,128],"res/img_swich_btn_on.png":[94,109],"res/img_swich_btn_right.png":[94,109],"res/img_swich_gesture.png":[143,182],"res/img_swich_gesture_2.png":[170,256],"res/img_swich_gesture_2_finger.png":[88,126],"res/img_swich_gesture_2_on.png":[210,250],"res/img_swich_gesture_3.png":[152,237],"res/img_swich_gesture_trailing.png":[35,189],"res/img_swich_smallcat.png":[39,57],"res/img_swich_start_bg.png":[480,290],"res/img_unlocked_moon.png":[172,147],"res/img_unlocked_moon_round.png":[431,430],"res/index_ChildCN.png":[257,39],"res/index_ChildEN.png":[257,39],"res/index_ground.png":[448,192],"res/index_logo.png":[501,218],"res/intro_bg_ground.png":[542,32],"res/intro_cap.png":[64,86],"res/intro_dialog_next.png":[46,32],"res/intro_logo.png":[62,54],"res/intro_mac_body.png":[94,122],"res/intro_mac_body_black.png":[94,114],"res/intro_mac_head.png":[58,28],"res/intro_mac_wire.png":[6,26],"res/intro_player.png":[52,77],"res/intro_robot.png":[52,70],"res/intro_scientist.png":[52,77],"res/intro_tip_light_bg.png":[64,51],"res/intro_tip_light_line.png":[64,6],"res/item/efx_Fang.png":[8,8],"res/item.png":[1024,1024],"res/item_Ling.png":[22,31],"res/item_coin_frames.png":[1024,1024],"res/item_moon_bg.png":[62,64],"res/levelBalloonCN.png":[192,164],"res/levelBalloonEN.png":[192,164],"res/levelBalloon_hand.png":[41,50],"res/levelBalloon_rope1.png":[16,250],"res/levelBalloon_rope10.png":[16,250],"res/levelBalloon_rope11.png":[16,250],"res/levelBalloon_rope12.png":[16,250],"res/levelBalloon_rope13.png":[16,250],"res/levelBalloon_rope14.png":[16,250],"res/levelBalloon_rope15.png":[16,250],"res/levelBalloon_rope16.png":[16,250],"res/levelBalloon_rope17.png":[16,250],"res/levelBalloon_rope18.png":[16,250],"res/levelBalloon_rope19.png":[16,250],"res/levelBalloon_rope2.png":[16,250],"res/levelBalloon_rope20.png":[16,250],"res/levelBalloon_rope21.png":[16,250],"res/levelBalloon_rope22.png":[16,250],"res/levelBalloon_rope23.png":[16,250],"res/levelBalloon_rope24.png":[16,250],"res/levelBalloon_rope3.png":[16,250],"res/levelBalloon_rope4.png":[16,250],"res/levelBalloon_rope5.png":[16,250],"res/levelBalloon_rope6.png":[16,250],"res/levelBalloon_rope7.png":[16,250],"res/levelBalloon_rope8.png":[16,250],"res/levelBalloon_rope9.png":[16,250],"res/levelFlag.png":[44,44],"res/levelFlag_2.png":[44,44],"res/levelFlagrope.png":[632,60],"res/levelFlagrope_2.png":[632,60],"res/levelHalloweenEN.png":[172,180],"res/levelLeaf.png":[196,267],"res/levelLeaf_2.png":[196,267],"res/levelMoonEN.png":[221,221],"res/levelMoon_hand.png":[54,54],"res/levelSugar_1.png":[47,92],"res/levelSugar_2.png":[61,57],"res/level_icon_coin_off.png":[22,22],"res/level_icon_coin_on.png":[22,22],"res/level_icon_moon_off.png":[17,20],"res/level_icon_moon_on.png":[17,20],"res/level_icon_star_off.png":[14,14],"res/level_icon_star_on.png":[14,14],"res/level_image_battle_1.png":[39,42],"res/level_image_battle_bang.png":[167,167],"res/level_image_battle_bg.png":[869,549],"res/level_image_battle_bg2.png":[870,146],"res/level_image_battle_blue cat.png":[192,192],"res/level_image_battle_bomb.png":[57,57],"res/level_image_battle_boxing_left.png":[125,125],"res/level_image_battle_boxing_right.png":[125,125],"res/level_image_battle_entrance.png":[76,92],"res/level_image_battle_entrance_eye.png":[76,92],"res/level_image_battle_light.png":[199,199],"res/level_image_battle_line_blue.png":[388,151],"res/level_image_battle_line_red.png":[388,151],"res/level_image_battle_red cat.png":[192,192],"res/level_image_battle_time_bg.png":[388,88],"res/level_image_battle_time_ring.png":[76,76],"res/level_image_battle_txt.png":[310,83],"res/level_image_battle_wifi_1.png":[70,55],"res/level_image_battle_wifi_2.png":[70,55],"res/level_image_battle_wifi_3.png":[70,55],"res/level_image_mid_0.png":[400,400],"res/level_image_mid_1.png":[400,400],"res/level_image_mid_2.png":[400,400],"res/level_image_mid_3.png":[400,400],"res/level_image_mid_4.png":[400,400],"res/level_image_mid_5.png":[400,400],"res/level_image_mid_Child.png":[400,400],"res/level_image_mid_SPC2_cat.png":[282,550],"res/level_image_mid_SPC2_email.png":[512,768],"res/level_image_mid_SPC2_glow.png":[268,458],"res/level_image_mid_SPC2_lamp.png":[450,768],"res/level_image_mid_SPC2_line.png":[512,768],"res/level_image_mid_SPC2_tick.png":[320,128],"res/level_image_mid_autumn.png":[400,400],"res/level_image_mid_halloween.png":[400,400],"res/level_image_mid_moon_0.png":[400,400],"res/level_image_mid_moon_1.png":[400,400],"res/level_image_mid_moon_2.png":[400,400],"res/level_image_mid_moon_3.png":[400,400],"res/level_image_mid_moon_4.png":[400,400],"res/level_image_mid_moon_5.png":[400,400],"res/level_image_mid_negative_0.png":[400,400],"res/level_image_mid_negative_1.png":[400,400],"res/level_image_mid_negative_2.png":[400,400],"res/level_image_mid_negative_3.png":[400,400],"res/level_image_mid_negative_4.png":[400,400],"res/level_image_mid_negative_5.png":[400,400],"res/level_image_mid_negative_6.png":[400,400],"res/level_image_mid_soon.png":[400,400],"res/level_image_mid_thanks.png":[400,400],"res/level_image_moregames.png":[400,400],"res/level_image_springtime.png":[319,335],"res/level_springtime_Money.png":[46,58],"res/level_springtime_lantern.png":[85,95],"res/loading_logo_1.png":[25,25],"res/loading_logo_2.png":[99,86],"res/lyBG10desert.png":[1136,768],"res/lyBG11disco.png":[1135,768],"res/lyBG11disco_2.png":[1136,768],"res/lyBG1tree.png":[1136,768],"res/lyBG2.png":[1136,768],"res/lyBG3.png":[1136,768],"res/lyBG5_1.png":[1136,768],"res/lyBG6_1.png":[1136,768],"res/lyBG7.png":[1136,768],"res/lyBG7_1.png":[1136,768],"res/lyBG8.png":[1136,768],"res/lyBG9Ice.png":[1136,768],"res/lyBG_12tree.png":[1136,768],"res/lyBG_black_1.png":[1136,768],"res/lyBG_black_1_moon.png":[1136,768],"res/lyBG_story.png":[1136,768],"res/lyBGhalloween.png":[1136,768],"res/mfi_avatar_on.png":[512,212],"res/mfi_btn_A.png":[24,24],"res/mfi_btn_B.png":[24,24],"res/mfi_btn_L.png":[20,24],"res/mfi_btn_R.png":[20,24],"res/mfi_btn_X.png":[24,24],"res/mfi_btn_on_170.png":[170,80],"res/mfi_btn_on_210.png":[210,80],"res/mfi_home_avatar_on.png":[142,125],"res/mfi_home_help.png":[69,61],"res/mfi_home_level_on.png":[120,120],"res/mfi_home_world.png":[113,25],"res/mfi_home_world_on.png":[142,125],"res/mfi_pad_left_bg.png":[150,150],"res/mfi_pad_left_on.png":[27,32],"res/mfi_pad_right_A.png":[40,40],"res/mfi_pad_right_X.png":[40,40],"res/mfi_pad_right_bg.png":[148,148],"res/mfi_pause_btn_big.png":[128,148],"res/mfi_pause_btn_small.png":[110,127],"res/mfi_tip_off.png":[360,160],"res/mfi_tip_on.png":[360,160],"res/mountain.png":[1024,1024],"res/open_sceen_cn.png":[1136,768],"res/quit_bot_light.png":[128,60],"res/quit_btn_more.png":[140,140],"res/quit_btn_no.png":[110,110],"res/quit_btn_yes.png":[110,110],"res/shareIcon.jpg":[72,72],"res/specialversion_cn.png":[1136,768],"res/start_swich_btn_on.png":[75,87],"res/start_swich_btn_right.png":[75,87],"res/streak.png":[64,64],"res/super_streak.png":[64,64],"res/ui_100px.png":[10,10],"res/ui_blank.png":[100,100],"res/unlock_avatar_box.png":[273,245],"res/veewo_logo.png":[231,48],"res/version_cn.png":[1136,768],"res/video_ui_hero_cry.png":[200,200],"res/video_ui_polygon.png":[222,239],"res/video_ui_srar.png":[417,196],"res/warn_hero_power_line.png":[746,90],"res/warn_hero_power_txt.png":[309,85],"res/warn_image_coins.png":[282,281],"res/warn_image_flash.png":[162,142],"res/warn_image_succeed.png":[114,119],"res/warn_image_unlock.png":[400,250],"res/warn_light.png":[568,410],"res/warn_reward_title.png":[736,142],"res/warn_reward_title_2.png":[736,142],"res/warn_unlock_bg.png":[826,594],"res/warn_unlock_light_bg.png":[832,600],"res/white_block.png":[1,1],"res/win_con_bg.png":[10,44]};
+--- a/webos/app/assets/index.webv1.html
++++ b/webos/app/assets/index.webv1.html
+@@ -1,4 +1,4 @@
+-﻿<!DOCTYPE html>
++<!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="utf-8">
+@@ -33,6 +33,11 @@
+         }
+     </style>
+     <script>
++    window.__supercatLowMemory = true;
++    window.__supercatSkipAudioStartupPreload = true;
++    window.__supercatSkipImageStartupPreload = true;
++    window.__supercatDisableBackgroundTexturePreload = true;
++    window.__supercatImageLoadConcurrency = 1;
+     window.__supercatNoAudioExtFallback = true;
+     window.__supercatFlatAudioPath = true;
+     window.__supercatResourceLoadConcurrency = 1;
+@@ -103,7 +108,9 @@
+     </script>
+     <script src="project.webv1.js?v=20260429z"></script>
+     <script src="../frameworks/cocos2d-html5/CCBoot.js?v=20260429z"></script>
+-    <script src="main.js?v=20260429z"></script>
++    <script src="image-sizes.js?v=20260918-memory1"></script>
++    <script src="webos-memory.js?v=20260918-memory1"></script>
++    <script src="main.js?v=20260918-memory1"></script>
+ </head>
+ <body>
+     <canvas id="gameCanvas"></canvas>
+--- a/webos/app/assets/main.js
++++ b/webos/app/assets/main.js
+@@ -133,7 +133,7 @@
+ // must be in the texture cache before a level is built; a deferred load leaves
+ // the map blank ("no texture bound to target"). In this title every tileset is
+ // named forest*.png, so we keep just those in the startup preload even when the
+-// bulk image preload is skipped. Cheap (~20 files) and fixes all maps.
++// bulk image preload is skipped. These 21 tilesets cost about 55 MiB of RGBA.
+ function __supercatIsTilesetImage(item) {
+ 	var src = item;
+ 	if (item && typeof item === "object") {
+@@ -212,6 +212,10 @@
+ }
+ 
+ function __supercatPreloadSpriteFrameFiles() {
++    if (__supercatBootRoot.__supercatLowMemory && __supercatBootRoot.__supercatMemory) {
++        __supercatBootRoot.__supercatMemory.indexAtlases();
++        return;
++    }
+ 	if (!cc || !cc.loader || !cc.spriteFrameCache) {
+ 		return;
+ 	}
+@@ -273,8 +277,14 @@
+ 		}
+ 		if (!frame && !this.__supercatResolvingMissingFrame) {
+ 			this.__supercatResolvingMissingFrame = true;
+-			__supercatPreloadSpriteFrameFiles();
+-			this.__supercatResolvingMissingFrame = false;
++            try {
++                if (__supercatBootRoot.__supercatLowMemory && __supercatBootRoot.__supercatMemory)
++                    __supercatBootRoot.__supercatMemory.ensureFrame(name);
++                else
++                    __supercatPreloadSpriteFrameFiles();
++            } finally {
++                this.__supercatResolvingMissingFrame = false;
++            }
+ 			frame = originalGetSpriteFrame.call(this, name);
+ 			if (!frame && baseName !== name) {
+ 				frame = originalGetSpriteFrame.call(this, baseName);
+@@ -705,7 +715,7 @@
+ 
+ function __supercatStartBackgroundTexturePreload() {
+ 	var root = __supercatBootRoot;
+-	if (root.__supercatBgPreloadStarted || !root.__supercatSkipImageStartupPreload) {
++	if (root.__supercatDisableBackgroundTexturePreload || root.__supercatBgPreloadStarted || !root.__supercatSkipImageStartupPreload) {
+ 		return;
+ 	}
+ 	if (typeof cc === "undefined" || !cc.textureCache || typeof cc.textureCache.addImage !== "function") {
+@@ -767,6 +777,7 @@
+ 	__supercatTraceRenderInfo();
+ 	__supercatInstallSlowResourceLoader();
+ 	__supercatInstallFlatPathFallback();
++    if (__supercatBootRoot.__supercatMemory) __supercatBootRoot.__supercatMemory.install();
+ 	__supercatPatchEventManager();
+ 	if (cc.BuilderReader && typeof cc.BuilderReader.setResourcePath === "function") {
+ 		cc.BuilderReader.setResourcePath("res/");
+--- /dev/null
++++ b/webos/app/assets/webos-memory.js
+@@ -0,0 +1,357 @@
++/* Super Cat webOS low-memory runtime. ES5 for older webOS Chromium versions. */
++(function (root) {
++    "use strict";
++    var api = root.__supercatMemory = {};
++    var atlasIndex = null;
++    var installed = false;
++    var stats = { imageLoads: 0, imageErrors: 0, activeImages: 0, peakActiveImages: 0,
++        indexedAtlases: 0, loadedAtlases: 0, droppedEffects: 0 };
++
++    function trace(message) {
++        if (root.__supercatBootTrace) root.__supercatBootTrace(message);
++    }
++    function own(obj, key) { return Object.prototype.hasOwnProperty.call(obj, key); }
++    function flat(path) {
++        return typeof root.__supercatFixResourcePath === "function" ?
++            root.__supercatFixResourcePath(path) : path;
++    }
++    function base(path) { return String(path).replace(/^.*[\\/]/, ""); }
++
++    // Index the small plist dictionaries, NOT textures or SpriteFrame instances.
++    // _addSpriteFramesByObject() itself calls addImage(): calling it for every
++    // plist would defeat an image-preload filter and allocate all 62 atlases.
++    api.indexAtlases = function () {
++        var cache = cc.spriteFrameCache;
++        var list = cc.loader.getRes("res/spriteFrameFileList.plist") ||
++            root.__supercatSpriteFrameFileListConfig;
++        if (!list || !list.spriteFrameFiles) return;
++        root.__supercatSpriteFrameFileListConfig = list;
++        var saved = root.__supercatSpriteFramePlists = root.__supercatSpriteFramePlists || {};
++        if (atlasIndex) {
++            cache.__supercatAtlasesRegistered = true;
++            return;
++        }
++        atlasIndex = Object.create(null);
++        for (var i = 0; i < list.spriteFrameFiles.length; i++) {
++            var path = "res/" + list.spriteFrameFiles[i];
++            var dict = saved[path] || cc.loader.getRes(path);
++            if (!dict || !dict.frames) continue;
++            saved[path] = dict;
++            stats.indexedAtlases++;
++            for (var name in dict.frames) {
++                if (!own(dict.frames, name)) continue;
++                if (!own(atlasIndex, name)) atlasIndex[name] = path;
++                var shortName = base(name);
++                if (!own(atlasIndex, shortName)) atlasIndex[shortName] = path;
++                var aliases = dict.frames[name].aliases || [];
++                for (var j = 0; j < aliases.length; j++) {
++                    if (!own(atlasIndex, aliases[j])) atlasIndex[aliases[j]] = path;
++                }
++            }
++        }
++        cache.__supercatAtlasesRegistered = true;
++        trace("lazy atlas index=" + stats.indexedAtlases + " (no texture preload)");
++    };
++
++    api.ensureFrame = function (name, exactOnly) {
++        api.indexAtlases();
++        if (!atlasIndex) return;
++        var path = atlasIndex[name] || (!exactOnly && atlasIndex[base(name)]);
++        var dict = path && root.__supercatSpriteFramePlists[path];
++        if (!dict) return;
++        cc.spriteFrameCache._addSpriteFramesByObject(path, dict);
++        stats.loadedAtlases++;
++    };
++
++    function installImageQueue() {
++        var loader = cc.loader, pending = Object.create(null), queue = [], active = 0;
++        var limit = Math.max(1, Math.min(2, parseInt(root.__supercatImageLoadConcurrency, 10) || 1));
++        var gap = 16, timer = null;
++        function schedule() {
++            if (timer !== null) return;
++            timer = setTimeout(function () { timer = null; pump(); }, gap);
++        }
++        function pump() {
++            while (active < limit && queue.length) start(queue.shift());
++        }
++        function start(job) {
++            active++;
++            stats.activeImages = active;
++            stats.peakActiveImages = Math.max(stats.peakActiveImages, active);
++            var img = job.image, done = false, timeout;
++            function cleanup() {
++                clearTimeout(timeout);
++                img.removeEventListener("load", loaded, false);
++                img.removeEventListener("error", failed, false);
++            }
++            function finish(error) {
++                if (done) return;
++                done = true;
++                cleanup();
++                delete pending[job.url];
++                if (error) {
++                    stats.imageErrors++;
++                    if (loader.cache[job.url] === img) delete loader.cache[job.url];
++                } else {
++                    stats.imageLoads++;
++                    loader.cache[job.url] = img;
++                }
++                // Keep this slot occupied while callbacks upload the texture.
++                // Nested addImage() calls join this same global queue.
++                try {
++                    for (var i = 0; i < job.callbacks.length; i++) {
++                        try { job.callbacks[i](error || null, error ? null : img); }
++                        catch (e) { setTimeout((function (err) { return function () { throw err; }; })(e), 0); }
++                    }
++                } finally {
++                    job.callbacks.length = 0;
++                    active--;
++                    stats.activeImages = active;
++                    schedule();
++                }
++            }
++            function loaded() { finish(null); }
++            function failed() {
++                if (img.crossOrigin && !job.retried) {
++                    job.retried = true;
++                    img.removeAttribute("crossorigin");
++                    img.src = job.url;
++                } else finish("Image load failed: " + job.url);
++            }
++            img.addEventListener("load", loaded, false);
++            img.addEventListener("error", failed, false);
++            timeout = setTimeout(function () {
++                finish("Image load timeout: " + job.url);
++                // Cancel the timed-out request without navigating to the page URL.
++                img.removeAttribute("src");
++            }, 20000);
++            if (job.crossOrigin && root.location.protocol !== "file:") img.crossOrigin = "Anonymous";
++            img.src = job.url;
++        }
++        loader.loadImg = function (url, option, callback) {
++            url = flat(url);
++            var crossOrigin = true;
++            if (typeof option === "function") callback = option;
++            else if (option && option.isCrossOrigin !== undefined && option.isCrossOrigin !== null)
++                crossOrigin = !!option.isCrossOrigin;
++            // Cocos stores the returned Image before it has decoded. Do not
++            // mistake that placeholder for a completed cache hit.
++            var job = pending[url];
++            if (job) {
++                if (typeof callback === "function") job.callbacks.push(callback);
++                return job.image;
++            }
++            var cached = loader.getRes(url);
++            if (cached && (cached.naturalWidth || cached.width) && cached.complete !== false) {
++                if (typeof callback === "function") callback(null, cached);
++                return cached;
++            }
++            job = { url: url, image: new Image(), callbacks: [], crossOrigin: crossOrigin, retried: false };
++            if (typeof callback === "function") job.callbacks.push(callback);
++            pending[url] = job;
++            queue.push(job);
++            schedule();
++            return job.image;
++        };
++        api.imageQueue = function () { return { active: active, queued: queue.length }; };
++    }
++
++
++    function installLazySpriteCompatibility() {
++        // The recovered CCB v6 reader used loader.getRes() as a file-existence
++        // test. With lazy images, an existing but unloaded file is not a miss.
++        // Dimensions in this tiny generated manifest keep CCB layouts valid
++        // before the asynchronous image decode has completed.
++        var reader = cc.BuilderReader && cc.BuilderReader.prototype;
++        if (reader && reader._loadTextureSpriteFrameV6) {
++            var originalTextureFrame = reader._loadTextureSpriteFrameV6;
++            reader._loadTextureSpriteFrameV6 = function (spriteFile) {
++                var path = flat("res/" + spriteFile);
++                var sizes = root.__supercatImageSizes || {};
++                if (!sizes[path]) path = "res/" + base(spriteFile);
++                var size = sizes[path];
++                if (!size) return originalTextureFrame.call(this, spriteFile);
++                var texture = cc.textureCache.addImage(path);
++                return new cc.SpriteFrame(texture, cc.rect(0, 0, size[0], size[1]));
++            };
++            var originalExact = reader._getSpriteFrameExactV6;
++            reader._getSpriteFrameExactV6 = function (name) {
++                var frame = originalExact.call(this, name);
++                if (!frame) {
++                    api.ensureFrame(name, true);
++                    frame = originalExact.call(this, name);
++                }
++                return frame;
++            };
++        }
++        var sprite = cc.Sprite && cc.Sprite.prototype;
++        if (sprite && sprite.setSpriteFrame && sprite.getSpriteFrame) {
++            var originalSet = sprite.setSpriteFrame;
++            var originalGet = sprite.getSpriteFrame;
++            sprite.setSpriteFrame = function (frame) {
++                var resolved = typeof frame === "string" ? cc.spriteFrameCache.getSpriteFrame(frame) : frame;
++                this.__supercatPendingFrame = resolved || null;
++                return originalSet.call(this, resolved || frame);
++            };
++            sprite.getSpriteFrame = function () {
++                var pending = this.__supercatPendingFrame;
++                if (pending && !this._textureLoaded) return pending;
++                return originalGet.apply(this, arguments);
++            };
++        }
++    }
++
++    function installAudio() {
++        var engine = cc.audioEngine;
++        if (!engine || !cc.Audio) return;
++        // Cocos 3.x leaves _pause set after stop(). A stopped, formerly paused
++        // effect must not occupy a voice/cache slot forever or resume later.
++        var originalStop = cc.Audio.prototype.stop;
++        cc.Audio.prototype.stop = function () {
++            var result = originalStop.apply(this, arguments);
++            this._pause = false;
++            return result;
++        };
++        var seen = Object.create(null), clock = 0;
++        var budget = 12 * 1024 * 1024, maxFiles = 24, maxVoices = 6;
++        var originalEffect = engine.playEffect;
++        function normalize(url) {
++            return flat(String(url).replace(/(^|\/)res\/sound\//, "$1res/"));
++        }
++        function releaseMusic(audio) {
++            if (!audio) return;
++            audio.stop();
++            if (audio._element) {
++                audio._element.removeAttribute("src");
++                audio._element.load();
++                audio._element = null;
++            }
++            // Remove a stopped stream from the engine's visibility-pause list.
++            var list = engine._pauseCache || [];
++            for (var i = list.length - 1; i >= 0; i--) if (list[i] === audio) list.splice(i, 1);
++        }
++        function attemptPlay(audio) {
++            if (engine._currMusic !== audio || !audio._element) return;
++            try {
++                var promise = audio._element.play();
++                if (promise && typeof promise.catch === "function") promise.catch(function (err) {
++                    // A user gesture may be required; retry only the current,
++                    // still-requested track, never a stopped or paused one.
++                    if (err && err.name !== "NotAllowedError" && err.name !== "AbortError")
++                        trace("music playback: " + err.message);
++                });
++            } catch (err) { trace("music playback: " + err.message); }
++        }
++        engine.playMusic = function (url, loop) {
++            if (typeof url !== "string" || !url) return;
++            url = normalize(url);
++            releaseMusic(this._currMusic);
++            var element = document.createElement("audio");
++            element.preload = "none";
++            element.src = url;
++            var audio = new cc.Audio(null, null, url);
++            audio.setElement(element);
++            audio._playOfAudio = function () {
++                element.loop = this.loop;
++                attemptPlay(this);
++            };
++            audio._resumeOfAudio = function () { attemptPlay(this); };
++            this._currMusic = audio;
++            audio.setVolume(this._musicVolume);
++            audio.play(0, !!loop);
++        };
++        engine.stopMusic = function () {
++            releaseMusic(this._currMusic);
++            this._currMusic = null;
++        };
++        function unlock() {
++            var audio = engine._currMusic;
++            if (audio && audio._playing && !audio._pause && audio._element && audio._element.paused)
++                attemptPlay(audio);
++        }
++        document.addEventListener("keydown", unlock, true);
++        document.addEventListener("mousedown", unlock, true);
++        document.addEventListener("touchstart", unlock, true);
++
++        function busy(audio) {
++            return !!(audio && (audio._pause || (audio.getPlaying && audio.getPlaying())));
++        }
++        function trimEffects() {
++            var entries = [], total = 0;
++            for (var url in seen) {
++                if (!own(seen, url)) continue;
++                var sample = cc.loader.getRes(url), bytes = 0;
++                if (sample && sample._buffer) bytes = sample._buffer.length * sample._buffer.numberOfChannels * 4;
++                total += bytes;
++                entries.push({ url: url, time: seen[url], bytes: bytes });
++            }
++            entries.sort(function (a, b) { return a.time - b.time; });
++            var count = entries.length;
++            for (var i = 0; i < entries.length && (total > budget || count > maxFiles); i++) {
++                var entry = entries[i], pool = engine._audioPool[entry.url] || [], inUse = false;
++                var sample = cc.loader.getRes(entry.url);
++                // Do not unload an in-flight decode or paused/playing effect.
++                if (!sample || (!sample._buffer && !sample._supercatDecodeFailed)) continue;
++                for (var j = 0; j < pool.length; j++) if (busy(pool[j])) inUse = true;
++                if (inUse) continue;
++                for (j = 0; j < pool.length; j++) {
++                    pool[j].stop();
++                    if (pool[j]._volume && pool[j]._volume.disconnect) pool[j]._volume.disconnect();
++                    pool[j]._buffer = null;
++                    pool[j]._setBufferCallback = null;
++                }
++                if (sample._volume && sample._volume.disconnect) sample._volume.disconnect();
++                engine.unloadEffect(entry.url);
++                delete seen[entry.url];
++                total -= entry.bytes;
++                count--;
++            }
++        }
++        engine.playEffect = function (url, loop) {
++            if (typeof url !== "string" || !url) return null;
++            url = normalize(url);
++            var voices = 0, pool = this._audioPool;
++            for (var key in pool) {
++                if (!own(pool, key)) continue;
++                for (var i = 0; i < pool[key].length; i++) if (busy(pool[key][i])) voices++;
++            }
++            if (voices >= maxVoices) { stats.droppedEffects++; return null; }
++            seen[url] = ++clock;
++            trimEffects();
++            return originalEffect.call(this, url, loop);
++        };
++        api.trimEffects = trimEffects;
++        // A soft decoded-effect-cache budget; active effects are never evicted.
++        setInterval(trimEffects, 5000);
++    }
++
++    api.snapshot = function () {
++        var result = {}, key, cache = cc.loader.cache;
++        for (key in stats) if (own(stats, key)) result[key] = stats[key];
++        result.textureCount = 0;
++        result.textureRGBABytes = 0;
++        result.decodedAudioBytes = 0;
++        for (key in cc.textureCache._textures) {
++            if (!own(cc.textureCache._textures, key)) continue;
++            var texture = cc.textureCache._textures[key];
++            result.textureCount++;
++            var size = texture.getContentSizeInPixels ? texture.getContentSizeInPixels() : null;
++            result.textureRGBABytes += (texture._pixelsWide || (size && size.width) || 0) *
++                (texture._pixelsHigh || (size && size.height) || 0) * 4;
++        }
++        for (key in cache) if (own(cache, key) && cache[key] && cache[key]._buffer)
++            result.decodedAudioBytes += cache[key]._buffer.length * cache[key]._buffer.numberOfChannels * 4;
++        result.imageQueue = api.imageQueue ? api.imageQueue() : null;
++        // These are asset estimates, not total process RSS or the TV's GPU usage.
++        return result;
++    };
++    api.install = function () {
++        if (installed || !root.__supercatLowMemory) return;
++        installed = true;
++        installImageQueue();
++        installLazySpriteCompatibility();
++        installAudio();
++        if (cc.view && cc.view.enableRetina) cc.view.enableRetina(false);
++        trace("webOS low-memory runtime installed");
++    };
++})(window);
+--- a/webos/app/frameworks/cocos2d-html5/cocos2d/core/scenes/CCLoaderScene.js
++++ b/webos/app/frameworks/cocos2d-html5/cocos2d/core/scenes/CCLoaderScene.js
+@@ -56,6 +56,10 @@
+         if(cc._loaderImage){
+             //loading logo
+             cc.loader.loadImg(cc._loaderImage, {isCrossOrigin : false }, function(err, img){
++                if (err || !img) {
++                    cc.log("SuperCat loader logo unavailable: " + (err || "empty image"));
++                    return; // The logo is optional; retain the progress label.
++                }
+                 logoWidth = img.width;
+                 logoHeight = img.height;
+                 self._initStage(img, cc.visibleRect.center);
+@@ -122,7 +126,16 @@
+                 var percent = (loadedCount / count * 100) | 0;
+                 percent = Math.min(percent, 100);
+                 self._label.setString("Loading... " + percent + "%");
+-            }, function () {
++            }, function (error) {
++                if (error) {
++                    var message = error.errorMessage || String(error);
++                    cc.error("SuperCat startup resource error: " + message);
++                    self._label.setString("Loading failed. Please restart the app.");
++                    if (typeof window !== "undefined" && window.__supercatBootTrace)
++                        window.__supercatBootTrace("startup resource error: " + message);
++                    return; // Never enter the game with partially loaded maps/CCBI.
++                }
++                self._label.setString("Loading... 100%");
+                 if (self.cb)
+                     self.cb.call(self.target);
+             });
+@@ -132,7 +145,8 @@
+         this._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
+         this._bgLayer._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
+         this._label._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
+-        this._logo._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
++        if (this._logo)
++            this._logo._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
+     }
+ });
+ /**
+--- a/webos/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js
++++ b/webos/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js
+@@ -840,6 +840,9 @@
+         if (!locTextureLoaded) {
+             _t._textureLoaded = false;
+             newFrame.addEventListener("load", function (sender) {
++                // Do not let an old deferred frame overwrite a newer animation.
++                if (_t.__supercatPendingFrame && _t.__supercatPendingFrame !== sender)
++                    return;
+                 _t._textureLoaded = true;
+                 var locNewTexture = sender.getTexture();
+                 if (locNewTexture !== _t._texture)
+--- a/webos/app/frameworks/cocos2d-html5/cocos2d/labels/CCLabelBMFontCanvasRenderCmd.js
++++ b/webos/app/frameworks/cocos2d-html5/cocos2d/labels/CCLabelBMFontCanvasRenderCmd.js
+@@ -79,19 +79,15 @@
+     };
+ 
+     proto._changeTextureColor = function(){
+-        var node = this._node;
+-        var texture = this._textureToRender,
+-            contentSize = texture.getContentSize();
+-
+-        var oTexture = node._texture,
+-            oElement = oTexture.getHtmlElementObj();
+-        var disColor = this._displayedColor;
+-        var textureRect = cc.rect(0, 0, oElement.width, oElement.height);
+-        if(texture && contentSize.width > 0){
+-            if(!oElement)
+-                return;
+-            this._textureToRender = oTexture._generateColorTexture(disColor.r, disColor.g, disColor.b, textureRect);
+-        }
++        // The Canvas batch texture belongs to its render command, not the
++        // LabelBMFont node. The old code failed on asynchronous font atlases.
++        var texture = this._texture;
++        if (!texture || !texture.isLoaded()) return;
++        var element = texture.getHtmlElementObj();
++        if (!element || !element.width || !element.height) return;
++        var color = this._displayedColor;
++        this._textureToRender = texture._generateColorTexture(
++            color.r, color.g, color.b, cc.rect(0, 0, element.width, element.height));
+     };
+ 
+     proto._updateChildrenDisplayedOpacity = function(locChild){
+--- a/webos/app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js
++++ b/webos/app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js
+@@ -484,6 +484,7 @@
+             texture = cc.textureCache.addImage(file);
+         }
+ 
++        var batchNode = new cc.SpriteBatchNode(texture, 9);
+         var locLoaded = texture.isLoaded();
+         this._textureLoaded = locLoaded;
+         if(!locLoaded){
+@@ -492,7 +493,7 @@
+                 var preferredSize = this._preferredSize, restorePreferredSize = preferredSize.width !== 0 && preferredSize.height !== 0;
+                 if (restorePreferredSize) preferredSize = cc.size(preferredSize.width, preferredSize.height);
+                 var size  = sender.getContentSize();
+-                this.updateWithBatchNode(this._scale9Image, cc.rect(0,0,size.width,size.height), false, this._capInsets);
++                this.updateWithBatchNode(batchNode, cc.rect(0,0,size.width,size.height), false, this._capInsets);
+                 if (restorePreferredSize)this.setPreferredSize(preferredSize);
+                 this._positionsAreDirty = true;
+                 this.setNodeDirty();
+@@ -500,7 +501,7 @@
+             }, this);
+         }
+ 
+-        return this.initWithBatchNode(new cc.SpriteBatchNode(file, 9), rect, false, capInsets);
++        return this.initWithBatchNode(batchNode, rect, false, capInsets);
+     },
+ 
+     /**
+@@ -518,6 +519,7 @@
+             throw new Error("ccui.Scale9Sprite.initWithSpriteFrame(): spriteFrame should be non-null and its texture should be non-null");
+ 
+         capInsets = capInsets || cc.rect(0, 0, 0, 0);
++        var batchNode = new cc.SpriteBatchNode(spriteFrame.getTexture(), 9);
+         var locLoaded = spriteFrame.textureLoaded();
+         this._textureLoaded = locLoaded;
+         if(!locLoaded){
+@@ -525,14 +527,13 @@
+                 // the texture is rotated on Canvas render mode, so isRotated always is false.
+                 var preferredSize = this._preferredSize, restorePreferredSize = preferredSize.width !== 0 && preferredSize.height !== 0;
+                 if (restorePreferredSize) preferredSize = cc.size(preferredSize.width, preferredSize.height);
+-                this.updateWithBatchNode(this._scale9Image, sender.getRect(), cc._renderType === cc.game.RENDER_TYPE_WEBGL && sender.isRotated(), this._capInsets);
++                this.updateWithBatchNode(batchNode, sender.getRect(), cc._renderType === cc.game.RENDER_TYPE_WEBGL && sender.isRotated(), this._capInsets);
+                 if (restorePreferredSize)this.setPreferredSize(preferredSize);
+                 this._positionsAreDirty = true;
+                 this.setNodeDirty();
+                 this.dispatchEvent("load");
+             },this);
+         }
+-        var batchNode = new cc.SpriteBatchNode(spriteFrame.getTexture(), 9);
+         // the texture is rotated on Canvas render mode, so isRotated always is false.
+         return this.initWithBatchNode(batchNode, spriteFrame.getRect(), cc._renderType === cc.game.RENDER_TYPE_WEBGL && spriteFrame.isRotated(), capInsets);
+     },
+--- a/webos/app/recovered-src/src/common/audioMgr.js
++++ b/webos/app/recovered-src/src/common/audioMgr.js
+@@ -142,7 +142,8 @@
+     this.soundEnabled = vee.data.soundEnabled;
+     var local0 = vee.Common.getInstance();
+     local0.setSoundEnabled(this.soundEnabled);
+-    if (VERSION.IOS_FREE_CN != game.Data.version.curVersion) {
++    if (!(typeof window !== "undefined" && window.__supercatSkipAudioStartupPreload) &&
++        VERSION.IOS_FREE_CN != game.Data.version.curVersion) {
+       this.preloadAudio();
+     }
+   },

@@ -1,0 +1,701 @@
+{
+  "version": "1.0.9",
+  "base_version": "1.0.8",
+  "verification_date_utc": "2026-09-20",
+  "input_archive_sha256": "49b08c8f81737cd6d5e2ae79e48646ccfd4b9bc3911a1abd356e0048baf6f0a9",
+  "environment": {
+    "browser": "Chromium 144.0.7559.96 built on Debian GNU/Linux 13 (trixie)",
+    "webgl_renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "renderers_tested": [
+      "WebGL",
+      "Canvas"
+    ],
+    "viewport": [
+      1280,
+      720
+    ],
+    "resource_delivery": "Offline adapter served unmodified project resource bytes through XHR/image/media hooks. No TV or IPK runtime.",
+    "production_resource_delay_ms": 50,
+    "webgl_final_run_resource_delay_ms": 50,
+    "canvas_test_resource_delay_ms": 1
+  },
+  "rendering_runs": [
+    {
+      "scenario": "cold_start_tutorial",
+      "renderer": "WebGL",
+      "passed": 26,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "game has initialized",
+          "passed": true
+        },
+        {
+          "name": "decoded texture cache hit is synchronous after purge",
+          "passed": true
+        },
+        {
+          "name": "pending frame retains texture identity and layout",
+          "passed": true
+        },
+        {
+          "name": "pending sprites are accepted by SpriteBatchNode",
+          "passed": true
+        },
+        {
+          "name": "late constructor frame cannot resize a newer frame",
+          "passed": true
+        },
+        {
+          "name": "late frame cannot overwrite explicit setTexture",
+          "passed": true
+        },
+        {
+          "name": "late setTexture cannot overwrite a newer frame",
+          "passed": true
+        },
+        {
+          "name": "pending setTexture can be cleared without resurrection",
+          "passed": true
+        },
+        {
+          "name": "replaced pending frames release their listeners",
+          "passed": true
+        },
+        {
+          "name": "deferred tinted sprite preserves color, opacity and visibility",
+          "passed": true
+        },
+        {
+          "name": "hidden Scale9Sprite remains hidden after decode",
+          "passed": true
+        },
+        {
+          "name": "visible Scale9Sprite remains visible after decode",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite preserves preferred size",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite rebuilds the render command list",
+          "passed": true
+        },
+        {
+          "name": "Scale9Sprite frame replacement uses new texture",
+          "passed": true
+        },
+        {
+          "name": "late Scale9 frame cannot replace current frame",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9 file load fires once and preserves its crop",
+          "passed": true
+        },
+        {
+          "name": "trimmed Scale9 frames preserve offsets and original size",
+          "passed": true
+        },
+        {
+          "name": "deferred rotated Scale9 frames use the decoded texture",
+          "passed": true
+        },
+        {
+          "name": "already-decoded rotated frames work outside SpriteFrameCache",
+          "passed": true
+        },
+        {
+          "name": "replaced Scale9 sources release their load listeners",
+          "passed": true
+        },
+        {
+          "name": "loading inactive button state does not duplicate the background",
+          "passed": true
+        },
+        {
+          "name": "no inactive game-button background is drawn",
+          "passed": true
+        },
+        {
+          "name": "all current TMX quads have finite texture coordinates",
+          "passed": true
+        },
+        {
+          "name": "player batch contains visible sprite quads",
+          "passed": true
+        },
+        {
+          "name": "pending sprite UVs are finite before decode",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "scenario": "tutorial_reentry_after_cache_purge",
+      "renderer": "WebGL",
+      "passed": 26,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "game has initialized",
+          "passed": true
+        },
+        {
+          "name": "decoded texture cache hit is synchronous after purge",
+          "passed": true
+        },
+        {
+          "name": "pending frame retains texture identity and layout",
+          "passed": true
+        },
+        {
+          "name": "pending sprites are accepted by SpriteBatchNode",
+          "passed": true
+        },
+        {
+          "name": "late constructor frame cannot resize a newer frame",
+          "passed": true
+        },
+        {
+          "name": "late frame cannot overwrite explicit setTexture",
+          "passed": true
+        },
+        {
+          "name": "late setTexture cannot overwrite a newer frame",
+          "passed": true
+        },
+        {
+          "name": "pending setTexture can be cleared without resurrection",
+          "passed": true
+        },
+        {
+          "name": "replaced pending frames release their listeners",
+          "passed": true
+        },
+        {
+          "name": "deferred tinted sprite preserves color, opacity and visibility",
+          "passed": true
+        },
+        {
+          "name": "hidden Scale9Sprite remains hidden after decode",
+          "passed": true
+        },
+        {
+          "name": "visible Scale9Sprite remains visible after decode",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite preserves preferred size",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite rebuilds the render command list",
+          "passed": true
+        },
+        {
+          "name": "Scale9Sprite frame replacement uses new texture",
+          "passed": true
+        },
+        {
+          "name": "late Scale9 frame cannot replace current frame",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9 file load fires once and preserves its crop",
+          "passed": true
+        },
+        {
+          "name": "trimmed Scale9 frames preserve offsets and original size",
+          "passed": true
+        },
+        {
+          "name": "deferred rotated Scale9 frames use the decoded texture",
+          "passed": true
+        },
+        {
+          "name": "already-decoded rotated frames work outside SpriteFrameCache",
+          "passed": true
+        },
+        {
+          "name": "replaced Scale9 sources release their load listeners",
+          "passed": true
+        },
+        {
+          "name": "loading inactive button state does not duplicate the background",
+          "passed": true
+        },
+        {
+          "name": "no inactive game-button background is drawn",
+          "passed": true
+        },
+        {
+          "name": "all current TMX quads have finite texture coordinates",
+          "passed": true
+        },
+        {
+          "name": "player batch contains visible sprite quads",
+          "passed": true
+        },
+        {
+          "name": "pending sprite UVs are finite before decode",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "scenario": "map100_after_cache_purge",
+      "renderer": "WebGL",
+      "passed": 26,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "game has initialized",
+          "passed": true
+        },
+        {
+          "name": "decoded texture cache hit is synchronous after purge",
+          "passed": true
+        },
+        {
+          "name": "pending frame retains texture identity and layout",
+          "passed": true
+        },
+        {
+          "name": "pending sprites are accepted by SpriteBatchNode",
+          "passed": true
+        },
+        {
+          "name": "late constructor frame cannot resize a newer frame",
+          "passed": true
+        },
+        {
+          "name": "late frame cannot overwrite explicit setTexture",
+          "passed": true
+        },
+        {
+          "name": "late setTexture cannot overwrite a newer frame",
+          "passed": true
+        },
+        {
+          "name": "pending setTexture can be cleared without resurrection",
+          "passed": true
+        },
+        {
+          "name": "replaced pending frames release their listeners",
+          "passed": true
+        },
+        {
+          "name": "deferred tinted sprite preserves color, opacity and visibility",
+          "passed": true
+        },
+        {
+          "name": "hidden Scale9Sprite remains hidden after decode",
+          "passed": true
+        },
+        {
+          "name": "visible Scale9Sprite remains visible after decode",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite preserves preferred size",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite rebuilds the render command list",
+          "passed": true
+        },
+        {
+          "name": "Scale9Sprite frame replacement uses new texture",
+          "passed": true
+        },
+        {
+          "name": "late Scale9 frame cannot replace current frame",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9 file load fires once and preserves its crop",
+          "passed": true
+        },
+        {
+          "name": "trimmed Scale9 frames preserve offsets and original size",
+          "passed": true
+        },
+        {
+          "name": "deferred rotated Scale9 frames use the decoded texture",
+          "passed": true
+        },
+        {
+          "name": "already-decoded rotated frames work outside SpriteFrameCache",
+          "passed": true
+        },
+        {
+          "name": "replaced Scale9 sources release their load listeners",
+          "passed": true
+        },
+        {
+          "name": "loading inactive button state does not duplicate the background",
+          "passed": true
+        },
+        {
+          "name": "no inactive game-button background is drawn",
+          "passed": true
+        },
+        {
+          "name": "all current TMX quads have finite texture coordinates",
+          "passed": true
+        },
+        {
+          "name": "player batch contains visible sprite quads",
+          "passed": true
+        },
+        {
+          "name": "pending sprite UVs are finite before decode",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "scenario": "canvas_tutorial",
+      "renderer": "Canvas",
+      "passed": 23,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "game has initialized",
+          "passed": true
+        },
+        {
+          "name": "decoded texture cache hit is synchronous after purge",
+          "passed": true
+        },
+        {
+          "name": "pending frame retains texture identity and layout",
+          "passed": true
+        },
+        {
+          "name": "pending sprites are accepted by SpriteBatchNode",
+          "passed": true
+        },
+        {
+          "name": "late constructor frame cannot resize a newer frame",
+          "passed": true
+        },
+        {
+          "name": "late frame cannot overwrite explicit setTexture",
+          "passed": true
+        },
+        {
+          "name": "late setTexture cannot overwrite a newer frame",
+          "passed": true
+        },
+        {
+          "name": "pending setTexture can be cleared without resurrection",
+          "passed": true
+        },
+        {
+          "name": "replaced pending frames release their listeners",
+          "passed": true
+        },
+        {
+          "name": "deferred tinted sprite preserves color, opacity and visibility",
+          "passed": true
+        },
+        {
+          "name": "hidden Scale9Sprite remains hidden after decode",
+          "passed": true
+        },
+        {
+          "name": "visible Scale9Sprite remains visible after decode",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite preserves preferred size",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9Sprite rebuilds the render command list",
+          "passed": true
+        },
+        {
+          "name": "Scale9Sprite frame replacement uses new texture",
+          "passed": true
+        },
+        {
+          "name": "late Scale9 frame cannot replace current frame",
+          "passed": true
+        },
+        {
+          "name": "deferred Scale9 file load fires once and preserves its crop",
+          "passed": true
+        },
+        {
+          "name": "trimmed Scale9 frames preserve offsets and original size",
+          "passed": true
+        },
+        {
+          "name": "deferred rotated Scale9 frames use the decoded texture",
+          "passed": true
+        },
+        {
+          "name": "already-decoded rotated frames work outside SpriteFrameCache",
+          "passed": true
+        },
+        {
+          "name": "replaced Scale9 sources release their load listeners",
+          "passed": true
+        },
+        {
+          "name": "loading inactive button state does not duplicate the background",
+          "passed": true
+        },
+        {
+          "name": "no inactive game-button background is drawn",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "legacy_canvas_browser_checks": {
+    "passed": 18,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "game startup completed",
+        "passed": true
+      },
+      {
+        "name": "global image concurrency stays at one",
+        "passed": true
+      },
+      {
+        "name": "background atlas preload is disabled",
+        "passed": true
+      },
+      {
+        "name": "no startup music decoded into AudioBuffers",
+        "passed": true
+      },
+      {
+        "name": "pending frame preserves texture reference",
+        "passed": true
+      },
+      {
+        "name": "lazy Scale9Sprite survives initial decode",
+        "passed": true
+      },
+      {
+        "name": "lazy Scale9Sprite preserves preferred size",
+        "passed": true
+      },
+      {
+        "name": "lazy sprite gets its final texture",
+        "passed": true
+      },
+      {
+        "name": "late old texture cannot overwrite current frame",
+        "passed": true
+      },
+      {
+        "name": "music uses HTML audio rather than a decoded buffer",
+        "passed": true
+      },
+      {
+        "name": "music volume retained",
+        "passed": true
+      },
+      {
+        "name": "music pauses",
+        "passed": true
+      },
+      {
+        "name": "music resumes",
+        "passed": true
+      },
+      {
+        "name": "switching music releases old media source",
+        "passed": true
+      },
+      {
+        "name": "stopping music releases current source",
+        "passed": true
+      },
+      {
+        "name": "cache purge does not reload all atlases",
+        "passed": true
+      },
+      {
+        "name": "frame lookup restores requested atlas after purge",
+        "passed": true
+      },
+      {
+        "name": "failed startup resource does not enter game",
+        "passed": true
+      }
+    ]
+  },
+  "memory_unit_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "cold_start_runtime": {
+    "stage": "Tutorial",
+    "freeze": false,
+    "target": {
+      "x": 21,
+      "y": 31
+    },
+    "delay": 50,
+    "errors": [],
+    "glError": 0,
+    "memory": {
+      "imageLoads": 84,
+      "imageErrors": 0,
+      "activeImages": 1,
+      "peakActiveImages": 1,
+      "indexedAtlases": 62,
+      "loadedAtlases": 4,
+      "droppedEffects": 0,
+      "textureCount": 59,
+      "textureRGBABytes": 52757560,
+      "decodedAudioBytes": 5363936,
+      "imageQueue": {
+        "active": 1,
+        "queued": 4
+      }
+    }
+  },
+  "reentry_runtime": {
+    "changedMap": true,
+    "stage": "Tutorial",
+    "errors": [],
+    "glError": 0,
+    "memory": {
+      "imageLoads": 89,
+      "imageErrors": 0,
+      "activeImages": 0,
+      "peakActiveImages": 1,
+      "indexedAtlases": 62,
+      "loadedAtlases": 14,
+      "droppedEffects": 0,
+      "textureCount": 51,
+      "textureRGBABytes": 47997564,
+      "decodedAudioBytes": 5363936,
+      "imageQueue": {
+        "active": 0,
+        "queued": 0
+      }
+    }
+  },
+  "map100_runtime": {
+    "stage": 100,
+    "errors": [],
+    "glError": 0,
+    "memory": {
+      "imageLoads": 93,
+      "imageErrors": 0,
+      "activeImages": 0,
+      "peakActiveImages": 1,
+      "indexedAtlases": 62,
+      "loadedAtlases": 16,
+      "droppedEffects": 0,
+      "textureCount": 43,
+      "textureRGBABytes": 24256956,
+      "decodedAudioBytes": 5363936,
+      "imageQueue": {
+        "active": 0,
+        "queued": 0
+      }
+    }
+  },
+  "source_audit": {
+    "base_version": "1.0.8",
+    "version": "1.0.9",
+    "changed_application_files": [
+      "app/appinfo.json",
+      "app/assets/index.webv1.html",
+      "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js",
+      "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteCanvasRenderCmd.js",
+      "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteFrame.js",
+      "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js",
+      "app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureCache.js",
+      "app/frameworks/cocos2d-html5/cocos2d/core/textures/TexturesWebGL.js",
+      "app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js"
+    ],
+    "added_application_files": [],
+    "deleted_application_files": [],
+    "syntax_checks": [
+      {
+        "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteCanvasRenderCmd.js",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteFrame.js",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "file": "app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureCache.js",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "file": "app/frameworks/cocos2d-html5/cocos2d/core/textures/TexturesWebGL.js",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "file": "app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js",
+        "passed": true,
+        "error": ""
+      },
+      {
+        "file": "tests/rendering_assertions.js",
+        "passed": true,
+        "error": ""
+      }
+    ],
+    "resource_files_compared": 1850,
+    "resource_bytes_compared": 58878556,
+    "modified_resources": [],
+    "all_original_resources_byte_identical": true
+  },
+  "before_observations": [
+    "The supplied WebGL build displayed the tutorial background but omitted the player and map tiles.",
+    "The inactive pressed ControlButton background became visible after its texture loaded, appearing offset from the normal background.",
+    "Pending sprites could be rejected by SpriteBatchNode before their texture finished loading."
+  ],
+  "after_observations": [
+    "Player and map geometry rendered in WebGL; texture coordinates were finite and nonzero for the tested maps.",
+    "Normal and highlighted button backgrounds remained mutually exclusive, including across deferred loads.",
+    "Late frame/texture callbacks no longer replaced current Sprite and Scale9Sprite state.",
+    "Canvas converted rotated packed frames both on deferred load and on an immediate texture-cache hit."
+  ],
+  "screenshots": {
+    "before_webgl": "rendering_before_webgl.png",
+    "after_webgl": "rendering_after_webgl.png",
+    "after_canvas": "rendering_after_canvas.png",
+    "map100_webgl": "rendering_after_map100_webgl.png"
+  },
+  "limitations": [
+    "Not tested on a physical webOS television or its GPU driver.",
+    "ares-package was unavailable; no IPK was built or installed.",
+    "The offline adapter did not serve CSS font requests; browser font-loading warnings occurred. These are separate from the game window-error arrays in this report.",
+    "Screenshots were taken at different animation times, not as a pixel-identical visual comparison.",
+    "Only tutorial/reentry/map100 scenarios and the listed synthetic regression checks were tested; not a full game playthrough.",
+    "Texture/audio byte counts are cache estimates, not process RSS, peak decode memory, GPU memory, or a TV performance measurement.",
+    "Previous 1.0.8 reports and changes.patch remain historical records, not results of this verification."
+  ]
+}

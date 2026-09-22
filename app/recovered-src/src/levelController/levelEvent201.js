@@ -1,0 +1,8 @@
+// Recovered source-like JS from /mnt/data/smdis/dis/levelController/levelEvent201.dis
+// Source-like reconstruction from smdis.
+
+LevelController.LevelEvent201 = LevelController.extend({
+  eventStory1: function (arg0) {
+    this.showStory(1, arg0, (((((((((((((((("SelectNpc,Flash;FaceTo,right;MoveCamera,30,13,2;FaceTo,left;MoveRole,31,13;ShowDialog," + vee.Utils.getLocalizedStringForKey("Come closer, friend!", "\u670b\u53cb\uff0c\u9760\u8fd1\u6211\u4e00\u70b9\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("A new friend has joined us!", "\u65b0\u7684\u5c0f\u4f19\u4f34\u5df2\u7ecf\u52a0\u5165\u6211\u4eec\u7684\u8c6a\u534e\u5957\u9910\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("Do you mind if I chat with him/her/it?", "\u4e0d\u548c\u4ed6/\u5979/\u5b83\u4ea4\u6d41\u4e00\u4e0b\u5417\uff1f")) + ";HideDialog;SelectNpc;MoveRole,32,13;ShowDialog,") + vee.Utils.getLocalizedStringForKey("Greetings!", "\u4f60\u597d\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("The data we have collected seems very interesting!", "\u6211\u6536\u96c6\u5230\u7684\u6570\u636e\u4f3c\u4e4e\u6709\u70b9\u5fae\u5999\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("Could you help me analyze it?", "\u80fd\u5426\u8bf7\u4f60\u5e2e\u6211\u5206\u6790\u4e00\u4e0b\uff1f")) + ";HideDialog;UnlockRole;TimeLine,huxi_2;Delay,1;Trigger,32,14;Delay,1.5;ShowDialog,") + vee.Utils.getLocalizedStringForKey("So, please collect it!", "\u90a3\u9ebb\u70e6\u4f60\u6536\u96c6\u4e00\u4e0b\u54af\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("And I'm looking forward to you~", "\u671f\u5f85\u4f60\u7684\u8868\u73b0\uff5e")) + ";HideDialog;Delay,1"));
+  }
+});

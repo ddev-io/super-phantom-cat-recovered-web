@@ -1,0 +1,253 @@
+{
+  "version": "1.0.8",
+  "scope": "Startup memory fix; original game assets unchanged. Not verified on a physical webOS TV.",
+  "source_analysis": {
+    "resource_entries": 1848,
+    "startup_images": 1056,
+    "startup_audio": 171,
+    "original_preload_resources": 1847,
+    "fixed_preload_resources": 641,
+    "startup_bgm_tracks": 21,
+    "bgm_position_in_original_list_percent": "28.85-29.98",
+    "bgm_float32_pcm_estimate_mib": 496.82,
+    "image_rgba_estimate_mib": 367.95,
+    "retained_initial_tileset_images": 21,
+    "retained_tileset_rgba_mib": 55.27
+  },
+  "measurement_definition": "Image width * height * 4 and decoded AudioBuffer.length * numberOfChannels * 4. Asset-cache estimates only, NOT process RSS, browser decoder peak memory, TV system memory, or GPU allocations.",
+  "baseline_canvas_cache_sample": {
+    "ready": true,
+    "percent": null,
+    "imageCount": 1057,
+    "imageRGBABytes": 385949668,
+    "decodedAudio": 171,
+    "audioPCMBytes": 606319772,
+    "frameCount": 4484,
+    "textureCount": 1056,
+    "runtime": null,
+    "seconds": 16.35
+  },
+  "fixed_canvas_cache_sample": {
+    "ready": true,
+    "percent": "Loading... 0%",
+    "imageCount": 77,
+    "imageRGBABytes": 115178992,
+    "decodedAudio": 7,
+    "audioPCMBytes": 5236932,
+    "frameCount": 531,
+    "textureCount": 56,
+    "runtime": {
+      "imageLoads": 77,
+      "imageErrors": 0,
+      "activeImages": 0,
+      "peakActiveImages": 1,
+      "indexedAtlases": 62,
+      "loadedAtlases": 2,
+      "droppedEffects": 0,
+      "textureCount": 56,
+      "textureRGBABytes": 55638768,
+      "decodedAudioBytes": 5236932,
+      "imageQueue": {
+        "active": 0,
+        "queued": 0
+      }
+    },
+    "seconds": 14.44
+  },
+  "comparison_limitations": "Baseline and fixed comparison use the same local-resource adapter and 1 ms resource scheduler delay. Samples are taken approximately 10 seconds after game initialization, not identical gameplay frames. Timing is not a TV benchmark.",
+  "extended_test": {
+    "configured_resource_gap_ms": 50,
+    "duration_seconds": 82.07,
+    "ready": true,
+    "keyboard_inputs": [
+      "Enter",
+      "Space",
+      "ArrowRight",
+      "Space"
+    ],
+    "last_cache_sample": {
+      "ready": true,
+      "percent": "Loading... 0%",
+      "imageCount": 89,
+      "imageRGBABytes": 117240028,
+      "decodedAudio": 22,
+      "audioPCMBytes": 10308720,
+      "frameCount": 921,
+      "textureCount": 55,
+      "runtime": {
+        "imageLoads": 89,
+        "imageErrors": 0,
+        "activeImages": 0,
+        "peakActiveImages": 1,
+        "indexedAtlases": 62,
+        "loadedAtlases": 4,
+        "droppedEffects": 10,
+        "textureCount": 55,
+        "textureRGBABytes": 48238784,
+        "decodedAudioBytes": 10308720,
+        "imageQueue": {
+          "active": 0,
+          "queued": 0
+        }
+      },
+      "seconds": 82.07
+    },
+    "screenshot": "startup_canvas.png"
+  },
+  "node_tests": {
+    "passed": 12,
+    "failed": 0,
+    "command": "node tests/memory_tests.js"
+  },
+  "browser_assertions": [
+    {
+      "name": "game startup completed",
+      "passed": true
+    },
+    {
+      "name": "global image concurrency stays at one",
+      "passed": true
+    },
+    {
+      "name": "background atlas preload is disabled",
+      "passed": true
+    },
+    {
+      "name": "no startup music decoded into AudioBuffers",
+      "passed": true
+    },
+    {
+      "name": "pending frame preserves texture reference",
+      "passed": true
+    },
+    {
+      "name": "lazy Scale9Sprite survives initial decode",
+      "passed": true
+    },
+    {
+      "name": "lazy Scale9Sprite preserves preferred size",
+      "passed": true
+    },
+    {
+      "name": "lazy sprite gets its final texture",
+      "passed": true
+    },
+    {
+      "name": "late old texture cannot overwrite current frame",
+      "passed": true
+    },
+    {
+      "name": "music uses HTML audio rather than a decoded buffer",
+      "passed": true
+    },
+    {
+      "name": "music volume retained",
+      "passed": true
+    },
+    {
+      "name": "music pauses",
+      "passed": true
+    },
+    {
+      "name": "music resumes",
+      "passed": true
+    },
+    {
+      "name": "switching music releases old media source",
+      "passed": true
+    },
+    {
+      "name": "stopping music releases current source",
+      "passed": true
+    },
+    {
+      "name": "cache purge does not reload all atlases",
+      "passed": true
+    },
+    {
+      "name": "frame lookup restores requested atlas after purge",
+      "passed": true
+    },
+    {
+      "name": "failed startup resource does not enter game",
+      "passed": true
+    }
+  ],
+  "syntax_checks": [
+    {
+      "file": "assets/main.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/cocos2d/labels/CCLabelBMFontCanvasRenderCmd.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/cocos2d/core/scenes/CCLoaderScene.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "recovered-src/src/common/audioMgr.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "assets/image-sizes.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "assets/webos-memory.js",
+      "passed": true,
+      "error": ""
+    }
+  ],
+  "missing_assets_during_test": [],
+  "browser_warnings": {
+    "baseline": [
+      "A network error occurred.\n",
+      "A network error occurred.\n",
+      "A network error occurred.\n"
+    ],
+    "fixed": [
+      "A network error occurred.\n",
+      "A network error occurred.\n",
+      "A network error occurred.\n",
+      "A network error occurred.\n",
+      "A network error occurred.\n"
+    ],
+    "extended": [
+      "A network error occurred.\n",
+      "A network error occurred.\n",
+      "A network error occurred.\n",
+      "A network error occurred.\n",
+      "A network error occurred.\n"
+    ],
+    "explanation": "Local offline adapter does not serve CSS font URLs. These network warnings also occur in the original project. No TypeError in either final fixed run."
+  },
+  "not_tested": [
+    "Physical webOS TV installation and startup",
+    "WebGL rendering/driver on TV",
+    "Audio audibility and TV-specific codec/media limits",
+    "Every game level and long-session memory behavior",
+    "IPK package build: CLI dependency installation failed because npm registry DNS was unavailable"
+  ],
+  "official_references": {
+    "cli": "https://webostv.developer.lge.com/develop/tools/cli-dev-guide",
+    "audio_buffer": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer",
+    "tv_memory_measurement": "https://webostv.developer.lge.com/develop/tools/resource-monitor-dev-guide"
+  }
+}

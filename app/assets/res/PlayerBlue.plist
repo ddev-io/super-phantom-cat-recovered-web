@@ -1,0 +1,2358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>img_hero_blue_get_bomb_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{681, 781}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 7}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{269, 344}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 6}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{356, 287}, {57, 84}}</string>
+			<key>offset</key>
+			<string>{3, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 6}, {57, 84}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{717, 356}, {56, 86}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 4}, {56, 86}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{553, 167}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{370, 172}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{889, 113}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{514, 61}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-3, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{321, 62}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{826, 224}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{97, 143}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{92, 200}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 62}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{597, 114}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-3, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{689, 114}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{188, 172}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{280, 115}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{279, 172}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{413, 62}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{889, 60}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-3, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{97, 90}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 203}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{644, 167}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{735, 180}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{606, 61}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{698, 61}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-3, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{505, 114}, {51, 90}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {51, 90}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{461, 224}, {51, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {51, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{917, 252}, {52, 89}}</string>
+			<key>offset</key>
+			<string>{-2, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {52, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{371, 115}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{462, 167}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{189, 115}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 146}, {55, 89}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {55, 89}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{92, 254}, {54, 88}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 2}, {54, 88}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{894, 367}, {54, 86}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 4}, {54, 86}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{269, 287}, {55, 85}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 5}, {55, 85}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{86, 951}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 7}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{86, 894}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 7}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_get_bomb_0039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 922}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 7}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{63, 90}</string>
+		</dict>
+		<key>img_hero_blue_huxi1_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{426, 871}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{55, 83}</string>
+		</dict>
+		<key>img_hero_blue_huxi1_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{511, 831}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{55, 83}</string>
+		</dict>
+		<key>img_hero_blue_huxi1_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{341, 950}, {54, 83}}</string>
+			<key>offset</key>
+			<string>{1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {54, 83}}</string>
+			<key>sourceSize</key>
+			<string>{55, 83}</string>
+		</dict>
+		<key>img_hero_blue_huxi1_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{681, 724}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{55, 83}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{86, 720}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{598, 602}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{601, 540}, {60, 83}}</string>
+			<key>offset</key>
+			<string>{0, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {60, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{783, 461}, {63, 83}}</string>
+			<key>offset</key>
+			<string>{1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {63, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{516, 529}, {64, 83}}</string>
+			<key>offset</key>
+			<string>{3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 11}, {64, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{606, 474}, {64, 83}}</string>
+			<key>offset</key>
+			<string>{3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 11}, {64, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{698, 414}, {65, 83}}</string>
+			<key>offset</key>
+			<string>{3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 11}, {65, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{431, 508}, {67, 83}}</string>
+			<key>offset</key>
+			<string>{4, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 11}, {67, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{521, 459}, {68, 83}}</string>
+			<key>offset</key>
+			<string>{5, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 11}, {68, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{953, 484}, {69, 82}}</string>
+			<key>offset</key>
+			<string>{5, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {69, 82}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{963, 166}, {60, 84}}</string>
+			<key>offset</key>
+			<string>{0, -5}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 10}, {60, 84}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{890, 1}, {57, 91}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {57, 91}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{796, 1}, {57, 92}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 2}, {57, 92}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{514, 1}, {58, 92}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 2}, {58, 92}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{702, 1}, {58, 92}}</string>
+			<key>offset</key>
+			<string>{-6, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 2}, {58, 92}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{419, 1}, {59, 93}}</string>
+			<key>offset</key>
+			<string>{-6, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 1}, {59, 93}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 84}, {60, 94}}</string>
+			<key>offset</key>
+			<string>{-7, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 0}, {60, 94}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{324, 1}, {59, 93}}</string>
+			<key>offset</key>
+			<string>{-6, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 1}, {59, 93}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 1}, {59, 93}}</string>
+			<key>offset</key>
+			<string>{-6, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 1}, {59, 93}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{608, 1}, {58, 92}}</string>
+			<key>offset</key>
+			<string>{-6, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 2}, {58, 92}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{796, 60}, {57, 91}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {57, 91}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{872, 166}, {56, 89}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 5}, {56, 89}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{629, 285}, {55, 87}}</string>
+			<key>offset</key>
+			<string>{-2, -3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 7}, {55, 87}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 340}, {55, 85}}</string>
+			<key>offset</key>
+			<string>{-2, -4}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{11, 9}, {55, 85}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{428, 577}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{767, 708}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{512, 655}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 629}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{938, 713}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{342, 602}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{86, 601}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{86, 661}, {57, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {57, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 754}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{426, 697}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{171, 697}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{341, 662}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{426, 813}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{596, 722}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{86, 836}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 806}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0041.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{341, 720}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0042.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 748}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0043.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 696}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0044.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 638}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0045.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{511, 773}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0046.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 864}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0047.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{171, 813}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0048.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{426, 755}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0049.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{86, 778}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0050.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{341, 778}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0051.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{511, 715}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0052.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{171, 755}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0053.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{937, 773}, {57, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {57, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0054.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{768, 648}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0055.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{776, 526}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0056.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{868, 484}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0057.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{258, 517}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0058.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{87, 540}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0059.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{856, 606}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0060.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 568}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0061.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{173, 517}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0062.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{946, 568}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0063.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{771, 587}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0064.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{861, 545}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0065.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{686, 543}, {59, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {59, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0066.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{683, 604}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0067.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{343, 542}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0068.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{682, 664}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0069.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{427, 637}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0070.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{852, 727}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0071.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{597, 662}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0072.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{257, 578}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0073.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{172, 578}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0074.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{171, 638}, {57, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {57, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0075.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{853, 667}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0076.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{766, 825}, {58, 82}}</string>
+			<key>offset</key>
+			<string>{-2, -6}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 12}, {58, 82}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0077.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{941, 653}, {58, 82}}</string>
+			<key>offset</key>
+			<string>{-2, -6}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 12}, {58, 82}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0078.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{513, 595}, {58, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {58, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0079.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 689}, {57, 83}}</string>
+			<key>offset</key>
+			<string>{-2, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {57, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi2_0080.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 812}, {56, 83}}</string>
+			<key>offset</key>
+			<string>{-3, -5}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 11}, {56, 83}}</string>
+			<key>sourceSize</key>
+			<string>{83, 94}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{182, 287}, {56, 85}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 85}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{260, 460}, {55, 84}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {55, 84}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{87, 484}, {54, 84}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {54, 84}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{596, 837}, {54, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 2}, {54, 83}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{527, 403}, {54, 84}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {54, 84}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{426, 928}, {54, 83}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {54, 83}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{90, 310}, {56, 85}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 85}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{441, 396}, {55, 84}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {55, 84}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{173, 461}, {54, 84}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {54, 84}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{851, 787}, {54, 83}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 2}, {54, 83}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 512}, {54, 84}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {54, 84}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_huxi_bomb_0012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{511, 888}, {54, 83}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {54, 83}}</string>
+			<key>sourceSize</key>
+			<string>{58, 85}</string>
+		</dict>
+		<key>img_hero_blue_injure_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{691, 481}, {60, 83}}</string>
+			<key>offset</key>
+			<string>{3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {60, 83}}</string>
+			<key>sourceSize</key>
+			<string>{79, 85}</string>
+		</dict>
+		<key>img_hero_blue_injure_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{613, 403}, {69, 83}}</string>
+			<key>offset</key>
+			<string>{1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 2}, {69, 83}}</string>
+			<key>sourceSize</key>
+			<string>{79, 85}</string>
+		</dict>
+		<key>img_hero_blue_injure_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{346, 461}, {79, 83}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 2}, {79, 83}}</string>
+			<key>sourceSize</key>
+			<string>{79, 85}</string>
+		</dict>
+		<key>img_hero_blue_jump_down_.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{596, 893}, {54, 81}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {54, 81}}</string>
+			<key>sourceSize</key>
+			<string>{54, 81}</string>
+		</dict>
+		<key>img_hero_blue_jump_up_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 927}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 84}</string>
+		</dict>
+		<key>img_hero_blue_jump_up_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 455}, {55, 84}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {55, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 84}</string>
+		</dict>
+		<key>img_hero_blue_jump_up_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{596, 780}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 84}</string>
+		</dict>
+		<key>img_hero_blue_jump_up_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{435, 453}, {53, 84}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {53, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 84}</string>
+		</dict>
+		<key>img_hero_blue_jump_up_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{681, 838}, {54, 82}}</string>
+			<key>offset</key>
+			<string>{2, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 0}, {54, 82}}</string>
+			<key>sourceSize</key>
+			<string>{57, 84}</string>
+		</dict>
+		<key>img_hero_blue_run_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{171, 928}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{256, 870}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{355, 346}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{174, 403}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{177, 345}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 397}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{528, 346}, {55, 84}}</string>
+			<key>offset</key>
+			<string>{0, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {55, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{341, 893}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{341, 836}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{171, 871}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{263, 402}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{87, 426}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{88, 368}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{442, 338}, {56, 84}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {56, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{349, 404}, {55, 84}}</string>
+			<key>offset</key>
+			<string>{0, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 0}, {55, 84}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_0016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{766, 768}, {55, 83}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {55, 83}}</string>
+			<key>sourceSize</key>
+			<string>{57, 86}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{805, 400}, {59, 85}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 6}, {59, 85}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{273, 226}, {59, 87}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 5}, {59, 87}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{912, 306}, {59, 88}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 3}, {59, 88}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{451, 277}, {59, 87}}</string>
+			<key>offset</key>
+			<string>{1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {59, 87}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{718, 295}, {59, 86}}</string>
+			<key>offset</key>
+			<string>{1, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {59, 86}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{552, 224}, {59, 88}}</string>
+			<key>offset</key>
+			<string>{1, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {59, 88}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{822, 278}, {59, 88}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 3}, {59, 88}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{806, 339}, {59, 86}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 5}, {59, 86}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{892, 423}, {59, 85}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 6}, {59, 85}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{362, 226}, {59, 87}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 5}, {59, 87}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{732, 234}, {59, 88}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 3}, {59, 88}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{540, 285}, {59, 87}}</string>
+			<key>offset</key>
+			<string>{1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {59, 87}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{183, 226}, {59, 88}}</string>
+			<key>offset</key>
+			<string>{1, 2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {59, 88}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{781, 119}, {59, 89}}</string>
+			<key>offset</key>
+			<string>{1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {59, 89}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{642, 224}, {59, 88}}</string>
+			<key>offset</key>
+			<string>{0, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 3}, {59, 88}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_run_bomb_0016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{629, 342}, {59, 86}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 5}, {59, 86}}</string>
+			<key>sourceSize</key>
+			<string>{61, 92}</string>
+		</dict>
+		<key>img_hero_blue_smash_huxi_.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{511, 944}, {80, 49}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {80, 49}}</string>
+			<key>sourceSize</key>
+			<string>{80, 49}</string>
+		</dict>
+		<key>img_hero_red__ShunYi_In_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 257}, {81, 87}}</string>
+			<key>offset</key>
+			<string>{17, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{77, 9}, {81, 87}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>img_hero_red__ShunYi_Out_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{130, 1}, {97, 87}}</string>
+			<key>offset</key>
+			<string>{-46, -2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{5, 9}, {97, 87}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>img_hero_red__ShunYi_Out_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {127, 81}}</string>
+			<key>offset</key>
+			<string>{-8, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{28, 11}, {127, 81}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>PlayerBlue.png</string>
+	</dict>
+</dict>
+</plist>

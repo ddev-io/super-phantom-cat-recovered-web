@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Super Cat Web v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="screen-orientation" content="landscape">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <link rel="icon" href="res/icon_index_play.png">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+        }
+        canvas {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            display: block;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+    <script>
+    window.__supercatLowMemory = true;
+    window.__supercatSkipAudioStartupPreload = true;
+    window.__supercatSkipImageStartupPreload = true;
+    window.__supercatDisableBackgroundTexturePreload = true;
+    window.__supercatImageLoadConcurrency = 1;
+    window.__supercatNoAudioExtFallback = true;
+    window.__supercatFlatAudioPath = true;
+    window.__supercatResourceLoadConcurrency = 1;
+    window.__supercatResourceLoadDelayMs = 50;
+    window.__supercatDisableClientReport = true;
+    (function () {
+        if (window.__supercatDisableClientReport) { return; }
+        var endpoint = "/__supercat_client_log";
+        var seq = 0;
+        function safeString(value) {
+            try {
+                if (value && value.stack) return String(value.stack);
+                if (typeof value === "string") return value;
+                return JSON.stringify(value);
+            } catch (err) {
+                return String(value);
+            }
+        }
+        function report(kind, data) {
+            var payload = {
+                seq: ++seq,
+                kind: kind,
+                href: location.href,
+                userAgent: navigator.userAgent,
+                time: new Date().toISOString(),
+                data: data
+            };
+            try {
+                if (navigator.sendBeacon) {
+                    var blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
+                    if (navigator.sendBeacon(endpoint, blob)) return;
+                }
+            } catch (err) {}
+            try {
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                    keepalive: true
+                }).catch(function () {});
+            } catch (err) {}
+        }
+        window.__supercatClientReport = report;
+        window.addEventListener("error", function (event) {
+            report("window.error", {
+                message: event.message,
+                filename: event.filename,
+                lineno: event.lineno,
+                colno: event.colno,
+                error: safeString(event.error)
+            });
+        }, true);
+        window.addEventListener("unhandledrejection", function (event) {
+            report("unhandledrejection", {
+                reason: safeString(event.reason)
+            });
+        });
+        ["error", "warn"].forEach(function (level) {
+            var original = console[level];
+            console[level] = function () {
+                var args = Array.prototype.slice.call(arguments).map(safeString);
+                report("console." + level, { args: args });
+                if (original && original.apply) return original.apply(console, arguments);
+            };
+        });
+        report("boot-probe", { message: "index.webv1.html loaded" });
+    })();
+    </script>
+    <script src="project.webv1.js?v=20260920-render1"></script>
+    <script src="../frameworks/cocos2d-html5/CCBoot.js?v=20260920-render1"></script>
+    <script src="image-sizes.js?v=20260920-render1"></script>
+    <script src="webos-memory.js?v=20260920-render1"></script>
+    <script src="main.js?v=20260920-render1"></script>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+</body>
+</html>
+

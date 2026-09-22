@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="350" height="45" tilewidth="64" tileheight="64" nextobjectid="405">
+ <properties>
+  <property name="bg" value="lyBG7_1"/>
+  <property name="bgm" value="bgm_4"/>
+  <property name="isParkour" value="1"/>
+ </properties>
+ <tileset firstgid="1" name="forest" tilewidth="70" tileheight="70">
+  <tileoffset x="-3" y="3"/>
+  <image source="forest1_1.png" width="700" height="980"/>
+  <tile id="0">
+   <properties>
+    <property name="isShow" value="1"/>
+    <property name="maxX" value="131"/>
+    <property name="maxY" value="18"/>
+    <property name="x" value="124"/>
+    <property name="y" value="13"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="mainBG" width="350" height="45">
+  <data encoding="base64" compression="zlib">
+   eJzt3E1u4zAMBlDfpr3YTH8Wuf9y3J1hiKLSGPKAeg8wGqR2voAIaEZxsm0AAAAAAAAAAAAAAAAAwG+8n7a34Pb7XU8QoJhWzz3+PfZegLu8Fcpt9dqoD89Wqc5y5a6We7VK9WutJ0T9d7ZKdZYrd7Xcq1WqX2/WPa83zFapznLlrpZ7tUr1a827536r78qVK/dulep37KvRZ2r6rly5cu9WqX7R+m6rB89Wqc5y5a6We7VK9TvPu1H/1XflypV7p0r1a32Odr5vpb77Z9/+7tvHvn3u29e+fU/KrvS6kiv3apXqF12v27q2YbZKdZYrd7Xcq1WqXzTfrjrvypUr9/9UqX7Z9bvHPjxbpTrLlbta7tUq1S9a122t+85Wqc5y5a6W+4reemfrutfe9w56vz/T+35ulNebU7NrE6J1hV72bKu9TuXKrZT7il7P7fWxrNdGv7U4ut7a67FZVnbe8PsMcuXKvVM2hz4zv4701d4+2Tlg9LqEqI9n+wHMEM2CUS98Zo1gZE4e7aO9+3szcra2cLwPYIaR9/VZHxydPUfm45E5NZvBszWJaF+AGX4zH2Zzbe921quzx82Oi3p6L9e8C8zy2PrzY9brejPkyNrFyPG9/pqdC7K1kvNjAczw7Nw5siaQHfOzPba8P0bngOzYkfzW+QBghpH35j/7PLbxfnv+X6tPjvT7bA5+dubO5m8AXhf12VZvBgAAAAAAAAAAAAAAAAAAAPgHvcOPBA==
+  </data>
+ </layer>
+ <layer name="bg_extra_area1" width="350" height="45">
+  <data encoding="base64" compression="zlib">
+   eJzt1rENgDAMAMFsA/tPiDJCCPkC3UnuXLh6eQwAAAAAAAAAAAAAAAAA4I1rYQDYp7sALd0FaOkuQEt3AVq6C9DSXYCW7gK0dBegpbsALd0FaOkuQEt3AVq6C9DSXYCW7gK0dBegpbsArS+7O3fuM2cC/IZ/F6CluwAt3QVo6S5AS3cBAAAAAAAAAAAAAAAAAACAFQ+0iyiI
+  </data>
+ </layer>
+ <layer name="main" width="350" height="45">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="mainEx" width="350" height="45">
+  <properties>
+   <property name="maxX" value="59"/>
+   <property name="maxY" value="20"/>
+   <property name="x" value="58"/>
+   <property name="y" value="20"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztw7EJAAAIA7Ce7um+UFdJIAkAAAAAAAAAAAAAAAAAAAAAAAAAAPw1RQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADuFoT8BIE=
+  </data>
+ </layer>
+ <layer name="mask1" width="350" height="45">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20Gf6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgP2GAAB
+  </data>
+ </layer>
+ <layer name="extra_area1" width="350" height="45" opacity="0.44">
+  <data encoding="base64" compression="zlib">
+   eJzt27EJwCAQBVBXC06QBTJD9q9SCRIS0xwKl/fgVzZXfQ7RUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiFS7AABABlsXAADIwD0uwHzn6gEAfqS+BAAAsrL7Aqyzrx4AIJFjcNZ2Xb0LEGfUu43eBYhz792n/2p6F2AuvQsQ6+vtgt4FAAAAAAAAAAAAAAAAAAAAAADgDy5DeAq5
+  </data>
+ </layer>
+ <layer name="extra_enemy1" width="350" height="45">
+  <properties>
+   <property name="maxX" value="120"/>
+   <property name="maxY" value="19"/>
+   <property name="x" value="114"/>
+   <property name="y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgENADAIAzCkT/pljIdWQWcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdko7AHBU2gGAo9IOAByVdgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPvYAJ44CAQ==
+  </data>
+ </layer>
+ <objectgroup name="objConfig">
+  <object id="393" type="player" gid="120" x="384" y="1984"/>
+  <object id="395" name="right" type="enemy" gid="101" x="7296" y="1088"/>
+  <object id="396" name="right" type="enemy" gid="101" x="7424" y="1152"/>
+  <object id="397" name="right" type="enemy" gid="101" x="7680" y="1280"/>
+  <object id="398" name="right" type="enemy" gid="101" x="7552" y="1216"/>
+ </objectgroup>
+ <objectgroup name="triggerConfig">
+  <object id="394" name="extra_area1" type="ShowExtra" gid="104" x="4224" y="1984"/>
+  <object id="399" name="extra_enemy1" type="ShowExtra" gid="104" x="7168" y="960"/>
+  <object id="400" name="extra_enemy1" type="ShowExtra" gid="104" x="7168" y="896"/>
+  <object id="401" name="extra_enemy1" type="ShowExtra" gid="104" x="7168" y="832"/>
+  <object id="402" name="extra_enemy1" type="ShowExtra" gid="104" x="7168" y="768"/>
+  <object id="403" name="extra_enemy1" type="ShowExtra" gid="104" x="7168" y="704"/>
+  <object id="404" name="extra_enemy1" type="ShowExtra" gid="104" x="7168" y="640"/>
+ </objectgroup>
+ <objectgroup name="coinList1"/>
+ <objectgroup name="coinList2"/>
+ <layer name="dangerous" width="350" height="45">
+  <data encoding="base64" compression="zlib">
+   eJzt2rEJACAQA0AndBRLa0cXN7B4fNG7CVKGkFIAAAAAACBezw4A8IGaHQAAAAKM7AAAAAAAAAAAAAB8qWUHAACAC+jFAAAAAAB3sdsCAPAyfRcAAPRiAAAAAAAAAOAcPwUAAAAgyu7OYI8AAAAAAAAAAAAAAAAAAAAAlgmctwS1
+  </data>
+ </layer>
+</map>

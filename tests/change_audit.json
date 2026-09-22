@@ -1,0 +1,63 @@
+{
+  "changed": [
+    "appinfo.json",
+    "assets/main.js",
+    "assets/index.webv1.html",
+    "frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js",
+    "frameworks/cocos2d-html5/cocos2d/labels/CCLabelBMFontCanvasRenderCmd.js",
+    "frameworks/cocos2d-html5/cocos2d/core/scenes/CCLoaderScene.js",
+    "frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js",
+    "recovered-src/src/common/audioMgr.js"
+  ],
+  "added": [
+    "assets/image-sizes.js",
+    "assets/webos-memory.js"
+  ],
+  "deleted": [],
+  "syntax_checks": [
+    {
+      "file": "assets/main.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/cocos2d/labels/CCLabelBMFontCanvasRenderCmd.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/cocos2d/core/scenes/CCLoaderScene.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "recovered-src/src/common/audioMgr.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "assets/image-sizes.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "assets/webos-memory.js",
+      "passed": true,
+      "error": ""
+    }
+  ],
+  "original_assets_unchanged": true,
+  "resource_entries": 1848,
+  "unresolved_resource_entries": [],
+  "version": "1.0.8"
+}

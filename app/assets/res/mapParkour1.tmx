@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="335" height="40" tilewidth="64" tileheight="64" nextobjectid="2904">
+ <properties>
+  <property name="bg" value="lyBG11disco_2"/>
+  <property name="bgm" value="bgm_discrun1"/>
+  <property name="isParkour" value="1"/>
+ </properties>
+ <tileset firstgid="1" name="forest" tilewidth="70" tileheight="70">
+  <tileoffset x="-3" y="3"/>
+  <image source="forest7.png" width="700" height="980"/>
+  <tile id="16">
+   <properties>
+    <property name="isShow" value="1"/>
+    <property name="maxX" value="23"/>
+    <property name="maxY" value="203"/>
+    <property name="x" value="18"/>
+    <property name="y" value="191"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="isShow" value="1"/>
+    <property name="maxX" value="23"/>
+    <property name="maxY" value="203"/>
+    <property name="x" value="18"/>
+    <property name="y" value="191"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="isShow" value="1"/>
+    <property name="maxX" value="23"/>
+    <property name="maxY" value="203"/>
+    <property name="x" value="18"/>
+    <property name="y" value="191"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="mainBG" width="335" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2lsOwiAUQEF346Lq/tfhjx+EgECbPrjMJI0xGtOCHBvb1wsAAAAAAAAAAAAAAAAAAAAAAJjBlm0AtGknwH+fwpa3s/QegJVpJ8A47QQYp50AbXn7jraz93pStO66jna/92+bVaT1sIK0j+lz7Ryjnfd7ajtL66X0vb9qPfTuR+/+rHoPTtrH2hyf0c5UhLHPx4XraefY/uTrurbOW2Zdv6156X19yx5H23nk/89Zxz6VjkuE47lCxPuGax3qMWs7S589w/lDhHbWjofYtDOep67f1rzsmbdaO1u/Sa2e7vXUsQfmtUI7AQAAAAAAAAAAAAAAAAAAAAAAONcX9MOGUg==
+  </data>
+ </layer>
+ <layer name="main" width="335" height="40">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="extra_monster2" width="335" height="40">
+  <properties>
+   <property name="maxX" value="221"/>
+   <property name="maxY" value="15"/>
+   <property name="x" value="194"/>
+   <property name="y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzrEJADAMA0GPrtHTp3ITjMkdqBVfBQAAAAAAAAAAAAAAAAAA0JPpAICF8vD3HsCvMh0AsFCmAwAWynQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQcQKAFAQ==
+  </data>
+ </layer>
+ <layer name="extra_area1" width="335" height="40">
+  <properties>
+   <property name="maxX" value="90"/>
+   <property name="maxY" value="21"/>
+   <property name="x" value="89"/>
+   <property name="y" value="14"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt17sKgEAMRcFVEO18/rO/7S5aWlgIITADtz9VIKUAAAAAAAAAAAAAAAAAAAAAAADAu76ui44ASGaom6IjAJJpd3OMjgBIZqs7oiMAkpnr1ugIgGSWZwB81372MzoCIJm93H87AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/7gAerABQQ==
+  </data>
+ </layer>
+ <layer name="mask1" width="335" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1LEJAAAIwDD/9P8/3F3ERRAS6AuNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4ky0AZt4JsOedAHveCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8VQMcFsQ==
+  </data>
+ </layer>
+ <objectgroup name="objConfig">
+  <object id="2635" type="player" gid="120" x="704" y="1536"/>
+  <object id="2753" name="-1,0,-8" type="fire" gid="101" x="4352" y="1920"/>
+  <object id="2754" name="-1,0,-8" type="fire" gid="101" x="4864" y="1920"/>
+  <object id="2771" name="-1,0,-8" type="fire" gid="101" x="8256" y="1920"/>
+  <object id="2772" name="-1,0,0,0" type="enemy" gid="101" x="8896" y="1600"/>
+  <object id="2782" name="-1,0,0,0" type="enemy" gid="101" x="9216" y="1472"/>
+  <object id="2783" name="-1,0,1,0,right" type="enemy" gid="101" x="9600" y="1536"/>
+  <object id="2828" name="-1,0,2,0" type="enemy" gid="101" x="12544" y="1472"/>
+  <object id="2829" name="-1,0,2,0" type="enemy" gid="101" x="12736" y="1600"/>
+  <object id="2830" name="-1,0,-8" type="fire" gid="101" x="13888" y="1920"/>
+  <object id="2833" name="-1,0,0,0" type="enemy" gid="101" x="15424" y="1664"/>
+  <object id="2834" name="-1,0,0,0" type="enemy" gid="101" x="15744" y="1536"/>
+  <object id="2838" name="-1,0,2,0" type="enemy" gid="101" x="18432" y="1344"/>
+  <object id="2854" name="-3,0,1,0" type="enemy" gid="101" x="12480" y="1344"/>
+  <object id="2855" name="-1,0,2,0" type="enemy" gid="101" x="18624" y="1472"/>
+  <object id="2856" name="-1,0,2,0" type="enemy" gid="101" x="18816" y="1600"/>
+  <object id="2857" name="-1,0,1,0,right" type="enemy" gid="101" x="3648" y="1600"/>
+  <object id="2858" name="-1,0,1,0" type="enemy" gid="101" x="18432" y="1216"/>
+  <object id="2859" name="-1,0,-8" type="fire" gid="101" x="14912" y="1920"/>
+  <object id="2865" name="-1,0,0,0" type="enemy" gid="101" x="13888" y="1664"/>
+  <object id="2873" name="-2,0,1,0" type="enemy" gid="101" x="11584" y="1408"/>
+  <object id="2880" name="-1,0,0,0" type="enemy" gid="101" x="16896" y="1536"/>
+  <object id="2898" name="-1,0,0,0" type="enemy" gid="101" x="17024" y="1536"/>
+  <object id="2899" name="-1,0,0,0" type="enemy" gid="101" x="17152" y="1536"/>
+  <object id="2900" name="-1,0,0,0" type="enemy" gid="101" x="17280" y="1536"/>
+  <object id="2901" name="-1,0,0,0" type="enemy" gid="101" x="17408" y="1536"/>
+  <object id="2902" name="-1,0,0,0" type="enemy" gid="101" x="17536" y="1536"/>
+ </objectgroup>
+ <objectgroup name="triggerConfig">
+  <object id="2653" name="4;Get Ready;Here comes the chanllange!;10;(4,0)" type="ShowText" gid="105" x="7488" y="1536"/>
+  <object id="2654" name="4;Get Ready;Here comes the chanllange!;10;(4,1)" type="ShowText" gid="105" x="7488" y="1472"/>
+  <object id="2655" name="4;Get Ready;Here comes the chanllange!;10;(4,2)" type="ShowText" gid="105" x="7488" y="1408"/>
+  <object id="2656" name="4;Get Ready;Here comes the chanllange!;10;(4,3)" type="ShowText" gid="105" x="7488" y="1344"/>
+  <object id="2657" name="4;Get Ready;Here comes the chanllange!;10;(4,4)" type="ShowText" gid="105" x="7488" y="1280"/>
+  <object id="2712" name="1;Parkour;Keep calm, it's a new style.;10;(2,4)" type="ShowText" gid="105" x="1216" y="1344"/>
+  <object id="2713" name="1;Parkour;Keep calm, it's a new style.;10;(2,2)" type="ShowText" gid="105" x="1216" y="1472"/>
+  <object id="2714" name="1;Parkour;Keep calm, it's a new style.;10;(2,3)" type="ShowText" gid="105" x="1216" y="1408"/>
+  <object id="2715" name="1;Parkour;Keep calm, it's a new style.;10;(2,0)" type="ShowText" gid="105" x="1216" y="1600"/>
+  <object id="2716" name="1;Parkour;Keep calm, it's a new style.;10;(2,7)" type="ShowText" gid="105" x="1216" y="1152"/>
+  <object id="2717" name="1;Parkour;Keep calm, it's a new style.;10;(2,8)" type="ShowText" gid="105" x="1216" y="1088"/>
+  <object id="2718" name="1;Parkour;Keep calm, it's a new style.;10;(2,1)" type="ShowText" gid="105" x="1216" y="1536"/>
+  <object id="2719" name="1;Parkour;Keep calm, it's a new style.;10;(2,5)" type="ShowText" gid="105" x="1216" y="1280"/>
+  <object id="2721" name="1;Parkour;Keep calm, it's a new style.;10;(2,6)" type="ShowText" gid="105" x="1216" y="1216"/>
+  <object id="2745" name="2;watch;Catch the chance.;10;(4,5)" type="ShowText" gid="105" x="3648" y="1280"/>
+  <object id="2746" name="2;watch;Catch the chance.;10;(4,3)" type="ShowText" gid="105" x="3648" y="1408"/>
+  <object id="2747" name="2;watch;Catch the chance.;10;(4,4)" type="ShowText" gid="105" x="3648" y="1344"/>
+  <object id="2748" name="2;watch;Catch the chance.;10;(4,8)" type="ShowText" gid="105" x="3648" y="1088"/>
+  <object id="2749" name="2;watch;Catch the chance.;10;(4,7)" type="ShowText" gid="105" x="3648" y="1152"/>
+  <object id="2750" name="2;watch;Catch the chance.;10;(4,6)" type="ShowText" gid="105" x="3648" y="1216"/>
+  <object id="2757" name="2;watch;Catch the chance.;10;(4,2)" type="ShowText" gid="105" x="3648" y="1472"/>
+  <object id="2758" name="2;watch;Catch the chance.;10;(4,1)" type="ShowText" gid="105" x="3648" y="1536"/>
+  <object id="2759" name="2;watch;Catch the chance.;10;(4,0)" type="ShowText" gid="105" x="3648" y="1600"/>
+  <object id="2760" type="CameraYFreeze" gid="105" x="896" y="1536"/>
+  <object id="2761" type="CameraYFreeze" gid="105" x="960" y="1536"/>
+  <object id="2762" type="CameraYFreeze" gid="105" x="1024" y="1536"/>
+  <object id="2763" type="CameraYFreeze" gid="105" x="1088" y="1536"/>
+  <object id="2764" type="CameraYFreeze" gid="105" x="1152" y="1536"/>
+  <object id="2765" type="CameraYFreeze" gid="105" x="7552" y="1536"/>
+  <object id="2766" type="CameraYFreeze" gid="105" x="7616" y="1536"/>
+  <object id="2767" type="CameraYFreeze" gid="105" x="7680" y="1536"/>
+  <object id="2768" type="CameraYFreeze" gid="105" x="7808" y="1536"/>
+  <object id="2769" type="CameraYFreeze" gid="105" x="7744" y="1536"/>
+  <object id="2786" name="1" type="BigCoin" gid="105" x="6656" y="1280"/>
+  <object id="2787" type="CameraYResume" gid="106" x="11200" y="1024"/>
+  <object id="2788" type="CameraYResume" gid="106" x="11264" y="1024"/>
+  <object id="2789" type="CameraYResume" gid="106" x="11392" y="1024"/>
+  <object id="2790" type="CameraYResume" gid="106" x="11328" y="1024"/>
+  <object id="2791" type="CameraYResume" gid="106" x="11456" y="1024"/>
+  <object id="2812" name="2" type="BigCoin" gid="105" x="13824" y="576"/>
+  <object id="2813" name="extra_monster2" type="ShowExtra" gid="104" x="11520" y="960"/>
+  <object id="2814" name="extra_monster2" type="ShowExtra" gid="104" x="11520" y="896"/>
+  <object id="2815" name="extra_monster2" type="ShowExtra" gid="104" x="11520" y="832"/>
+  <object id="2816" name="extra_monster2" type="ShowExtra" gid="104" x="11520" y="768"/>
+  <object id="2817" name="extra_monster2" type="ShowExtra" gid="104" x="11520" y="704"/>
+  <object id="2818" name="extra_monster2" type="ShowExtra" gid="104" x="11520" y="640"/>
+  <object id="2819" name="extra_monster2" type="ShowExtra" gid="104" x="11584" y="896"/>
+  <object id="2820" type="CameraYFreeze" gid="105" x="13888" y="1536"/>
+  <object id="2821" type="CameraYFreeze" gid="105" x="13824" y="1536"/>
+  <object id="2822" type="CameraYFreeze" gid="105" x="14016" y="1536"/>
+  <object id="2823" type="CameraYFreeze" gid="105" x="13952" y="1536"/>
+  <object id="2824" type="CameraYFreeze" gid="105" x="14144" y="1536"/>
+  <object id="2825" type="CameraYFreeze" gid="105" x="14208" y="1536"/>
+  <object id="2826" type="CameraYFreeze" gid="105" x="14080" y="1536"/>
+  <object id="2827" type="CameraYFreeze" gid="105" x="14272" y="1536"/>
+  <object id="2835" name="3" type="BigCoin" gid="105" x="17088" y="1280"/>
+  <object id="2840" name="coinList1" type="ShowCoins" gid="102" x="7808" y="1472"/>
+  <object id="2863" type="CameraYFreeze" gid="105" x="14400" y="1536"/>
+  <object id="2864" type="CameraYFreeze" gid="105" x="14336" y="1536"/>
+  <object id="2874" name="mask1" type="HideMask" gid="103" x="16768" y="1472"/>
+  <object id="2875" name="mask1" type="HideMask" gid="103" x="16768" y="1408"/>
+  <object id="2876" name="mask1" type="HideMask" gid="103" x="16768" y="1280"/>
+  <object id="2877" name="mask1" type="HideMask" gid="103" x="16768" y="1344"/>
+  <object id="2878" name="mask1" type="HideMask" gid="103" x="16768" y="1152"/>
+  <object id="2879" name="mask1" type="HideMask" gid="103" x="16768" y="1216"/>
+  <object id="2884" name="0,0,0,0" type="Applause" gid="106" x="14016" y="640"/>
+  <object id="2885" name="0,0,0,0" type="Applause" gid="106" x="13824" y="640"/>
+  <object id="2886" name="0,0,0,0" type="Applause" gid="106" x="13888" y="640"/>
+  <object id="2887" name="0,0,0,0" type="Applause" gid="106" x="13952" y="640"/>
+  <object id="2888" name="0,0,0,0" type="Applause" gid="106" x="6720" y="1216"/>
+  <object id="2889" name="0,0,0,0" type="Applause" gid="106" x="6720" y="1280"/>
+  <object id="2890" name="0,0,0,0" type="Applause" gid="106" x="6656" y="1216"/>
+  <object id="2891" name="0,0,0,0" type="Applause" gid="106" x="6592" y="1216"/>
+  <object id="2892" name="0,0,0,0" type="Applause" gid="106" x="6592" y="1280"/>
+  <object id="2893" name="extra_area1" type="ShowExtra" gid="104" x="6016" y="1536"/>
+  <object id="2894" name="extra_area1" type="ShowExtra" gid="104" x="6080" y="1536"/>
+  <object id="2895" name="extra_area1" type="ShowExtra" gid="104" x="6208" y="1536"/>
+  <object id="2896" name="extra_area1" type="ShowExtra" gid="104" x="6144" y="1536"/>
+  <object id="2897" name="extra_area1" type="ShowExtra" gid="104" x="6272" y="1536"/>
+  <object id="2903" name="mask1" type="HideMask" gid="103" x="16768" y="1088"/>
+ </objectgroup>
+ <layer name="dangerous" width="335" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2EEOgjAQQNHexIAczKN5VGncEBRToNFOfS8x0YWNdOjXmBIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkI0p3fLj158DIJJh7uagnUAH5pbl34MEMC2eX1K611z7WnMxgIZMq9c1+6md7TKb/7Kc9/rM730/T0f2sZT9bpfZ9GmrkZHaGeV/C+38rtr3Rcl6786N2byKcmazkkZuabWd0e7JHtsZbQZnfLpWnezL3kZGE+2aIrfzzHdvdCVd1E5aF/ncRmtn5L0GAAAAAAAAAAAAAAAAAAAAAABoxQMYJgvh
+  </data>
+ </layer>
+ <objectgroup name="coinList1">
+  <object id="2841" gid="81" x="8192" y="1472"/>
+  <object id="2842" gid="81" x="8256" y="1408"/>
+  <object id="2843" gid="81" x="8320" y="1408"/>
+  <object id="2844" gid="81" x="8384" y="1472"/>
+  <object id="2845" gid="81" x="8448" y="1600"/>
+  <object id="2846" gid="81" x="8512" y="1600"/>
+  <object id="2847" gid="81" x="8576" y="1600"/>
+  <object id="2848" gid="81" x="8640" y="1600"/>
+  <object id="2849" gid="81" x="8704" y="1472"/>
+  <object id="2850" gid="81" x="8768" y="1472"/>
+  <object id="2851" gid="81" x="8832" y="1472"/>
+  <object id="2852" gid="81" x="8896" y="1472"/>
+ </objectgroup>
+</map>

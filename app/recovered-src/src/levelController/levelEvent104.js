@@ -1,0 +1,8 @@
+// Recovered source-like JS from /mnt/data/smdis/dis/levelController/levelEvent104.dis
+// Source-like reconstruction from smdis.
+
+LevelController.LevelEvent104 = LevelController.extend({
+  eventStory1: function (arg0) {
+    this.showStory(1, arg0, (((((((((((((((((("MoveCamera,24,13,2;SelectNpc,Flash;ShowDialog," + vee.Utils.getLocalizedStringForKey("We are talking about you!", "\u6211\u4eec\u6b63\u5728\u8c08\u8d77\u4f60\u5462\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("Oh here's your new friend!", "\u54e6\u5bf9\u4e86\uff0c\u8fd9\u4f4d\u662f\u65b0\u7684\u5c0f\u4f19\u4f34\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("Our new friend is very interested in you, he is mini...!", "\u4ed6\u662f\u5c0f...")) + ";HideDialog;SelectNpc;ShowDialog,") + vee.Utils.getLocalizedStringForKey("Nah, you are the mini minion one!", "\u53fd\uff01\u4f60\u624d\u5c0f\uff01")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("Get out, big guy!", "\u6eda\u5f00\uff0c\u5927\u9ad8\u4e2a\uff01")) + ";HideDialog;MoveRole,25,13;ShowDialog,") + vee.Utils.getLocalizedStringForKey("Here you are!", "\u7ed9\uff0c")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("Oh -- and here's my data!", "\u8fd9\u662f\u6211\u7684\u6570\u636e\uff01")) + ";HideDialog;UnlockRole;TimeLine,huxi_2;Delay,1;MoveCamera,12,13,1;Trigger,24,14;Delay,2;MoveCamera,24,13,1;ShowDialog,") + vee.Utils.getLocalizedStringForKey("I will dance on your grave!", "\u4f60\u6302\u7684\u65f6\u5019\u6211\u4f1a\u9f13\u638c\u7684\uff0c")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("I just rolling my eyes. Bye!", "\u518d\u89c1\uff01\u53fd\uff01")) + ";HideDialog"));
+  }
+});

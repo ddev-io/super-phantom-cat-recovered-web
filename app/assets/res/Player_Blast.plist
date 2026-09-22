@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Player_Blast_ShunYi_In_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{899, 149}, {81, 76}}</string>
+			<key>offset</key>
+			<string>{17, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{77, 20}, {81, 76}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>Player_Blast_ShunYi_Out_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{130, 1}, {97, 87}}</string>
+			<key>offset</key>
+			<string>{-46, -2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{5, 9}, {97, 87}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>Player_Blast_ShunYi_Out_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {127, 81}}</string>
+			<key>offset</key>
+			<string>{-8, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{28, 11}, {127, 81}}</string>
+			<key>sourceSize</key>
+			<string>{200, 100}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{414, 498}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{580, 488}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{411, 646}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{826, 530}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{660, 589}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 606}, {71, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {71, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{416, 424}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{301, 227}, {72, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 2}, {72, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{896, 304}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{85, 90}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{901, 1}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 241}, {72, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 2}, {72, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{565, 1}, {73, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {73, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{313, 152}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{166, 383}, {73, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {73, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{247, 602}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 464}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{742, 589}, {68, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {68, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 685}, {68, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {68, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{880, 459}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{578, 562}, {70, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {70, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{496, 499}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{564, 142}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{85, 238}, {72, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 2}, {72, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{481, 142}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-4, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{817, 75}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{313, 78}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{733, 1}, {73, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {73, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{397, 150}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{250, 379}, {73, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {73, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{329, 588}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{248, 454}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{6, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{247, 676}, {68, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {68, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{85, 164}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 679}, {68, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {68, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00041.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{494, 645}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00042.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 613}, {70, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {70, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_00043.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{498, 425}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{901, 75}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{2, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{397, 1}, {73, 82}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {73, 82}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{730, 159}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-5, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 315}, {73, 80}}</string>
+			<key>offset</key>
+			<string>{-3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 3}, {73, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi2_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 538}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{86, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{247, 528}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{412, 572}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{744, 518}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{908, 530}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{576, 634}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 612}, {71, 80}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {71, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 458}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{169, 232}, {72, 81}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 2}, {72, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{899, 227}, {75, 81}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 2}, {75, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{313, 1}, {75, 82}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 1}, {75, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 1}, {80, 82}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {80, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{563, 217}, {72, 81}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 2}, {72, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 84}, {81, 82}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {81, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{733, 76}, {81, 81}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 2}, {81, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{716, 436}, {79, 80}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {79, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{895, 379}, {78, 80}}</string>
+			<key>offset</key>
+			<string>{3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {78, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{798, 438}, {78, 80}}</string>
+			<key>offset</key>
+			<string>{4, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {78, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{252, 301}, {76, 80}}</string>
+			<key>offset</key>
+			<string>{3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {76, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{168, 306}, {75, 80}}</string>
+			<key>offset</key>
+			<string>{3, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 3}, {75, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{84, 312}, {75, 80}}</string>
+			<key>offset</key>
+			<string>{2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {75, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{494, 573}, {70, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {70, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{332, 440}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{647, 142}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{396, 225}, {72, 81}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 2}, {72, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{218, 157}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-2, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 83}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{817, 1}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{649, 1}, {73, 82}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {73, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{480, 217}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{83, 389}, {73, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {73, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 465}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 532}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{8, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{824, 601}, {68, 80}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 3}, {68, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 167}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 685}, {68, 80}}</string>
+			<key>offset</key>
+			<string>{1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 3}, {68, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00041.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{329, 662}, {69, 80}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{9, 3}, {69, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00042.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{662, 517}, {70, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {70, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_00043.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{330, 514}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{397, 76}, {72, 82}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{4, 1}, {72, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{481, 1}, {73, 82}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 1}, {73, 82}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{813, 231}, {73, 81}}</string>
+			<key>offset</key>
+			<string>{-3, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{3, 2}, {73, 81}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{334, 365}, {73, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{5, 3}, {73, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi3_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 539}, {72, 80}}</string>
+			<key>offset</key>
+			<string>{0, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{7, 3}, {72, 80}}</string>
+			<key>sourceSize</key>
+			<string>{87, 83}</string>
+		</dict>
+		<key>Player_Blast_huxi_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{247, 812}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_huxi_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{329, 799}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_huxi_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{493, 782}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_huxi_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{658, 728}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_huxi_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{824, 671}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_jump_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{740, 727}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_jump_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{481, 76}, {64, 82}}</string>
+			<key>offset</key>
+			<string>{0, -26}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 82}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_jump_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{633, 422}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_jump_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{550, 359}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_jump_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{411, 783}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_jump_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{575, 773}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_pazhe.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{169, 90}, {79, 47}}</string>
+			<key>offset</key>
+			<string>{3, -40}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{14, 92}, {79, 47}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{906, 601}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{906, 667}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{384, 299}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{467, 358}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{565, 76}, {64, 82}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 58}, {64, 82}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{812, 306}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{729, 370}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{411, 717}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{329, 733}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{247, 746}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{165, 749}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{812, 372}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{479, 292}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{649, 76}, {64, 82}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 58}, {64, 82}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{729, 304}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{646, 356}, {64, 81}}</string>
+			<key>offset</key>
+			<string>{0, -24}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 59}, {64, 81}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_0017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{493, 716}, {64, 80}}</string>
+			<key>offset</key>
+			<string>{0, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{18, 60}, {64, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0000.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{657, 794}, {68, 79}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {68, 79}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{563, 291}, {66, 81}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 2}, {66, 81}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_00010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{906, 733}, {68, 79}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {68, 79}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{742, 659}, {66, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 3}, {66, 80}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{822, 737}, {68, 79}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 3}, {68, 79}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{646, 217}, {68, 81}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {68, 81}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{575, 839}, {68, 79}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{1, 1}, {68, 79}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{646, 287}, {67, 81}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 2}, {67, 81}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{576, 705}, {66, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 3}, {66, 80}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{740, 793}, {68, 79}}</string>
+			<key>offset</key>
+			<string>{-1, -1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 3}, {68, 79}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_run_fast_0009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{729, 234}, {68, 81}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 1}, {68, 81}}</string>
+			<key>sourceSize</key>
+			<string>{70, 83}</string>
+		</dict>
+		<key>Player_Blast_shoushang_0001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{658, 660}, {66, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -27}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{15, 62}, {66, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_shoushang_0002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 390}, {73, 80}}</string>
+			<key>offset</key>
+			<string>{-1, -27}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{12, 62}, {73, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+		<key>Player_Blast_shoushang_0003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{816, 149}, {81, 80}}</string>
+			<key>offset</key>
+			<string>{-2, -27}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{7, 62}, {81, 80}}</string>
+			<key>sourceSize</key>
+			<string>{100, 150}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>Player_Blast.png</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,14 @@
+{
+  "id": "com.veewo.supercat.webos",
+  "version": "1.0.9",
+  "vendor": "VeeWo",
+  "type": "web",
+  "main": "assets/index.webv1.html",
+  "title": "Super Cat",
+  "icon": "icon.png",
+  "largeIcon": "icon.png",
+  "bgColor": "#000000",
+  "resolution": "1280x720",
+  "uiRevision": 2,
+  "appDescription": "Super Cat restored web build"
+}

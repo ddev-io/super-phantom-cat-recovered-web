@@ -1,0 +1,8 @@
+// Recovered source-like JS from /mnt/data/smdis/dis/levelController/levelEvent102.dis
+// Source-like reconstruction from smdis.
+
+LevelController.LevelEvent102 = LevelController.extend({
+  eventStory1: function (arg0) {
+    this.showStory(1, arg0, (((((((((((("SelectNpc,Flash;FaceTo,right;MoveCamera,34,32,2;FaceTo,left;MoveRole,34,33;ShowDialog," + vee.Utils.getLocalizedStringForKey("Just in time, buddy!", "\u6765\u7684\u6b63\u597d\uff0c\u4f19\u8ba1\u3002")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("A branch of complex data has leaked out !", "\u6709\u4e00\u7ec4\u590d\u6742\u7684\u6570\u636e\u6cc4\u6f0f\u51fa\u6765\u4e86\u3002")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("Do you mind doing me a favor?", "\u5982\u679c\u4f60\u6709\u65f6\u95f4\u7684\u8bdd\uff0c\u5e2e\u4e2a\u5fd9\u5457\uff1f")) + ";HideDialog;SelectNpc;MoveRole,35,33;ShowDialog,") + vee.Utils.getLocalizedStringForKey("That's my data -- mine! Okay, I admit that I might not be able to handle it...", "\u90a3\u662f\u6211\u7684\u6570\u636e\uff0c\u6211\u7684\uff01\u597d\u5427\u6211\u627f\u8ba4\u6ca1\u6cd5\u81ea\u5df1\u89e3\u51b3\u8fd9\u4e8b\u513f\u2026\u2026")) + ";ShowDialog,") + vee.Utils.getLocalizedStringForKey("All I ask is for a copy of the data -- after you finish your work!", "\u4f60\u6536\u96c6\u5230\u4e4b\u540e\u53ea\u9700\u8981\u7ed9\u6211\u4efd\u62f7\u8d1d\u5c31\u884c\uff01")) + ";HideDialog;UnlockRole;TimeLine,huxi_2;Delay,1;Trigger,38,34;MoveCamera,23,31,2;MoveCamera,18,26,2;MoveCamera,34,25,2;MoveCamera,34,32,2;ShowDialog,") + vee.Utils.getLocalizedStringForKey("Fresh data! Come on!", "\u65b0\u9c9c\u7684\u6570\u636e\uff01\u5feb\uff01")) + ";HideDialog"));
+  }
+});

@@ -1,0 +1,80 @@
+package gameProto;
+
+enum MessageType {
+    UNKNOWN = 0;
+    GAME_MINEINFO = 1;
+    GAME_USERINFO = 2;
+    GAME_MAP_TILEINFO = 3;
+    GAME_MAP_ITEMINFO = 4;
+    GAME_REPLAYINFO = 5;
+}
+
+//required 必填
+//optional 可选
+message BaseMessage {
+    required int32 mid = 1;
+    required bytes serialization = 2;
+}
+
+/**
+in game
+*/
+message GameRoleInfo {
+	required float 	 posX = 1;
+    required float 	 posY = 2;
+    optional int32   faceTo = 3;
+    optional int32   u_state = 4;
+}
+
+message GameMineInfo {
+    required int32 minePlayer = 1;      //携带炸弹的玩家
+    optional float overTime = 2;        //剩余爆炸时间
+}
+
+//砖块状态同步
+message GameMapTileInfo {
+	required int32  tileId = 1;			//gid
+	required int32  posX = 2;
+	required int32  posY = 3;
+	required int32  state = 4;			// 0=消失  1=生成
+	required string tmxLayerName = 5;	//tmxMap.getLayer(name)
+}
+
+message GameMapItemInfo {
+	required int32 itemId = 1;			
+	required int32 posX = 2;
+	required int32 posY = 3;
+	required int32 state = 4;			// 0=消失  1=生成
+
+	optional float  mineOverTime = 5;	//炸弹爆炸剩余时间
+}
+
+
+/**
+pre start game
+*/
+message GameReplayInfo {
+	required int32 levelId = 1;
+}
+
+message GamePreStartInfo {
+	required int32 minePlayer = 1;		//携带炸弹的玩家
+	
+}
+
+/**
+out game
+*/
+message GameStateInfo {
+	required int32 msgType = 1;			//-1:离开游戏
+	optional string data = 2;
+}
+
+
+
+
+message Flag {
+	required string username = 1;
+	required string tmxidx = 2;
+	required string flagpos = 3;
+}

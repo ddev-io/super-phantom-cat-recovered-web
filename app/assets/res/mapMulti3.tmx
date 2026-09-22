@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="50" tilewidth="64" tileheight="64" nextobjectid="1701">
+ <properties>
+  <property name="bee" value="2"/>
+  <property name="bg" value="lyBG8"/>
+  <property name="bgm" value="bgm_mini"/>
+  <property name="dogSlime" value="8"/>
+  <property name="slime" value="10"/>
+ </properties>
+ <tileset firstgid="1" name="forest" tilewidth="70" tileheight="70">
+  <tileoffset x="-3" y="3"/>
+  <image source="forest.png" width="700" height="980"/>
+ </tileset>
+ <layer name="main" width="20" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztVUkOgzAMNKWslzSBV/XA/5/TRJoRlktZRC6VMtLIje2YcWWwSEFBQUFBQcG/owaf4AO2Uv5a+SqTWyummIvswfR7iBwjm8gX2CHWgh1ymMf7A2wuUE8uJL0+Y705copcwC0shns5rJcLXr773dNxlJdbX0DNMzrO6N7q9w4mydvvDO69wxa/3t0a2nL3a+u9L5415o16d0B9e888gr4bwFxI+o7m+Yp2b+pdubuVy/nTO0LPnp1Hu1cY415hvfSNTnuiheUOSXuigWVshHWy7pB07tFvkHXXvFSsUTUdzoPK45m5Tv1/Lfy838m6r6hX7zFq642f88I59LJ+I4LyBfVsMhjL+AfMcg8Z
+  </data>
+ </layer>
+ <objectgroup name="objConfig">
+  <object id="1658" type="player" gid="120" x="320" y="2368"/>
+  <object id="1681" name="other" type="player" gid="120" x="896" y="2368"/>
+  <object id="1692" name="(0,-2)" type="platform" gid="101" x="512" y="2560" width="4" height="1"/>
+  <object id="1693" name="(0,-2)" type="platform" gid="101" x="512" y="2816" width="4" height="1"/>
+  <object id="1694" name="(0,-2)" type="platform" gid="101" x="768" y="2560" width="4" height="1"/>
+  <object id="1695" name="(0,2)" type="platform" gid="101" x="768" y="2560" width="4" height="1"/>
+  <object id="1696" name="(0,-2)" type="platform" gid="101" x="1024" y="2688" width="3" height="1"/>
+  <object id="1697" name="(0,-2)" type="platform" gid="101" x="896" y="2880" width="3" height="1"/>
+  <object id="1698" name="(0,2)" type="platform" gid="101" x="256" y="2560" width="4" height="1"/>
+  <object id="1699" name="(0,-2)" type="platform" gid="101" x="64" y="2688" width="3" height="1"/>
+  <object id="1700" name="(0,-2)" type="platform" gid="101" x="192" y="2880" width="3" height="1"/>
+ </objectgroup>
+ <objectgroup name="triggerConfig" visible="0">
+  <object id="1659" name="mask" type="HideMask" gid="101" x="256" y="2304"/>
+  <object id="1660" name="mask" type="HideMask" gid="101" x="128" y="2176"/>
+  <object id="1661" name="mask" type="HideMask" gid="101" x="64" y="2176"/>
+  <object id="1662" name="mask" type="HideMask" gid="101" x="512" y="2304"/>
+  <object id="1663" name="mask" type="HideMask" gid="101" x="704" y="2304"/>
+  <object id="1664" name="mask" type="HideMask" gid="101" x="960" y="2304"/>
+  <object id="1665" name="mask" type="HideMask" gid="101" x="1088" y="2176"/>
+  <object id="1666" name="mask" type="HideMask" gid="101" x="1152" y="2176"/>
+  <object id="1667" name="mask" type="HideMask" gid="101" x="1152" y="1856"/>
+  <object id="1668" name="mask" type="HideMask" gid="101" x="1088" y="1856"/>
+  <object id="1669" name="mask" type="HideMask" gid="101" x="704" y="1856"/>
+  <object id="1670" name="mask" type="HideMask" gid="101" x="640" y="1856"/>
+  <object id="1671" name="mask" type="HideMask" gid="101" x="576" y="1856"/>
+  <object id="1672" name="mask" type="HideMask" gid="101" x="512" y="1856"/>
+  <object id="1673" name="mask" type="HideMask" gid="101" x="128" y="1856"/>
+  <object id="1674" name="mask" type="HideMask" gid="101" x="64" y="1856"/>
+ </objectgroup>
+ <layer name="extra_close" width="20" height="50" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztyrEJAAAIBLGf1P3HsHUAEYQErrsEAADgvxptvnClAe5zAjU=
+  </data>
+ </layer>
+ <layer name="mask" width="20" height="50" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztzjkOACAIBEAb/P+TbazUeCTYzSRbsRBKAQCY1aT8vnfz+65DjujJ2j/de53HkFX3dQaQrQFuYwF3
+  </data>
+ </layer>
+ <layer name="big" width="20" height="50" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwShABak0wNR226h5w9u80fQ3at6oefQzbzDmtZEKAPfnJRc=
+  </data>
+ </layer>
+</map>

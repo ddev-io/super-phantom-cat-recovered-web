@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="250" height="50" tilewidth="64" tileheight="64" nextobjectid="4371">
+ <properties>
+  <property name="bgm" value="bgm_7"/>
+  <property name="slime" value="2"/>
+  <property name="spider" value="1"/>
+ </properties>
+ <tileset firstgid="1" name="forest" tilewidth="70" tileheight="70">
+  <tileoffset x="-3" y="3"/>
+  <image source="forest2.png" width="700" height="980"/>
+  <tile id="0">
+   <properties>
+    <property name="maxX" value="87"/>
+    <property name="maxY" value="63"/>
+    <property name="x" value="77"/>
+    <property name="y" value="61"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="isShow" value="1"/>
+    <property name="maxX" value=""/>
+    <property name="maxY" value=""/>
+    <property name="x" value=""/>
+    <property name="y" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="mainBG" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztlwtu2zAQRHMb5/4nLAKkQCHM7Cwt2t4S7wGCaotazuyHTr++AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOCH79/rcblfv79e1/WP3wsA5vHvHKsZfxRr1BkAAPNQc51+46v1ADAPN9fX3/L0286cA8yl+n1Ol5r9lT1X/+/fWafOKXVeKc9qHxdLxVbxqj2qv5dO8jZV0wRdO+N0fbjeq3pO5SHR+ftA9b7T45531qs83Tl3Uo+5vJ3qbaKmabp2xOnsUfmo4itNP/9OrMarNLkzK50hKk56/5m6dLWe6m2ipmm6dsTpeO/kYCV+optj57lat1Kjam06d1Q/u3Wuhi5/J3mbqEndP6Vrd5zqvKjqo3KQnic6flfOvfR+0ptyq9akz+7M7NbiJG9TNU3TdSfOs72mvKvnKk5CeXF3NwNOi6tZykeqeTeeO59S75zqbaIm19Of1PWKfup4786e+i5RnR3Xnnd7pRlw9XS+XfxujqoeUH6S91O8TdRU7fVuXbv9rT7rzt4z77m76mm3V6pDiply7WJWuUgzmWp6oreJmqbp2hGn473zfpUDt77q0Y6vlRqsxF3NR5VjtVeqZ+f7k7xN1DRN19043T3uzF6l7Vtc3fy59zsaU7zKW8dPVYcqfnrvNG8TNU3StdNf553qu855UM2x2r/ym/o/nQ/VeeJiJC1Ku+uJKg8qRkfP/+ptoqZKz7t17YzT9f73ejWVzqSv01dV7dJMpHnq1KbqD/XsdG8TNU3Stdufe3bd79V0PLs8p/yr9e5zNUudvu329oqP07xN1DRN1444K/X41Jx3e9bVyflYzYf7rHKW9ki9pOKf7G2apkm6dvpL3t855yrnrgYp7533U71W89ud1Wr2Us+d5G2qpmm67sRJe6jYr8ZpSznorHP1U3tWa1fmMJ1Fbq6v9xO9TdTk+v8TunbHcd4BAAAAAAAAAAAAAOA+fwBCRVrb
+  </data>
+ </layer>
+ <layer name="main" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="extra_coin" width="250" height="50">
+  <properties>
+   <property name="coin" value="4"/>
+   <property name="maxX" value="94"/>
+   <property name="maxY" value="39"/>
+   <property name="x" value="93"/>
+   <property name="y" value="36"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt07ENADAIA0FWDPsPQ8MCEQVScid978YRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/yu0BAMDY6YB3+TkAAAAAAAAAAADAvQLWGAGX
+  </data>
+ </layer>
+ <layer name="extra_path" width="250" height="50">
+  <properties>
+   <property name="isShow" value="1"/>
+   <property name="maxX" value="70"/>
+   <property name="maxY" value="39"/>
+   <property name="x" value="66"/>
+   <property name="y" value="36"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt1U0KgCAQgFH7g2xj9z9tI02bLlDIe/Ch7twMUwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwL9M0Rwt0ZpvYCxbtEctOvMOjOUo96z3ap7AWPps913+7PT27XcAAAAAAAAAAAAAeLkAZ7sAoA==
+  </data>
+ </layer>
+ <layer name="extra_block" width="250" height="50">
+  <properties>
+   <property name="isShow" value="1"/>
+   <property name="maxX" value="74"/>
+   <property name="maxY" value="41"/>
+   <property name="x" value="71"/>
+   <property name="y" value="40"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt0zEKACAMBMF8QeL/3ypik85CJM0MXH/NRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANyNstn8Bfhj951xGs/mLwAAAAAAAAAAvFlBLwCT
+  </data>
+ </layer>
+ <layer name="bg_extra_block" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0zENAAAIBLEXg3+NaGAghKRVcMslAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM3UdAKzzOQAAAAAAAADAbw3ghgBJ
+  </data>
+ </layer>
+ <layer name="extra_block1" width="250" height="50">
+  <properties>
+   <property name="isShow" value="1"/>
+   <property name="maxX" value="62"/>
+   <property name="maxY" value="37"/>
+   <property name="x" value="54"/>
+   <property name="y" value="33"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt1kEKwyAQBVCXTTZN0pwn9z9WHToDHqAQJO/Bx9GVm4+2BgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwt6Vn7Xn17LmP+Z3zct/VgD8Z+x2Jfq/Dqucwv+p5rFv79bve8i3PgblFn/ch9Wevjus5zK/6fWaunqPnkznvuxoAAAAAAAAAAAAAAMAjfQEW0AJ8
+  </data>
+ </layer>
+ <layer name="bg_extra_block1" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt07ERACAMA7HsAvvPmBFSwYFPat24+SoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgL+tYd9XXgAn6Rzy6Rzy6Rzy6RwAAAAAAAAAAAAAAOAtDcbAAWQ=
+  </data>
+ </layer>
+ <layer name="extra_trick" width="250" height="50">
+  <properties>
+   <property name="isShow" value="1"/>
+   <property name="maxX" value="178"/>
+   <property name="maxY" value="41"/>
+   <property name="x" value="170"/>
+   <property name="y" value="33"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt2TEOwjAMBdAAHVqW0gtx/2MRC1utGJiQaKT3pK8ombpYjZ3WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgPC49155bz5T7zzNgbI/M0jP3bD1rnm15Doytavne9npfcx+Z//dpwI9UXS+ZZ3vX9pqrOgeA86tZW6zHGdzU9lkcMLboweO+Hn169Od1Z68zczgYX9Ry1Ppx9lY9+5YBxlbvZ/Xvrre1WKvuAQAAAAAAAAC+eQH3AgL1
+  </data>
+ </layer>
+ <layer name="bg_extra_trick" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt1bENACAMA8HsAvvPyAgUiAisu9ZNmleqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgHWOzz5YrgJt0Dvl0Dvl0DgD/888hn84hn84hn84BAAAAAAAAgFMLbJUCOQ==
+  </data>
+ </layer>
+ <layer name="extra_gate" width="250" height="50">
+  <properties>
+   <property name="isShow" value="1"/>
+   <property name="maxX" value="135"/>
+   <property name="maxY" value="39"/>
+   <property name="x" value="135"/>
+   <property name="y" value="36"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt00ENAAAIxDCU4l8GKgjk0irYZ1UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHzX1wHAOp9DPp9DPp8DAAAAAAAAAAAAnwxlmwF5
+  </data>
+ </layer>
+ <layer name="bg_extra_gate" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt00ENAAAIxDDE4F8jKgjk0irYZ1UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHzX1wHAOp9DPp9DPp8DAAAAAAAAAAAAnwwMZQCR
+  </data>
+ </layer>
+ <layer name="mask1" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt00EJADAMwMBqq39RNbD/INxBJGQGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo2UdAi8+hz+fQ53Po8zkAAAAAAAAAAAAAAL8dBQcGcw==
+  </data>
+ </layer>
+ <layer name="mask2" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0zENAAAMw7BiG39Qe/fvq2wpEJIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHSZE9DJ59DP5wAAAAAAAAAAAAAAPwubxQJT
+  </data>
+ </layer>
+ <layer name="mask3" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0zENAAAIBLHXhn9RrGzs0CYn4RIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD9qBNzkc7jP5wAAAAAAAAAAAAAAuwZazQJT
+  </data>
+ </layer>
+ <layer name="mask4" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt00EJAAAIBEGz2T+UiB8zHDOwEbYKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDVLyCTzyGfzwEAAAAAAAAAAAAAzgAZ1QJT
+  </data>
+ </layer>
+ <layer name="mask6" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt1TEKgDAQBMCUaqWYF/n/R3kHFn4gHAkzsP02y7YGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDMnsgR2SO9uAswxn/nd3EXYIzceW58a/4cVpU7z43np/tzWFP/ckau4i4AAAAAAAAAAADpBd+KAek=
+  </data>
+ </layer>
+ <objectgroup name="objConfig">
+  <object id="3447" type="player" gid="120" x="704" y="2304"/>
+  <object id="3572" name="(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="2688" y="2944" width="3" height="1"/>
+  <object id="3573" name="(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3)" type="platform" gid="102" x="2496" y="2752" width="3" height="1"/>
+  <object id="3574" name="(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="3264" y="2944" width="3" height="1"/>
+  <object id="3575" name="(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0)" type="platform" gid="102" x="2880" y="1984" width="3" height="1"/>
+  <object id="3576" name="(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="2496" y="2944" width="3" height="1"/>
+  <object id="3577" name="(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0)" type="platform" gid="102" x="2880" y="2944" width="3" height="1"/>
+  <object id="3578" name="(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="2496" y="2368" width="3" height="1"/>
+  <object id="3579" name="(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3)" type="platform" gid="102" x="2496" y="2560" width="3" height="1"/>
+  <object id="3580" name="(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3)" type="platform" gid="102" x="3264" y="2368" width="3" height="1"/>
+  <object id="3581" name="(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0)" type="platform" gid="102" x="3264" y="1984" width="3" height="1"/>
+  <object id="3582" name="(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0)" type="platform" gid="102" x="3072" y="1984" width="3" height="1"/>
+  <object id="3583" name="(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="2496" y="1984" width="3" height="1"/>
+  <object id="3595" name="(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="2496" y="2176" width="3" height="1"/>
+  <object id="3596" name="(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3)" type="platform" gid="102" x="3264" y="2176" width="3" height="1"/>
+  <object id="3597" name="(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0)" type="platform" gid="102" x="3072" y="2944" width="3" height="1"/>
+  <object id="3598" name="(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3)" type="platform" gid="102" x="3264" y="2560" width="3" height="1"/>
+  <object id="3599" name="(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="3264" y="2752" width="3" height="1"/>
+  <object id="3600" name="(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0)" type="platform" gid="102" x="2688" y="1984" width="3" height="1"/>
+  <object id="3603" name="-6,0,2,0" type="enemy" gid="101" x="3072" y="2368"/>
+  <object id="3604" name="-8,0,0,0" type="enemy" gid="101" x="3200" y="2368"/>
+  <object id="3637" name="(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3)" type="platform" gid="102" x="4800" y="2368" width="3" height="1"/>
+  <object id="3640" name="(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="4032" y="2176" width="3" height="1"/>
+  <object id="3641" name="(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0)" type="platform" gid="102" x="4608" y="2944" width="3" height="1"/>
+  <object id="3642" name="(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="4032" y="2368" width="3" height="1"/>
+  <object id="3644" name="(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3)" type="platform" gid="102" x="4800" y="2176" width="3" height="1"/>
+  <object id="3645" name="(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0)" type="platform" gid="102" x="4416" y="2944" width="3" height="1"/>
+  <object id="3646" name="(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="4032" y="2944" width="3" height="1"/>
+  <object id="3647" name="(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0)" type="platform" gid="102" x="4224" y="1984" width="3" height="1"/>
+  <object id="3648" name="(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="4800" y="2752" width="3" height="1"/>
+  <object id="3649" name="(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0)" type="platform" gid="102" x="4416" y="1984" width="3" height="1"/>
+  <object id="3651" name="(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3)" type="platform" gid="102" x="4032" y="2752" width="3" height="1"/>
+  <object id="3652" name="(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0)" type="platform" gid="102" x="4800" y="1984" width="3" height="1"/>
+  <object id="3653" name="(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3)" type="platform" gid="102" x="4800" y="2560" width="3" height="1"/>
+  <object id="3654" name="-1,0,0,0" type="enemy" gid="101" x="3968" y="2688"/>
+  <object id="3656" name="(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0)" type="platform" gid="102" x="4608" y="1984" width="3" height="1"/>
+  <object id="3658" name="(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="4800" y="2944" width="3" height="1"/>
+  <object id="3659" name="(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3)" type="platform" gid="102" x="4032" y="2560" width="3" height="1"/>
+  <object id="3660" name="(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="4224" y="2944" width="3" height="1"/>
+  <object id="3661" name="(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="4032" y="1984" width="3" height="1"/>
+  <object id="3663" name="-2,0,0,0" type="enemy" gid="101" x="4480" y="2304"/>
+  <object id="3947" name="(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="6592" y="2176" width="2" height="1"/>
+  <object id="3948" name="(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0)" type="platform" gid="102" x="7168" y="2944" width="2" height="1"/>
+  <object id="3951" name="(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0)" type="platform" gid="102" x="7168" y="1984" width="2" height="1"/>
+  <object id="3952" name="(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0)" type="platform" gid="102" x="6784" y="1984" width="2" height="1"/>
+  <object id="3953" name="(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3)" type="platform" gid="102" x="6592" y="2560" width="2" height="1"/>
+  <object id="3954" name="(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0)" type="platform" gid="102" x="7360" y="1984" width="2" height="1"/>
+  <object id="3956" name="(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="6784" y="2944" width="2" height="1"/>
+  <object id="3957" name="(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="7360" y="2752" width="2" height="1"/>
+  <object id="3958" name="(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3)" type="platform" gid="102" x="7360" y="2560" width="2" height="1"/>
+  <object id="3959" name="(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="7360" y="2944" width="2" height="1"/>
+  <object id="3960" name="(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0)" type="platform" gid="102" x="6976" y="1984" width="2" height="1"/>
+  <object id="3961" name="(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="6592" y="1984" width="2" height="1"/>
+  <object id="3962" name="(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3)" type="platform" gid="102" x="6592" y="2752" width="2" height="1"/>
+  <object id="3963" name="(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0)" type="platform" gid="102" x="6976" y="2944" width="2" height="1"/>
+  <object id="3965" name="(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="6592" y="2368" width="2" height="1"/>
+  <object id="3966" name="(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="6592" y="2944" width="2" height="1"/>
+  <object id="3967" name="(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3)" type="platform" gid="102" x="7360" y="2176" width="2" height="1"/>
+  <object id="3969" name="(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3)" type="platform" gid="102" x="7360" y="2368" width="2" height="1"/>
+  <object id="4239" name="-1,0,1,0" type="enemy" gid="101" x="3712" y="2688"/>
+  <object id="4245" name="-6,0,1,0" type="enemy" gid="101" x="7168" y="2496"/>
+  <object id="4246" name="-7,0,0,0" type="enemy" gid="101" x="7232" y="2496"/>
+  <object id="4247" name="-7,0,0,0" type="enemy" gid="101" x="7232" y="2688"/>
+  <object id="4248" name="(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0)" type="platform" gid="102" x="11264" y="2944" width="3" height="1"/>
+  <object id="4249" name="(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="10688" y="2368" width="3" height="1"/>
+  <object id="4250" name="(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="11456" y="2944" width="3" height="1"/>
+  <object id="4251" name="(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="10688" y="2176" width="3" height="1"/>
+  <object id="4252" name="(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3)" type="platform" gid="102" x="11456" y="2368" width="3" height="1"/>
+  <object id="4253" name="(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0)" type="platform" gid="102" x="11072" y="2944" width="3" height="1"/>
+  <object id="4254" name="(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3)" type="platform" gid="102" x="11456" y="2176" width="3" height="1"/>
+  <object id="4255" name="(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0)" type="platform" gid="102" x="11456" y="1984" width="3" height="1"/>
+  <object id="4257" name="(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0)" type="platform" gid="102" x="10880" y="1984" width="3" height="1"/>
+  <object id="4258" name="(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="10880" y="2944" width="3" height="1"/>
+  <object id="4259" name="(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3)" type="platform" gid="102" x="10688" y="2752" width="3" height="1"/>
+  <object id="4260" name="(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3)" type="platform" gid="102" x="10688" y="2560" width="3" height="1"/>
+  <object id="4261" name="(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="10688" y="1984" width="3" height="1"/>
+  <object id="4263" name="(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0)" type="platform" gid="102" x="11264" y="1984" width="3" height="1"/>
+  <object id="4264" name="(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0)" type="platform" gid="102" x="11072" y="1984" width="3" height="1"/>
+  <object id="4265" name="(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="11456" y="2752" width="3" height="1"/>
+  <object id="4266" name="(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3)" type="platform" gid="102" x="11456" y="2560" width="3" height="1"/>
+  <object id="4267" name="(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="10688" y="2944" width="3" height="1"/>
+  <object id="4270" name="-1,0,0,0" type="enemy" gid="101" x="10048" y="2496"/>
+  <object id="4271" name="-1,0,0,0" type="enemy" gid="101" x="10304" y="2624"/>
+  <object id="4283" name="(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="12736" y="2944" width="3" height="1"/>
+  <object id="4284" name="(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="13312" y="2944" width="3" height="1"/>
+  <object id="4285" name="(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0)" type="platform" gid="102" x="13120" y="2944" width="3" height="1"/>
+  <object id="4287" name="(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0)" type="platform" gid="102" x="13120" y="1984" width="3" height="1"/>
+  <object id="4288" name="(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3)" type="platform" gid="102" x="12544" y="2560" width="3" height="1"/>
+  <object id="4290" name="(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0)" type="platform" gid="102" x="12736" y="1984" width="3" height="1"/>
+  <object id="4291" name="(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3)" type="platform" gid="102" x="12544" y="2752" width="3" height="1"/>
+  <object id="4292" name="(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="13312" y="2752" width="3" height="1"/>
+  <object id="4293" name="(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3)" type="platform" gid="102" x="13312" y="2560" width="3" height="1"/>
+  <object id="4294" name="(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="12544" y="1984" width="3" height="1"/>
+  <object id="4295" name="(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0)" type="platform" gid="102" x="12928" y="2944" width="3" height="1"/>
+  <object id="4296" name="(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0)" type="platform" gid="102" x="13312" y="1984" width="3" height="1"/>
+  <object id="4297" name="(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3)" type="platform" gid="102" x="13312" y="2368" width="3" height="1"/>
+  <object id="4298" name="(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="12544" y="2368" width="3" height="1"/>
+  <object id="4299" name="(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0)" type="platform" gid="102" x="12544" y="2944" width="3" height="1"/>
+  <object id="4300" name="(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0)" type="platform" gid="102" x="12928" y="1984" width="3" height="1"/>
+  <object id="4301" name="(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="12544" y="2176" width="3" height="1"/>
+  <object id="4302" name="(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(3,0);(3,0);(0,3)" type="platform" gid="102" x="13312" y="2176" width="3" height="1"/>
+  <object id="4304" name="-1,0,0,0" type="enemy" gid="101" x="12032" y="2624"/>
+  <object id="4305" name="-1,0,0,0" type="enemy" gid="101" x="12288" y="2496"/>
+  <object id="4306" name="3" type="platform" gid="102" x="12864" y="2304" width="5" height="1"/>
+  <object id="4307" name="-1,0,1,0" type="enemy" gid="101" x="12992" y="2624"/>
+  <object id="4308" name="(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0)" type="platform" gid="102" x="8320" y="2944" width="2" height="1"/>
+  <object id="4309" name="(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3)" type="platform" gid="102" x="8320" y="2752" width="2" height="1"/>
+  <object id="4310" name="(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3)" type="platform" gid="102" x="8320" y="2560" width="2" height="1"/>
+  <object id="4311" name="(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="8320" y="2368" width="2" height="1"/>
+  <object id="4312" name="(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="8320" y="2176" width="2" height="1"/>
+  <object id="4313" name="(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="8320" y="1984" width="2" height="1"/>
+  <object id="4314" name="(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0)" type="platform" gid="102" x="8512" y="1984" width="2" height="1"/>
+  <object id="4315" name="(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0)" type="platform" gid="102" x="8704" y="1984" width="2" height="1"/>
+  <object id="4316" name="(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3)" type="platform" gid="102" x="8704" y="2176" width="2" height="1"/>
+  <object id="4317" name="(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3)" type="platform" gid="102" x="8704" y="2368" width="2" height="1"/>
+  <object id="4318" name="(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3)" type="platform" gid="102" x="8704" y="2560" width="2" height="1"/>
+  <object id="4319" name="(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="8704" y="2752" width="2" height="1"/>
+  <object id="4320" name="(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="8704" y="2944" width="2" height="1"/>
+  <object id="4321" name="(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0)" type="platform" gid="102" x="8512" y="2944" width="2" height="1"/>
+  <object id="4322" name="(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="8960" y="2368" width="2" height="1"/>
+  <object id="4323" name="(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0)" type="platform" gid="102" x="9344" y="1984" width="2" height="1"/>
+  <object id="4324" name="(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3)" type="platform" gid="102" x="8960" y="2752" width="2" height="1"/>
+  <object id="4325" name="(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="9344" y="2944" width="2" height="1"/>
+  <object id="4327" name="(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="8960" y="1984" width="2" height="1"/>
+  <object id="4328" name="(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0)" type="platform" gid="102" x="9152" y="2944" width="2" height="1"/>
+  <object id="4332" name="(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3)" type="platform" gid="102" x="9344" y="2560" width="2" height="1"/>
+  <object id="4334" name="(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0)" type="platform" gid="102" x="8960" y="2944" width="2" height="1"/>
+  <object id="4335" name="(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0)" type="platform" gid="102" x="9152" y="1984" width="2" height="1"/>
+  <object id="4338" name="(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3)" type="platform" gid="102" x="9344" y="2368" width="2" height="1"/>
+  <object id="4339" name="(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3)" type="platform" gid="102" x="9344" y="2752" width="2" height="1"/>
+  <object id="4341" name="(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3)" type="platform" gid="102" x="8960" y="2176" width="2" height="1"/>
+  <object id="4342" name="(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3);(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3)" type="platform" gid="102" x="9344" y="2176" width="2" height="1"/>
+  <object id="4343" name="(0,-3);(0,-3);(0,-3);(3,0);(3,0);(0,3);(0,3);(0,3);(0,3);(0,3);(-3,0);(-3,0);(0,-3);(0,-3)" type="platform" gid="102" x="8960" y="2560" width="2" height="1"/>
+  <object id="4363" name="-1,0,0,0" type="enemy" gid="101" x="9984" y="2368"/>
+  <object id="4367" name="-1,0,1,0" type="enemy" gid="101" x="11136" y="2432"/>
+ </objectgroup>
+ <objectgroup name="triggerConfig">
+  <object id="3450" type="CameraYFreeze" gid="105" x="1856" y="2496"/>
+  <object id="3481" name="extra_coin" type="ShowExtra" gid="105" x="6144" y="2176"/>
+  <object id="3484" name="coinList1" type="ShowCoins" gid="101" x="9920" y="2496"/>
+  <object id="3566" name="1" type="BigCoin" gid="105" x="5952" y="2368"/>
+  <object id="3585" type="DeadZone" gid="104" x="2624" y="2816"/>
+  <object id="3586" type="DeadZone" gid="104" x="2496" y="2816"/>
+  <object id="3587" type="DeadZone" gid="104" x="2560" y="2816"/>
+  <object id="3590" type="DeadZone" gid="104" x="3392" y="2816"/>
+  <object id="3591" type="DeadZone" gid="104" x="3264" y="2816"/>
+  <object id="3592" type="DeadZone" gid="104" x="3328" y="2816"/>
+  <object id="3735" name="2" type="BigCoin" gid="105" x="8512" y="2496"/>
+  <object id="3817" type="CameraYFreeze" gid="105" x="7808" y="2496"/>
+  <object id="3818" type="CameraYFreeze" gid="105" x="7936" y="2496"/>
+  <object id="3824" name="3" type="BigCoin" gid="105" x="12992" y="2112"/>
+  <object id="3845" type="DeadZone" gid="104" x="7360" y="2816"/>
+  <object id="3846" type="DeadZone" gid="104" x="7424" y="2816"/>
+  <object id="3863" type="DeadZone" gid="104" x="9408" y="2816"/>
+  <object id="3867" type="DeadZone" gid="104" x="9344" y="2816"/>
+  <object id="3884" type="DeadZone" gid="104" x="10752" y="2816"/>
+  <object id="3885" type="DeadZone" gid="104" x="10816" y="2816"/>
+  <object id="3887" type="DeadZone" gid="104" x="10688" y="2816"/>
+  <object id="3926" name="extra_path" type="HideExtra" gid="105" x="4416" y="2688"/>
+  <object id="3929" type="DeadZone" gid="104" x="8512" y="2816"/>
+  <object id="3930" type="DeadZone" gid="104" x="8576" y="2816"/>
+  <object id="3931" type="DeadZone" gid="104" x="8320" y="2816"/>
+  <object id="3932" type="DeadZone" gid="104" x="8640" y="2816"/>
+  <object id="3933" type="DeadZone" gid="104" x="8448" y="2816"/>
+  <object id="3934" type="DeadZone" gid="104" x="8704" y="2816"/>
+  <object id="3935" type="DeadZone" gid="104" x="8384" y="2816"/>
+  <object id="3936" type="DeadZone" gid="104" x="8768" y="2816"/>
+  <object id="3937" type="DeadZone" gid="104" x="9280" y="2816"/>
+  <object id="3938" type="DeadZone" gid="104" x="9024" y="2816"/>
+  <object id="3939" type="DeadZone" gid="104" x="9216" y="2816"/>
+  <object id="3940" type="DeadZone" gid="104" x="9152" y="2816"/>
+  <object id="3941" type="DeadZone" gid="104" x="9088" y="2816"/>
+  <object id="3942" type="DeadZone" gid="104" x="8896" y="2816"/>
+  <object id="3943" type="DeadZone" gid="104" x="8960" y="2816"/>
+  <object id="3944" type="DeadZone" gid="104" x="8832" y="2816"/>
+  <object id="4060" type="DeadZone" gid="104" x="12736" y="2816"/>
+  <object id="4061" type="DeadZone" gid="104" x="12544" y="2816"/>
+  <object id="4062" type="DeadZone" gid="104" x="12672" y="2816"/>
+  <object id="4063" type="DeadZone" gid="104" x="12608" y="2816"/>
+  <object id="4067" type="DeadZone" gid="104" x="13440" y="2816"/>
+  <object id="4068" type="DeadZone" gid="104" x="13376" y="2816"/>
+  <object id="4069" type="DeadZone" gid="104" x="13312" y="2816"/>
+  <object id="4070" type="DeadZone" gid="104" x="13248" y="2816"/>
+  <object id="4150" name="coin" type="AddItem" gid="103" x="5760" y="2176"/>
+  <object id="4151" name="coin" type="AddItem" gid="103" x="5696" y="2176"/>
+  <object id="4152" name="coin" type="AddItem" gid="103" x="5248" y="2176"/>
+  <object id="4153" name="coin" type="AddItem" gid="103" x="6208" y="2176"/>
+  <object id="4154" name="coin" type="AddItem" gid="103" x="5376" y="2176"/>
+  <object id="4156" name="mask1" type="HideMask" gid="104" x="384" y="2496"/>
+  <object id="4157" name="mask1" type="HideMask" gid="104" x="384" y="2432"/>
+  <object id="4158" name="mask1" type="HideMask" gid="104" x="384" y="2304"/>
+  <object id="4159" name="mask1" type="HideMask" gid="104" x="384" y="2240"/>
+  <object id="4160" name="mask1" type="HideMask" gid="104" x="384" y="2368"/>
+  <object id="4161" name="mask1" type="HideMask" gid="104" x="384" y="2176"/>
+  <object id="4162" name="8,0,0,0" type="Applause" gid="105" x="128" y="2368"/>
+  <object id="4163" name="mask2" type="HideMask" gid="104" x="5184" y="2560"/>
+  <object id="4164" name="mask2" type="HideMask" gid="104" x="5184" y="2496"/>
+  <object id="4165" name="mask2" type="HideMask" gid="104" x="5184" y="2432"/>
+  <object id="4166" name="mask2" type="HideMask" gid="104" x="5184" y="2368"/>
+  <object id="4167" name="mask2" type="HideMask" gid="104" x="5248" y="2560"/>
+  <object id="4168" name="mask2" type="HideMask" gid="104" x="5312" y="2560"/>
+  <object id="4169" name="mask2" type="HideMask" gid="104" x="5376" y="2560"/>
+  <object id="4170" name="mask3" type="HideMask" gid="104" x="5632" y="2560"/>
+  <object id="4171" name="mask2" type="HideMask" gid="104" x="5440" y="2432"/>
+  <object id="4172" name="mask2" type="HideMask" gid="104" x="5440" y="2560"/>
+  <object id="4173" name="mask2" type="HideMask" gid="104" x="5440" y="2368"/>
+  <object id="4174" name="mask2" type="HideMask" gid="104" x="5440" y="2496"/>
+  <object id="4175" name="mask3" type="HideMask" gid="104" x="5632" y="2496"/>
+  <object id="4176" name="mask3" type="HideMask" gid="104" x="5632" y="2432"/>
+  <object id="4177" name="mask3" type="HideMask" gid="104" x="5632" y="2368"/>
+  <object id="4178" name="mask3" type="HideMask" gid="104" x="5888" y="2368"/>
+  <object id="4179" name="mask3" type="HideMask" gid="104" x="5888" y="2496"/>
+  <object id="4180" name="mask3" type="HideMask" gid="104" x="5888" y="2432"/>
+  <object id="4181" name="mask3" type="HideMask" gid="104" x="5888" y="2560"/>
+  <object id="4182" name="mask3" type="HideMask" gid="104" x="5696" y="2560"/>
+  <object id="4183" name="mask3" type="HideMask" gid="104" x="5824" y="2560"/>
+  <object id="4184" name="mask3" type="HideMask" gid="104" x="5760" y="2560"/>
+  <object id="4185" name="mask4" type="HideMask" gid="104" x="6080" y="2560"/>
+  <object id="4186" name="mask4" type="HideMask" gid="104" x="6080" y="2496"/>
+  <object id="4187" name="mask4" type="HideMask" gid="104" x="6080" y="2368"/>
+  <object id="4188" name="mask4" type="HideMask" gid="104" x="6080" y="2432"/>
+  <object id="4189" name="mask4" type="HideMask" gid="104" x="6336" y="2496"/>
+  <object id="4190" name="mask4" type="HideMask" gid="104" x="6336" y="2432"/>
+  <object id="4191" name="mask4" type="HideMask" gid="104" x="6336" y="2368"/>
+  <object id="4192" name="mask4" type="HideMask" gid="104" x="6336" y="2560"/>
+  <object id="4193" name="mask4" type="HideMask" gid="104" x="6144" y="2560"/>
+  <object id="4194" name="mask4" type="HideMask" gid="104" x="6272" y="2560"/>
+  <object id="4195" name="mask4" type="HideMask" gid="104" x="6208" y="2560"/>
+  <object id="4198" name="12,0,0,0" type="Applause" gid="105" x="13824" y="2240"/>
+  <object id="4202" name="mask2" type="HideMask" gid="104" x="5312" y="2368"/>
+  <object id="4204" name="mask2" type="HideMask" gid="104" x="5248" y="2368"/>
+  <object id="4206" name="mask2" type="HideMask" gid="104" x="5376" y="2368"/>
+  <object id="4207" name="mask3" type="HideMask" gid="104" x="5824" y="2368"/>
+  <object id="4209" name="mask3" type="HideMask" gid="104" x="5696" y="2368"/>
+  <object id="4210" name="mask3" type="HideMask" gid="104" x="5760" y="2368"/>
+  <object id="4212" name="mask4" type="HideMask" gid="104" x="6144" y="2368"/>
+  <object id="4213" name="mask4" type="HideMask" gid="104" x="6208" y="2368"/>
+  <object id="4214" name="mask4" type="HideMask" gid="104" x="6272" y="2368"/>
+  <object id="3636" type="DeadZone" gid="104" x="4032" y="2816"/>
+  <object id="3638" type="DeadZone" gid="104" x="4800" y="2816"/>
+  <object id="3643" type="DeadZone" gid="104" x="4864" y="2816"/>
+  <object id="3650" type="DeadZone" gid="104" x="4160" y="2816"/>
+  <object id="3655" type="DeadZone" gid="104" x="4096" y="2816"/>
+  <object id="3657" type="DeadZone" gid="104" x="4928" y="2816"/>
+  <object id="4231" type="DeadZone" gid="104" x="6656" y="2816"/>
+  <object id="4232" type="DeadZone" gid="104" x="6592" y="2816"/>
+  <object id="4234" name="extra_block" type="HideExtra" gid="103" x="4800" y="2496"/>
+  <object id="4235" name="extra_block" type="HideExtra" gid="103" x="4864" y="2496"/>
+  <object id="4236" name="extra_block" type="HideExtra" gid="103" x="4928" y="2496"/>
+  <object id="4237" name="extra_block" type="HideExtra" gid="103" x="4992" y="2496"/>
+  <object id="4238" name="extra_block" type="HideExtra" gid="103" x="4416" y="2624"/>
+  <object id="4240" name="extra_block1" type="HideExtra" gid="103" x="3712" y="2432"/>
+  <object id="4241" name="coin" type="AddItem" gid="103" x="2880" y="2240"/>
+  <object id="4242" name="coin" type="AddItem" gid="103" x="2944" y="2240"/>
+  <object id="4243" name="coin" type="AddItem" gid="103" x="3008" y="2240"/>
+  <object id="4244" name="heart" type="AddItem" gid="83" x="7040" y="2368"/>
+  <object id="4273" type="DeadZone" gid="104" x="11456" y="2816"/>
+  <object id="4275" type="DeadZone" gid="104" x="11520" y="2816"/>
+  <object id="4276" type="DeadZone" gid="104" x="11584" y="2816"/>
+  <object id="4348" name="mask6" type="HideMask" gid="103" x="9088" y="2368"/>
+  <object id="4349" name="mask6" type="HideMask" gid="103" x="9088" y="2432"/>
+  <object id="4350" name="mask6" type="HideMask" gid="103" x="9088" y="2496"/>
+  <object id="4351" name="mask6" type="HideMask" gid="103" x="9088" y="2560"/>
+  <object id="4364" name="coin" type="AddItem" gid="103" x="9728" y="2240"/>
+  <object id="4365" name="coin" type="AddItem" gid="103" x="9664" y="2240"/>
+  <object id="4366" name="extra_trick" type="HideExtra" gid="103" x="11136" y="2368"/>
+  <object id="4368" name="extra_gate" type="HideExtra" gid="103" x="9280" y="2560"/>
+  <object id="4369" name="1;MOON;Access to a different world.;10;(0,1)" type="ShowTextOnce" gid="105" x="5312" y="2432">
+   <properties>
+    <property name="moon" value="1"/>
+   </properties>
+  </object>
+  <object id="4370" name="1; ;Come back later.;10;(0,1)" type="ShowTextOnce" gid="105" x="5312" y="2432"/>
+ </objectgroup>
+ <objectgroup name="coinList1">
+  <object id="4352" gid="81" x="10240" y="2496"/>
+  <object id="4353" gid="81" x="10176" y="2432"/>
+  <object id="4354" gid="81" x="10176" y="2368"/>
+  <object id="4355" gid="81" x="10176" y="2304"/>
+  <object id="4356" gid="81" x="10240" y="2240"/>
+  <object id="4357" gid="81" x="10304" y="2304"/>
+  <object id="4360" gid="81" x="10304" y="2368"/>
+  <object id="4361" gid="81" x="10304" y="2432"/>
+ </objectgroup>
+ <layer name="dangerous" width="250" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2FsOgjAQBVC2orBwlip+kGgj0NoHhZyTED+ATGm5GcswAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANzbeHB+ajIKAACAssK9zN7eJtwXHe2TuK7HcjzPHkQh9vN5zyjnlFA7h3fKeWrmpuA3p2bEPM7vI6NUMeFYrrTGtay9O6aH1+jzch6v55z3rPY7xDE5j9dzzpfz8/jdQ5v197DWj7FkkfN8d8phbaVy/s93uCu/63JeT+x//N5yXntNW34TKzl3qbXDnrqqkbmtWns1t54n5Vq2hfOYmvOzr8/1WS+mVur1W/fmKjUvZ6yPnLfXW27lPI6cAwAAAAAAd/UC2VIcxw==
+  </data>
+ </layer>
+</map>

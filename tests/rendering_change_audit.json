@@ -1,0 +1,63 @@
+{
+  "base_version": "1.0.8",
+  "version": "1.0.9",
+  "changed_application_files": [
+    "app/appinfo.json",
+    "app/assets/index.webv1.html",
+    "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js",
+    "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteCanvasRenderCmd.js",
+    "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteFrame.js",
+    "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js",
+    "app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureCache.js",
+    "app/frameworks/cocos2d-html5/cocos2d/core/textures/TexturesWebGL.js",
+    "app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js"
+  ],
+  "added_application_files": [],
+  "deleted_application_files": [],
+  "syntax_checks": [
+    {
+      "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteCanvasRenderCmd.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteFrame.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureCache.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "app/frameworks/cocos2d-html5/cocos2d/core/textures/TexturesWebGL.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "tests/rendering_assertions.js",
+      "passed": true,
+      "error": ""
+    }
+  ],
+  "resource_files_compared": 1850,
+  "resource_bytes_compared": 58878556,
+  "modified_resources": [],
+  "all_original_resources_byte_identical": true
+}

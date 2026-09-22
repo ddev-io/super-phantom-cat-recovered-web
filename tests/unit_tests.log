@@ -1,0 +1,13 @@
+PASS images are globally serialized and duplicate URLs share a single decode
+PASS pending Image in loader.cache is not mistaken for a decoded cache hit
+PASS completed image cache hits do not reload the file
+PASS image error cleans the cache and does not block later jobs
+PASS CORS fallback retries once, then reports failure exactly once
+PASS image timeout releases its slot and cancels the request
+PASS atlas indexing does not allocate textures; requested atlas can be restored after purge
+PASS music uses one media element, supports pause/resume, and releases old sources
+PASS effect voice cap counts both playing and paused voices
+PASS decoded effect cache is trimmed without evicting active/paused voices
+PASS install is idempotent and retina scaling is disabled
+PASS stopping a paused effect releases its voice and clears the paused flag
+{"passed":12,"failed":0}

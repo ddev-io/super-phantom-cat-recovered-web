@@ -1,0 +1,627 @@
+--- a/app/appinfo.json
++++ b/app/appinfo.json
+@@ -1,6 +1,6 @@
+ {
+   "id": "com.veewo.supercat.webos",
+-  "version": "1.0.8",
++  "version": "1.0.9",
+   "vendor": "VeeWo",
+   "type": "web",
+   "main": "assets/index.webv1.html",
+--- a/app/assets/index.webv1.html
++++ b/app/assets/index.webv1.html
+@@ -106,11 +106,11 @@
+         report("boot-probe", { message: "index.webv1.html loaded" });
+     })();
+     </script>
+-    <script src="project.webv1.js?v=20260429z"></script>
+-    <script src="../frameworks/cocos2d-html5/CCBoot.js?v=20260429z"></script>
+-    <script src="image-sizes.js?v=20260918-memory1"></script>
+-    <script src="webos-memory.js?v=20260918-memory1"></script>
+-    <script src="main.js?v=20260918-memory1"></script>
++    <script src="project.webv1.js?v=20260920-render1"></script>
++    <script src="../frameworks/cocos2d-html5/CCBoot.js?v=20260920-render1"></script>
++    <script src="image-sizes.js?v=20260920-render1"></script>
++    <script src="webos-memory.js?v=20260920-render1"></script>
++    <script src="main.js?v=20260920-render1"></script>
+ </head>
+ <body>
+     <canvas id="gameCanvas"></canvas>
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSprite.js
+@@ -247,12 +247,8 @@
+     initWithSpriteFrame:function (spriteFrame) {
+         cc.assert(spriteFrame, cc._LogInfos.Sprite_initWithSpriteFrame);
+ 
+-        if(!spriteFrame.textureLoaded()){
+-            //add event listener
+-            this._textureLoaded = false;
+-            spriteFrame.addEventListener("load", this._renderCmd._spriteFrameLoadedCallback, this);
+-        }
+-
++        // setSpriteFrame owns the one deferred callback. A second callback
++        // here could apply an old frame after the animation has advanced.
+         //TODO
+         var rotated = cc._renderType === cc.game.RENDER_TYPE_CANVAS ? false : spriteFrame._rotated;
+         var ret = this.initWithTexture(spriteFrame.getTexture(), spriteFrame.getRect(), rotated);
+@@ -726,10 +722,16 @@
+                 _t._rect.width = rect.width;
+                 _t._rect.height = rect.height;
+             }
+-            if(_t.texture)
+-                _t.texture.removeEventListener("load", _t);
+-            texture.addEventListener("load", _t._renderCmd._textureLoadedCallback, _t);
+-            _t.texture = texture;
++            var request = _t._cancelPendingTextureLoad();
++            _t._setTexture(texture);
++            _t.setTextureRect(rect || cc.rect(0, 0, texture.width, texture.height), rotated);
++            _t._pendingTextureSource = texture;
++            texture.addEventListener("load", function (sender) {
++                if (request !== _t._textureRequestId || sender !== _t._texture)
++                    return;
++                _t._pendingTextureSource = null;
++                _t._renderCmd._textureLoadedCallback.call(_t, sender);
++            }, _t);
+             return true;
+         }
+ 
+@@ -821,46 +823,53 @@
+      * @function
+      * @param {cc.SpriteFrame|String} newFrame
+      */
++    // Cancel only the internal deferred callbacks owned by this Sprite.
++    _cancelPendingTextureLoad: function () {
++        if (this._pendingTextureSource)
++            this._pendingTextureSource.removeEventListener("load", this);
++        if (this._pendingFrameSource)
++            this._pendingFrameSource.removeEventListener("load", this);
++        this._pendingTextureSource = this._pendingFrameSource = null;
++        this.__supercatPendingFrame = null;
++        this._textureRequestId = (this._textureRequestId || 0) + 1;
++        return this._textureRequestId;
++    },
++
+     setSpriteFrame: function (newFrame) {
+-        var _t = this;
+-        if(cc.isString(newFrame)){
++        var self = this;
++        if (cc.isString(newFrame))
+             newFrame = cc.spriteFrameCache.getSpriteFrame(newFrame);
+-            cc.assert(newFrame, cc._LogInfos.Sprite_setSpriteFrame)
+-        }
+-
++        cc.assert(newFrame, cc._LogInfos.Sprite_setSpriteFrame);
++        var request = this._cancelPendingTextureLoad();
++        this.__supercatPendingFrame = newFrame;
++        function applyFrame(frame) {
++            var offset = frame.getOffset(), texture = frame.getTexture();
++            self._unflippedOffsetPositionFromCenter.x = offset.x;
++            self._unflippedOffsetPositionFromCenter.y = offset.y;
++            self._setTexture(texture);
++            self._textureLoaded = frame.textureLoaded();
++            self.setTextureRect(frame.getRect(), frame.isRotated(), frame.getOriginalSize());
++            self._renderCmd._updateForSetSpriteFrame(texture, self._textureLoaded);
++            if (self._textureLoaded) {
++                self._renderCmd._updateBlendFunc && self._renderCmd._updateBlendFunc();
++                self.setColor(self._realColor);
++                self._renderCmd._updateColor();
++            }
++        }
++        // Metadata is available now. In particular SpriteBatchNode validates
++        // child.texture when adding the child, not when the image loads.
++        applyFrame(newFrame);
++        if (!newFrame.textureLoaded()) {
++            this._pendingFrameSource = newFrame;
++            newFrame.addEventListener("load", function (sender) {
++                if (request !== self._textureRequestId || self.__supercatPendingFrame !== sender)
++                    return;
++                self._pendingFrameSource = null;
++                applyFrame(sender);
++                self.dispatchEvent("load");
++            }, this);
++        }
+         this.setNodeDirty(true);
+-
+-        var frameOffset = newFrame.getOffset();
+-        _t._unflippedOffsetPositionFromCenter.x = frameOffset.x;
+-        _t._unflippedOffsetPositionFromCenter.y = frameOffset.y;
+-
+-        // update rect
+-        var pNewTexture = newFrame.getTexture();
+-        var locTextureLoaded = newFrame.textureLoaded();
+-        if (!locTextureLoaded) {
+-            _t._textureLoaded = false;
+-            newFrame.addEventListener("load", function (sender) {
+-                // Do not let an old deferred frame overwrite a newer animation.
+-                if (_t.__supercatPendingFrame && _t.__supercatPendingFrame !== sender)
+-                    return;
+-                _t._textureLoaded = true;
+-                var locNewTexture = sender.getTexture();
+-                if (locNewTexture !== _t._texture)
+-                    _t._setTexture(locNewTexture);
+-                _t.setTextureRect(sender.getRect(), sender.isRotated(), sender.getOriginalSize());
+-                _t.dispatchEvent("load");
+-                _t.setColor(_t._realColor);
+-            }, _t);
+-        } else {
+-            _t._textureLoaded = true;
+-            // update texture before updating texture rect
+-            if (pNewTexture !== _t._texture) {
+-                _t._setTexture(pNewTexture);
+-                _t.setColor(_t._realColor);
+-            }
+-            _t.setTextureRect(newFrame.getRect(), newFrame.isRotated(), newFrame.getOriginalSize());
+-        }
+-        this._renderCmd._updateForSetSpriteFrame(pNewTexture);
+     },
+ 
+     /**
+@@ -940,25 +949,34 @@
+      * @param {cc.Texture2D|String} texture
+      */
+     setTexture: function (texture) {
+-        if(!texture)
+-            return this._renderCmd._setTexture(null);
+-
+-        //CCSprite.cpp 327 and 338
++        var self = this, request = this._cancelPendingTextureLoad();
+         var isFileName = cc.isString(texture);
+-
+-        if(isFileName)
++        if (isFileName)
+             texture = cc.textureCache.addImage(texture);
+-
+-        if(texture._textureLoaded){
+-            this._setTexture(texture, isFileName);
+-            this.setColor(this._realColor);
+-            this._textureLoaded = true;
+-        }else{
+-            this._renderCmd._setTexture(null);
+-            texture.addEventListener("load", function(){
+-                this._setTexture(texture, isFileName);
+-                this.setColor(this._realColor);
+-                this._textureLoaded = true;
++        this._setTexture(texture, isFileName);
++        this._textureLoaded = !!(texture && texture.isLoaded());
++        if (!texture)
++            return;
++        function finish() {
++            if (request !== self._textureRequestId || self._texture !== texture)
++                return;
++            self._pendingTextureSource = null;
++            self._textureLoaded = true;
++            self._setTexture(texture, isFileName);
++            self.setTextureRect(self._rect, self._rectRotated, self._contentSize);
++            self._renderCmd._updateBlendFunc && self._renderCmd._updateBlendFunc();
++            self.setColor(self._realColor);
++            self._renderCmd._updateColor();
++        }
++        if (this._textureLoaded) {
++            finish();
++        } else {
++            this._pendingTextureSource = texture;
++            texture.addEventListener("load", function () {
++                if (request !== self._textureRequestId)
++                    return;
++                finish();
++                self.dispatchEvent("load");
+             }, this);
+         }
+     },
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteCanvasRenderCmd.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteCanvasRenderCmd.js
+@@ -179,6 +179,11 @@
+         var texture = node._texture, rect = this._textureCoord;
+         var dColor = this._displayedColor;
+ 
++        if (texture && !texture.isLoaded()) {
++            this._textureToRender = texture;
++            this._colorized = false;
++            return;
++        }
+         if(texture){
+             if(dColor.r !== 255 || dColor.g !== 255 || dColor.b !== 255){
+                 this._textureToRender = texture._generateColorTexture(dColor.r, dColor.g, dColor.b, rect);
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteFrame.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteFrame.js
+@@ -242,18 +242,8 @@
+             this._texture = texture;
+             if(!locLoaded){
+                 texture.addEventListener("load", function(sender){
++                    if (sender !== this._texture) return;
+                     this._textureLoaded = true;
+-                    if(this._rotated && cc._renderType === cc.game.RENDER_TYPE_CANVAS){
+-                        var tempElement = sender.getHtmlElementObj();
+-                        tempElement = cc.Sprite.CanvasRenderCmd._cutRotateImageToCanvas(tempElement, this.getRect());
+-                        var tempTexture = new cc.Texture2D();
+-                        tempTexture.initWithElement(tempElement);
+-                        tempTexture.handleLoadedTexture();
+-                        this.setTexture(tempTexture);
+-
+-                        var rect = this.getRect();
+-                        this.setRect(cc.rect(0, 0, rect.width, rect.height));
+-                    }
+                     var locRect = this._rect;
+                     if(locRect.width === 0 && locRect.height === 0){
+                         var w = sender.width, h = sender.height;
+@@ -265,11 +255,31 @@
+                         this._originalSize.width =  w;
+                         this._originalSize.height =  h;
+                     }
++                    this._prepareCanvasTexture();
+                     //dispatch 'load' event of cc.SpriteFrame
+                     this.dispatchEvent("load");
+                 }, this);
+             }
+         }
++    },
++
++    // Normalize packed rotation for both cache hits and deferred decodes.
++    // CCB can construct a frame directly, bypassing SpriteFrameCache's fixup.
++    _prepareCanvasTexture: function () {
++        if (!this._rotated || cc._renderType !== cc.game.RENDER_TYPE_CANVAS)
++            return;
++        var texture = this.getTexture();
++        if (!texture || !texture.isLoaded())
++            return;
++        var canvas = cc.Sprite.CanvasRenderCmd._cutRotateImageToCanvas(
++            texture.getHtmlElementObj(), this.getRectInPixels());
++        var prepared = new cc.Texture2D();
++        prepared.initWithElement(canvas);
++        prepared.handleLoadedTexture();
++        this.setTexture(prepared);
++        var rect = this.getRect();
++        this.setRect(cc.rect(0, 0, rect.width, rect.height));
++        this._rotated = false;
+     },
+ 
+     /**
+@@ -373,6 +383,7 @@
+         this._originalSizeInPixels.height = originalSize.height;
+         cc._sizePixelsToPointsOut(originalSize, this._originalSize);
+         this._rotated = rotated;
++        this._prepareCanvasTexture();
+         return true;
+     }
+ });
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/sprites/CCSpriteWebGLRenderCmd.js
+@@ -155,6 +155,15 @@
+ 
+         var atlasWidth = tex.pixelsWidth;
+         var atlasHeight = tex.pixelsHeight;
++        if (!(atlasWidth > 0 && atlasHeight > 0)) {
++            var emptyQuad = this._quad;
++            emptyQuad.bl.texCoords.u = emptyQuad.bl.texCoords.v = 0;
++            emptyQuad.br.texCoords.u = emptyQuad.br.texCoords.v = 0;
++            emptyQuad.tl.texCoords.u = emptyQuad.tl.texCoords.v = 0;
++            emptyQuad.tr.texCoords.u = emptyQuad.tr.texCoords.v = 0;
++            this._quadDirty = true;
++            return;
++        }
+ 
+         var left, right, top, bottom, tempSwap, locQuad = this._quad;
+         if (node._rectRotated) {
+@@ -294,12 +303,11 @@
+                 cc.log(cc._LogInfos.Sprite_setTexture);
+                 return;
+             }
+-        }else{
+-            if(node._texture !== texture){
+-                node._textureLoaded = texture ? texture._textureLoaded : false;
+-                node._texture = texture;
+-                this._updateBlendFunc();
+-            }
++        }
++        if (node._texture !== texture) {
++            node._textureLoaded = texture ? texture._textureLoaded : false;
++            node._texture = texture;
++            this._updateBlendFunc();
+         }
+ 
+         if (texture)
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureCache.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureCache.js
+@@ -358,6 +358,17 @@
+ 
+             tex = locTexs[url] = new cc.Texture2D();
+             tex.url = url;
++            // TMX builds its quads synchronously. A decoded image in loader.cache
++            // must also yield a ready texture synchronously, even after a cache purge.
++            var cachedImage = cc.loader.getRes(url);
++            if (cachedImage && cachedImage.width > 0 && cachedImage.height > 0 &&
++                    cachedImage.complete !== false &&
++                    (cachedImage.naturalWidth === undefined || cachedImage.naturalWidth > 0)) {
++                tex.initWithElement(cachedImage);
++                cc.textureCache.handleLoadedTexture(url);
++                cb && cb.call(target, tex);
++                return tex;
++            }
+             var loadFunc = cc.loader._checkIsImageURL(url) ? cc.loader.load : cc.loader.loadImg;
+             loadFunc.call(cc.loader, url, function (err, img) {
+                 if (err)
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/textures/TexturesWebGL.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/textures/TexturesWebGL.js
+@@ -903,6 +903,17 @@
+ 
+         tex = locTexs[url] = new cc.Texture2D();
+         tex.url = url;
++        // TMX builds its quads synchronously. A decoded image in loader.cache
++        // must also yield a ready texture synchronously, even after a cache purge.
++        var cachedImage = cc.loader.getRes(url);
++        if (cachedImage && cachedImage.width > 0 && cachedImage.height > 0 &&
++                cachedImage.complete !== false &&
++                (cachedImage.naturalWidth === undefined || cachedImage.naturalWidth > 0)) {
++            tex.initWithElement(cachedImage);
++            cc.textureCache.handleLoadedTexture(url);
++            cb && cb.call(target, tex);
++            return tex;
++        }
+         var loadFunc = cc.loader._checkIsImageURL(url) ? cc.loader.load : cc.loader.loadImg;
+         loadFunc.call(cc.loader, url, function (err, img) {
+             if (err)
+--- a/app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js
++++ b/app/frameworks/cocos2d-html5/extensions/ccui/base-classes/UIScale9Sprite.js
+@@ -471,37 +471,15 @@
+             file = arguments[1];
+             capInsets = arguments[0];
+             rect = cc.rect(0, 0, 0, 0);
+-        } else {
+-            rect = rect || cc.rect(0, 0, 0, 0);
+-            capInsets = capInsets || cc.rect(0, 0, 0, 0);
+-        }
+-
+-        if(!file)
++        }
++        rect = rect || cc.rect(0, 0, 0, 0);
++        capInsets = capInsets || cc.rect(0, 0, 0, 0);
++        if (!file)
+             throw new Error("ccui.Scale9Sprite.initWithFile(): file should be non-null");
+-
+-        var texture = cc.textureCache.getTextureForKey(file);
+-        if (!texture) {
+-            texture = cc.textureCache.addImage(file);
+-        }
+-
+-        var batchNode = new cc.SpriteBatchNode(texture, 9);
+-        var locLoaded = texture.isLoaded();
+-        this._textureLoaded = locLoaded;
+-        if(!locLoaded){
+-            texture.addEventListener("load", function(sender){
+-                // the texture is rotated on Canvas render mode, so isRotated always is false.
+-                var preferredSize = this._preferredSize, restorePreferredSize = preferredSize.width !== 0 && preferredSize.height !== 0;
+-                if (restorePreferredSize) preferredSize = cc.size(preferredSize.width, preferredSize.height);
+-                var size  = sender.getContentSize();
+-                this.updateWithBatchNode(batchNode, cc.rect(0,0,size.width,size.height), false, this._capInsets);
+-                if (restorePreferredSize)this.setPreferredSize(preferredSize);
+-                this._positionsAreDirty = true;
+-                this.setNodeDirty();
+-                this.dispatchEvent("load");
+-            }, this);
+-        }
+-
+-        return this.initWithBatchNode(batchNode, rect, false, capInsets);
++        var texture = cc.textureCache.getTextureForKey(file) || cc.textureCache.addImage(file);
++        // updateWithSprite owns the sole deferred-load callback. Registering
++        // callbacks at every initialization layer rebuilt the slices repeatedly.
++        return this.initWithBatchNode(new cc.SpriteBatchNode(texture, 9), rect, false, capInsets);
+     },
+ 
+     /**
+@@ -515,27 +493,14 @@
+      * @param capInsets The values to use for the cap insets.
+      */
+     initWithSpriteFrame: function (spriteFrame, capInsets) {
+-        if(!spriteFrame || !spriteFrame.getTexture())
+-            throw new Error("ccui.Scale9Sprite.initWithSpriteFrame(): spriteFrame should be non-null and its texture should be non-null");
+-
+-        capInsets = capInsets || cc.rect(0, 0, 0, 0);
+-        var batchNode = new cc.SpriteBatchNode(spriteFrame.getTexture(), 9);
+-        var locLoaded = spriteFrame.textureLoaded();
+-        this._textureLoaded = locLoaded;
+-        if(!locLoaded){
+-            spriteFrame.addEventListener("load", function(sender){
+-                // the texture is rotated on Canvas render mode, so isRotated always is false.
+-                var preferredSize = this._preferredSize, restorePreferredSize = preferredSize.width !== 0 && preferredSize.height !== 0;
+-                if (restorePreferredSize) preferredSize = cc.size(preferredSize.width, preferredSize.height);
+-                this.updateWithBatchNode(batchNode, sender.getRect(), cc._renderType === cc.game.RENDER_TYPE_WEBGL && sender.isRotated(), this._capInsets);
+-                if (restorePreferredSize)this.setPreferredSize(preferredSize);
+-                this._positionsAreDirty = true;
+-                this.setNodeDirty();
+-                this.dispatchEvent("load");
+-            },this);
+-        }
+-        // the texture is rotated on Canvas render mode, so isRotated always is false.
+-        return this.initWithBatchNode(batchNode, spriteFrame.getRect(), cc._renderType === cc.game.RENDER_TYPE_WEBGL && spriteFrame.isRotated(), capInsets);
++        if (!spriteFrame || !spriteFrame.getTexture())
++            throw new Error("ccui.Scale9Sprite.initWithSpriteFrame(): spriteFrame and texture must be non-null");
++        this.setSpriteFrame(spriteFrame, capInsets);
++        this.setCascadeColorEnabled(true);
++        this.setCascadeOpacityEnabled(true);
++        this.setAnchorPoint(0.5, 0.5);
++        this._positionsAreDirty = true;
++        return true;
+     },
+ 
+     /**
+@@ -839,58 +804,71 @@
+      * @param capInsets The Values to use for the cap insets.
+      * @return True if update success, false otherwise.
+      */
+-    updateWithSprite: function(sprite, spriteRect, spriteFrameRotated, offset, originalSize, capInsets) {
+-        var opacity = this.getOpacity();
+-        var color = this.getColor();
++    updateWithSprite: function (sprite, spriteRect, spriteFrameRotated, offset, originalSize, capInsets) {
++        var image = sprite || this._scale9Image;
++        if (!image || !image.getTexture())
++            return false;
++        if (this._scale9PendingSprite)
++            this._scale9PendingSprite.removeEventListener("load", this);
++        this._scale9PendingSprite = null;
++        var request = this._scale9RequestId = (this._scale9RequestId || 0) + 1;
++        var opacity = this.getOpacity(), color = this.getColor();
++        var contentSize = cc.size(this._contentSize);
++        var preferredSize = cc.size(this._preferredSize);
++        this._scale9Image = image;
+         this._renderers.length = 0;
+-        if(sprite) {
+-            if(!sprite.getSpriteFrame())
+-                return false;
+-            if(!this._scale9Image)
+-                this._scale9Image = sprite;
+-        }
+-        if(!this._scale9Image)  return false;
+-        var rect = spriteRect;
+-        var size = originalSize;
+-
+-        var tmpTexture = this._scale9Image.getTexture();
+-        var locLoaded = tmpTexture && tmpTexture.isLoaded();
+-        this._textureLoaded = locLoaded;
+-        if(!locLoaded){
+-            tmpTexture.addEventListener("load", function(sender){
+-                this._positionsAreDirty = true;
+-                this.updateWithSprite(sprite, spriteRect, spriteFrameRotated, offset, originalSize, capInsets);
+-                this.setVisible(true);
++        // Removing old slices and adding decoded ones both change the command list.
++        cc.renderer.childrenOrderDirty = true;
++
++        var texture = image.getTexture();
++        var rect = cc.rect(spriteRect || cc.rect(0, 0, 0, 0));
++        var size = cc.size(originalSize || cc.size(0, 0));
++        this._textureLoaded = !!(image._textureLoaded && texture.isLoaded());
++        if (this._textureLoaded && cc._rectEqualToZero(rect)) {
++            var textureSize = texture.getContentSize();
++            rect = cc.rect(0, 0, textureSize.width, textureSize.height);
++        }
++        if (size.width === 0 && size.height === 0)
++            size = cc.size(rect.width, rect.height);
++        this._capInsets = cc.rect(capInsets || cc.rect(0, 0, 0, 0));
++        this._capInsetsInternal = cc.rect(this._capInsets);
++        this._spriteRect = rect;
++        this._offset = cc.p(offset || cc.p(0, 0));
++        this._spriteFrameRotated = !!spriteFrameRotated;
++        this._originalSize = size;
++        this._preferredSize = preferredSize.width || preferredSize.height ? preferredSize : cc.size(size);
++        this.setContentSize(contentSize.width || contentSize.height ? contentSize : size);
++        this._positionsAreDirty = true;
++
++        if (!this._textureLoaded) {
++            // Wait for the Sprite, not just its texture: Canvas may first need
++            // to extract a rotated atlas frame into a different texture.
++            var frame = image.__supercatPendingFrame;
++            this._scale9PendingSprite = image;
++            image.addEventListener("load", function () {
++                if (request !== this._scale9RequestId || image !== this._scale9Image)
++                    return;
++                this._scale9PendingSprite = null;
++                this.updateWithSprite(image,
++                    frame ? frame.getRect() : this._spriteRect,
++                    frame ? cc._renderType === cc.game.RENDER_TYPE_WEBGL && frame.isRotated() : this._spriteFrameRotated,
++                    frame ? frame.getOffset() : this._offset,
++                    frame ? frame.getOriginalSize() : this._originalSize,
++                    this._capInsets);
+                 this.setNodeDirty();
+                 this.dispatchEvent("load");
+             }, this);
+-            this.setVisible(false);
+             return true;
+         }
+-        if(cc._rectEqualToZero(rect)) {
+-            var textureSize = tmpTexture.getContentSize();
+-            rect = cc.rect(0, 0, textureSize.width, textureSize.height);
+-        }
+-        if(size.width === 0 && size.height === 0)
+-            size = cc.size(rect.width, rect.height);
+-        this._capInsets = capInsets;
+-        this._spriteRect = rect;
+-        this._offset = offset;
+-        this._spriteFrameRotated = spriteFrameRotated;
+-        this._originalSize = size;
+-        this._preferredSize = size;
+-        this._capInsetsInternal = capInsets;
+-        if(this._scale9Enabled)
++
++        if (this._scale9Enabled)
+             this.createSlicedSprites();
+         else
+-            this._scale9Image.initWithTexture(tmpTexture, this._spriteRect, this._spriteFrameRotated);
+-
++            image.initWithTexture(texture, this._spriteRect, this._spriteFrameRotated);
+         this.setState(this._brightState);
+-        this.setContentSize(size);
+-        if(this._spritesGenerated === true) {
+-            this.setOpacity(opacity);
+-            this.setColor(color);
+-        }
++        // A load must never change logical visibility or caller-defined layout.
++        this.setOpacity(opacity);
++        this.setColor(color);
+         this._spritesGenerated = true;
+         return true;
+     },
+@@ -903,25 +881,12 @@
+      * @returns {boolean}
+      */
+     updateWithBatchNode: function (batchNode, originalRect, rotated, capInsets) {
+-        var sprite = new cc.Sprite(batchNode.getTexture());
+-        var pos = cc.p(0,0);
+-        var originalSize = cc.size(originalRect.width,originalRect.height);
+-
+-        var tmpTexture = batchNode.getTexture();
+-        var locLoaded = tmpTexture.isLoaded();
+-        this._textureLoaded = locLoaded;
+-        if(!locLoaded){
+-            tmpTexture.addEventListener("load", function(sender){
+-                this._positionsAreDirty = true;
+-                this.updateWithBatchNode(batchNode, originalRect, rotated, capInsets);
+-                this.setVisible(true);
+-                this.setNodeDirty();
+-                this.dispatchEvent("load");
+-            }, this);
+-            this.setVisible(false);
+-            return true;
+-        }
+-        return this.updateWithSprite(sprite, originalRect, rotated, pos, originalSize, capInsets);
++        if (!batchNode || !batchNode.getTexture())
++            return false;
++        originalRect = originalRect || cc.rect(0, 0, 0, 0);
++        return this.updateWithSprite(new cc.Sprite(batchNode.getTexture()),
++            originalRect, rotated, cc.p(0, 0),
++            cc.size(originalRect.width, originalRect.height), capInsets);
+     },
+ 
+     /**
+@@ -930,26 +895,13 @@
+      * @param {cc.rect} capInsets
+      */
+     setSpriteFrame: function (spriteFrame, capInsets) {
+-        // Reset insets
+-        if (!capInsets)
+-            capInsets = cc.rect();
+-        var sprite = new cc.Sprite(spriteFrame.getTexture());
+-        var locLoaded = spriteFrame.textureLoaded();
+-        this._textureLoaded = locLoaded;
+-        if(!locLoaded){
+-            spriteFrame.addEventListener("load", function(sender){
+-                // the texture is rotated on Canvas render mode, so isRotated always is false.
+-                var preferredSize = this._preferredSize, restorePreferredSize = preferredSize.width !== 0 && preferredSize.height !== 0;
+-                if (restorePreferredSize) preferredSize = cc.size(preferredSize.width, preferredSize.height);
+-                this.updateWithBatchNode(this._scale9Image, sender.getRect(), cc._renderType === cc.game.RENDER_TYPE_WEBGL && sender.isRotated(), this._capInsets);
+-                if (restorePreferredSize)this.setPreferredSize(preferredSize);
+-                this._positionsAreDirty = true;
+-                this.setNodeDirty();
+-                this.dispatchEvent("load");
+-            },this);
+-        }
+-        this.updateWithSprite(sprite, spriteFrame.getRect(),spriteFrame.isRotated(),spriteFrame.getOffset(),spriteFrame.getOriginalSize(),capInsets);
+-
++        if (!spriteFrame || !spriteFrame.getTexture())
++            throw new Error("ccui.Scale9Sprite.setSpriteFrame(): spriteFrame and texture must be non-null");
++        capInsets = capInsets || cc.rect(0, 0, 0, 0);
++        var sprite = new cc.Sprite(spriteFrame);
++        this.updateWithSprite(sprite, spriteFrame.getRect(),
++            cc._renderType === cc.game.RENDER_TYPE_WEBGL && spriteFrame.isRotated(),
++            spriteFrame.getOffset(), spriteFrame.getOriginalSize(), capInsets);
+         this._insetLeft = capInsets.x;
+         this._insetTop = capInsets.y;
+         this._insetRight = this._originalSize.width - this._insetLeft - capInsets.width;
