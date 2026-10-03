@@ -13,10 +13,31 @@ scripts.
 
 ## Building
 
+### GitHub Actions
+
+Open **Actions → Build webOS IPK → Run workflow** to build the current branch.
+The workflow also runs automatically when the application, Linux build script,
+or workflow changes on `main`.
+
+After a successful run, download the `.ipk` from the run's **Artifacts** section.
+Artifacts are retained for 30 days. The package version comes from
+`app/appinfo.json`. The build uses the webOS TV profile and skips minification
+to preserve the recovered runtime. Only `app/` is packaged; repository-level
+tests and documentation are not included.
+
+### Local build
+
+Install Node.js 20 or later and the webOS CLI first:
+
+```sh
+npm install --global @webos-tools/cli@3.2.6
+ares-config --profile tv
+```
+
 On Linux:
 
 ```sh
-./build-ipk.sh
+sh build-ipk.sh
 ```
 
 On Windows:

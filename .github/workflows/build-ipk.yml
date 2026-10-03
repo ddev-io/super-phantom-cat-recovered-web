@@ -1,0 +1,66 @@
+name: Build webOS IPK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'build-ipk.sh'
+      - '.github/workflows/build-ipk.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+
+      - name: Install webOS CLI
+        run: |
+          npm install --global @webos-tools/cli@3.2.6
+          ares-config --profile tv
+
+      - name: Read application metadata
+        id: app
+        run: |
+          node <<'NODE' >> "$GITHUB_OUTPUT"
+          const { id, version } = require('./app/appinfo.json');
+          console.log(`version=${version}`);
+          console.log(`package=${id}_${version}_all.ipk`);
+          NODE
+
+      - name: Build and inspect IPK
+        env:
+          IPK_FILE: ${{ steps.app.outputs.package }}
+        run: |
+          sh build-ipk.sh
+          test -s "$IPK_FILE"
+          ares-package --info "$IPK_FILE"
+          {
+            echo '## webOS IPK'
+            echo
+            echo 'Package SHA-256:'
+            echo '```text'
+            sha256sum "$IPK_FILE"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload IPK
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          path: ${{ steps.app.outputs.package }}
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
