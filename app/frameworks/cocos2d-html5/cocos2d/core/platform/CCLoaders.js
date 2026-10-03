@@ -79,68 +79,95 @@ cc._plistLoader = {
 cc.loader.register(["plist"], cc._plistLoader);
 
 cc._fontLoader = {
-    TYPE : {
-        ".eot" : "embedded-opentype",
-        ".ttf" : "truetype",
-        ".ttc" : "truetype",
-        ".woff" : "woff",
-        ".svg" : "svg"
+    TYPE: {'.eot':'embedded-opentype', '.ttf':'truetype', '.ttc':'truetype',
+        '.otf':'opentype', '.woff':'woff', '.woff2':'woff2', '.svg':'svg'},
+    _fonts: Object.create(null),
+    _family: function (name) {
+        return String(name).replace(/\\/g, '/').split('/').pop().replace(/\.(ttf|ttc|otf|woff2?|eot|svg)$/i, '');
     },
-    _loadFont : function(name, srcs, type){
-        var doc = document, path = cc.path, TYPE = this.TYPE, fontStyle = document.createElement("style");
-        fontStyle.type = "text/css";
-        doc.body.appendChild(fontStyle);
-
-        var fontStr = "";
-        if(isNaN(name - 0))
-            fontStr += "@font-face { font-family:" + name + "; src:";
-        else
-            fontStr += "@font-face { font-family:'" + name + "'; src:";
-        if(srcs instanceof Array){
-            for(var i = 0, li = srcs.length; i < li; i++){
-                var src = srcs[i];
-                type = path.extname(src).toLowerCase();
-                fontStr += "url('" + srcs[i] + "') format('" + TYPE[type] + "')";
-                fontStr += (i === li - 1) ? ";" : ",";
-            }
-        }else{
-            type = type.toLowerCase();
-            fontStr += "url('" + srcs + "') format('" + TYPE[type] + "');";
-        }
-        fontStyle.textContent += fontStr + "}";
-
-        //<div style="font-family: PressStart;">.</div>
-        var preloadDiv = document.createElement("div");
-        var _divStyle =  preloadDiv.style;
-        _divStyle.fontFamily = name;
-        preloadDiv.innerHTML = ".";
-        _divStyle.position = "absolute";
-        _divStyle.left = "-100px";
-        _divStyle.top = "-100px";
-        doc.body.appendChild(preloadDiv);
+    _quote: function (value) {
+        return "'" + String(value).replace(/\\/g, '\\\\').replace(/'/g, "\\'") + "'";
     },
-    load : function(realUrl, url, res, cb){
-        var self = this;
-        var type = res.type, name = res.name, srcs = res.srcs;
-        if(cc.isString(res)){
-            type = cc.path.extname(res);
-            name = cc.path.basename(res, type);
-            self._loadFont(name, res, type);
-        }else{
-            self._loadFont(name, srcs);
+    _notifyReady: function (entry, error) {
+        if (entry.state !== 'loading') return;
+        entry.state = error ? 'error' : 'loaded';
+        entry.error = error || null;
+        clearTimeout(entry.timer);
+        if (entry.probes) entry.probes.forEach(function (p) { if (p.parentNode) p.parentNode.removeChild(p); });
+        entry.probes = null;
+        // Heights measured while a fallback was used must never survive font load.
+        if (!error && cc.LabelTTF) cc.LabelTTF.__fontHeightCache = {};
+        var callbacks = entry.callbacks;
+        entry.callbacks = [];
+        callbacks.forEach(function (cb) { cb(error || null, !error); });
+    },
+    _whenReady: function (name, cb) {
+        var entry = this._fonts[this._family(name)];
+        if (!entry) return;
+        if (entry.state === 'loading') entry.callbacks.push(cb);
+        else cb(entry.error, entry.state === 'loaded');
+    },
+    _loadFont: function (name, srcs, type, cb) {
+        name = this._family(name);
+        var self = this, entry = this._fonts[name];
+        if (entry) {
+            if (cb) this._whenReady(name, cb);
+            return entry;
         }
-        if(document.fonts){
-            document.fonts.load("1em " + name).then(function(){
-                cb(null, true);
-            }, function(err){
-                cb(err);
+        entry = this._fonts[name] = {name:name, state:'loading', callbacks:cb ? [cb] : []};
+        var sources = Array.isArray(srcs) ? srcs : [srcs];
+        var rules = sources.map(function (src) {
+            var ext = cc.path.extname(src).toLowerCase();
+            var format = self.TYPE[ext] || self.TYPE[type];
+            return 'url(' + self._quote(encodeURI(src)) + ')' + (format ? ' format(' + self._quote(format) + ')' : '');
+        });
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        style.textContent = '@font-face{font-family:' + this._quote(name) + ';src:' + rules.join(',') + ';font-weight:normal;font-style:normal;}';
+        (document.head || document.body || document.documentElement).appendChild(style);
+        var text = 'BESbswy0123456789MWil';
+        entry.timer = setTimeout(function () {
+            self._notifyReady(entry, new Error('Font load timed out: ' + name));
+        }, 15000);
+        if (document.fonts && typeof document.fonts.load === 'function') {
+            try {
+                document.fonts.load('32px ' + this._quote(name), text).then(function (faces) {
+                    self._notifyReady(entry, faces.length ? null : new Error('Font was not registered: ' + name));
+                }, function (error) { self._notifyReady(entry, error); });
+            } catch (error) { self._notifyReady(entry, error); }
+        } else {
+            // Older webOS engines: compare two different fallback families.
+            var probes = [], widths = [];
+            ['monospace', 'serif'].forEach(function (fallback) {
+                var probe = document.createElement('span');
+                probe.style.cssText = 'position:absolute;left:-10000px;top:-10000px;visibility:hidden;white-space:nowrap;font-size:32px;line-height:normal;';
+                probe.style.fontFamily = fallback;
+                probe.textContent = text;
+                (document.body || document.documentElement).appendChild(probe);
+                widths.push(probe.offsetWidth);
+                probe.style.fontFamily = self._quote(name) + ',' + fallback;
+                probes.push(probe);
             });
-        }else{
-            cb(null, true);
+            entry.probes = probes;
+            (function poll() {
+                if (entry.state !== 'loading') return;
+                if (probes[0].offsetWidth !== widths[0] && probes[1].offsetWidth !== widths[1])
+                    self._notifyReady(entry, null);
+                else setTimeout(poll, 50);
+            })();
+        }
+        return entry;
+    },
+    load: function (realUrl, url, res, cb) {
+        if (cc.isString(res)) {
+            var type = cc.path.extname(res).toLowerCase();
+            this._loadFont(this._family(res), realUrl || res, type, cb);
+        } else {
+            this._loadFont(res.name, res.srcs || realUrl, res.type, cb);
         }
     }
 };
-cc.loader.register(["font", "eot", "ttf", "woff", "svg", "ttc"], cc._fontLoader);
+cc.loader.register(['font','eot','ttf','ttc','otf','woff','woff2','svg'], cc._fontLoader);
 
 cc._binaryLoader = {
     load : function(realUrl, url, res, cb){

@@ -167,7 +167,7 @@
 
         var left, right, top, bottom, tempSwap, locQuad = this._quad;
         if (node._rectRotated) {
-            if (cc.FIX_ARTIFACTS_BY_STRECHING_TEXEL) {
+            if (cc.FIX_ARTIFACTS_BY_STRECHING_TEXEL || node._supercatInsetTexels) {
                 left = (2 * rect.x + 1) / (2 * atlasWidth);
                 right = left + (rect.height * 2 - 2) / (2 * atlasWidth);
                 top = (2 * rect.y + 1) / (2 * atlasHeight);
@@ -200,7 +200,7 @@
             locQuad.tr.texCoords.u = right;
             locQuad.tr.texCoords.v = bottom;
         } else {
-            if (cc.FIX_ARTIFACTS_BY_STRECHING_TEXEL) {
+            if (cc.FIX_ARTIFACTS_BY_STRECHING_TEXEL || node._supercatInsetTexels) {
                 left = (2 * rect.x + 1) / (2 * atlasWidth);
                 right = left + (rect.width * 2 - 2) / (2 * atlasWidth);
                 top = (2 * rect.y + 1) / (2 * atlasHeight);

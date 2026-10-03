@@ -96,6 +96,21 @@ cc.LabelTTF._firsrEnglish = /^[a-zA-Z0-9ÄÖÜäöüßéèçàùêâîôû]/;
     proto.constructor = cc.LabelTTF.RenderCmd;
 
     proto._setFontStyle = function (fontNameOrFontDef, fontSize, fontStyle, fontWeight) {
+        var renderCmd = this;
+        var requestedName = fontNameOrFontDef instanceof cc.FontDefinition ? fontNameOrFontDef.fontName : fontNameOrFontDef;
+        var fontEntry = cc._fontLoader && cc._fontLoader._fonts[cc._fontLoader._family(requestedName)];
+        if (fontEntry && fontEntry.state === "loading" && this._pendingFontEntry !== fontEntry) {
+            this._pendingFontEntry = fontEntry;
+            cc._fontLoader._whenReady(requestedName, function (error) {
+                if (renderCmd._pendingFontEntry !== fontEntry) return;
+                renderCmd._pendingFontEntry = null;
+                var node = renderCmd._node;
+                if (!error && node && cc._fontLoader._family(node._fontName) === fontEntry.name) {
+                    renderCmd._setFontStyle(node._fontName, node._fontSize, node._fontStyle, node._fontWeight);
+                    node._setUpdateTextureDirty();
+                }
+            });
+        }
         if(fontNameOrFontDef instanceof cc.FontDefinition){
             this._fontStyleStr = fontNameOrFontDef._getCanvasFontStr();
             this._fontClientHeight = cc.LabelTTF.__getFontHeightByDiv(fontNameOrFontDef);

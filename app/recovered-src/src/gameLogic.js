@@ -262,6 +262,36 @@ game.Logic = {
     var text = this._getLoaderText(tmxResource);
     this._prepareTMXTextureFromText(tmxResource, text, {});
   },
+  releaseTMXMap: function () {
+    var oldMap = this._tmxMap;
+    if (!oldMap) return;
+    oldMap.removeFromParent(true);
+    oldMap.allLayers().forEach(function (layer) {
+      layer.removeAllChildren(true);
+      var atlas = layer._renderCmd && layer._renderCmd._textureAtlas;
+      if (atlas) {
+        atlas._releaseBuffer();
+        atlas._buffersVBO = [null, null];
+        atlas._quadsWebBuffer = null;
+        atlas._quads.length = 0;
+        atlas._indices = null;
+        atlas._quadsReader = null;
+        atlas._quadsArrayBuffer = null;
+        atlas._capacity = atlas._totalQuads = 0;
+        atlas.texture = null; // Shared tileset textures themselves stay in cache.
+      }
+      // Canvas is a fallback renderer; drop its large backing store as well.
+      var canvas = layer._renderCmd && layer._renderCmd._cacheCanvas;
+      if (canvas) canvas.width = canvas.height = 0;
+      layer._reusedTile = null;
+      layer.releaseMap();
+    });
+    this._tmxMap = this._tmxLayer = this._tmxLayerEx = this._tmxLayerHide = null;
+    this._tmxLayerExtra = this._tmxLayerGrass = this._tmxLayerTips = null;
+    this.objMap = this.triggerMap = this.dynamicObjMap = this.configMap = null;
+    this.map = this.mapex = null;
+    this.funcPool = [];
+  },
   createTMXMap: function (arg0) {
     var tmxResource = this._resolveTMXResource(arg0);
     this._prepareTMXTextures(tmxResource);
@@ -1437,7 +1467,12 @@ game.Logic = {
     });
   },
   checkTileGridValid: function (arg0) {
-    return arg0.x < this._tmxMapSize.width && arg0.x >= 0 && arg0.y < this._tmxMapSize.height && arg0.y >= 0;
+    return !!(arg0 && this._tmxMapSize &&
+      typeof arg0.x === "number" && typeof arg0.y === "number" &&
+      isFinite(arg0.x) && isFinite(arg0.y) &&
+      arg0.x === Math.floor(arg0.x) && arg0.y === Math.floor(arg0.y) &&
+      arg0.x < this._tmxMapSize.width && arg0.x >= 0 &&
+      arg0.y < this._tmxMapSize.height && arg0.y >= 0);
   },
   getTileGridByPos: function (arg0) {
     var local0 = Math.floor(arg0.x / this._tmxTileSize.width);
@@ -1481,7 +1516,8 @@ game.Logic = {
   },
   _missingTileInfoGids: {},
   getTileDataByGid: function (arg0, arg1, arg2) {
-    if (!arg0) {
+    // Validate before construction/init (which can create items or animations).
+    if (!arg0 || !this.checkTileGridValid(arg1)) {
       return null;
     }
     var local0 = TileData.createTileData(arg0);

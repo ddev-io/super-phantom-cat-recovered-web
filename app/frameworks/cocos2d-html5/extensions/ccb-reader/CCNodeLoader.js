@@ -62,37 +62,15 @@ cc._supercatResolveCCBFontName = cc._supercatResolveCCBFontName || function (fon
         return fontName;
     }
 
-    var familyName = match[1];
-    var rootPath = "";
-    if (ccbReader && typeof ccbReader.getCCBRootPath === "function") {
-        rootPath = ccbReader.getCCBRootPath() || "";
-    }
-
+    var familyName = cc._fontLoader._family(fontName);
+    var rootPath = ccbReader && ccbReader.getCCBRootPath ? ccbReader.getCCBRootPath() || "" : "";
     var url = fontName;
-    if (!/^(?:[a-z]+:)?\/\//i.test(url) && url.charAt(0) !== "/" && url.indexOf("/") < 0) {
+    if (!/^(?:[a-z]+:)?\/\//i.test(url) && url.charAt(0) !== "/" && url.indexOf("/") < 0)
         url = rootPath + url;
-    }
-
-    if (typeof document !== "undefined" && !cc._supercatCCBRegisteredFonts[familyName]) {
-        cc._supercatCCBRegisteredFonts[familyName] = true;
-
-        var ext = (match[2] || "ttf").toLowerCase();
-        var format = ext === "otf" ? "opentype" : (ext === "woff2" ? "woff2" : (ext === "woff" ? "woff" : "truetype"));
-        var safeFamily = familyName.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
-        var safeUrl = encodeURI(url).replace(/'/g, "%27");
-
-        var style = document.createElement("style");
-        style.type = "text/css";
-        style.textContent = "@font-face{font-family:'" + safeFamily + "';src:url('" + safeUrl + "') format('" + format + "');font-weight:normal;font-style:normal;}";
-        (document.head || document.body || document.documentElement).appendChild(style);
-
-        // Trigger browser font loading early. Rendering will refresh naturally on
-        // the next Cocos frame; this also fixes labels created before CSS font
-        // parsing has finished in some browsers.
-        if (document.fonts && typeof document.fonts.load === "function") {
-            document.fonts.load("1em '" + familyName.replace(/'/g, "\\'") + "'");
-        }
-    }
+    if (typeof __supercatFixResourcePath === "function") url = __supercatFixResourcePath(url);
+    // Share the preload registration. Re-registering a loaded face made labels
+    // cache a fallback bitmap and fallback dimensions during CCB construction.
+    cc._fontLoader._loadFont(familyName, url, "." + match[2].toLowerCase());
 
     return familyName;
 };

@@ -322,7 +322,7 @@ cc.Node.RenderCmd.prototype = {
         return this._transform;
     },
 
-    _syncStatus: function (parentCmd) {
+    _syncStatus: function (parentCmd, visitingChildren) {
         //  In the visit logic does not restore the _dirtyFlag
         //  Because child elements need parent's _dirtyFlag to change himself
         var flags = cc.Node._dirtyFlags, locFlag = this._dirtyFlag;
@@ -361,7 +361,7 @@ cc.Node.RenderCmd.prototype = {
 
         if (cc._renderType === cc.game.RENDER_TYPE_WEBGL || locFlag & flags.transformDirty)
             //update the transform
-            this.transform(parentCmd, true);
+            this.transform(parentCmd, !visitingChildren);
 
         if (locFlag & flags.orderDirty)
             this._dirtyFlag = this._dirtyFlag & flags.orderDirty ^ this._dirtyFlag;

@@ -255,7 +255,7 @@ var LyGame = vee.Class.extend({
       this.jumpButtonUp.bind(this)
     );
     LyGame_safeCall(vee.Controller, "registerButtonAction",
-      vee.KeyCode.BUTTON_B,
+      [vee.KeyCode.BUTTON_B, vee.KeyCode.BUTTON_DPAD_CENTER], // Remote OK: on-screen ability button.
       this.BButtonDown.bind(this),
       this.BButtonUp.bind(this)
     );
@@ -553,6 +553,8 @@ var LyGame = vee.Class.extend({
       ItemCoin.coinFrameName = "coin_fist.png";
     }
 
+    // Release the old level before allocating the next map's CPU/GPU quads.
+    game.Logic.releaseTMXMap();
     this.lyContainer.removeAllChildren();
 
     this.lyMap = new cc.Layer();
@@ -950,7 +952,7 @@ var LyGame = vee.Class.extend({
     }
     this._lastUpdateClock = now;
     game.Data._lastLyGameUpdateClock = now;
-    if (parseFloat(dt.toFixed(3)) > 0.02) {
+    if (dt >= 0.0205) {
       dt = 0.02;
     }
 
@@ -962,7 +964,9 @@ var LyGame = vee.Class.extend({
     if (game.Logic && game.Logic.dynamicObjMap && game.Logic.dynamicObjMap.getObjects) {
       objects = game.Logic.dynamicObjMap.getObjects() || [];
     }
-    for (var i = 0; i < objects.length; i++) {
+    // Grid indices can be far apart. Scanning .length visits every empty cell.
+    for (var i in objects) {
+      if (!Object.prototype.hasOwnProperty.call(objects, i)) { continue; }
       var obj = objects[i];
       if (obj && !obj.uncheck && obj.updatePos) {
         obj.updatePos(dt);

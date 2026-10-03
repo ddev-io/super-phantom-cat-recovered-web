@@ -2350,16 +2350,19 @@ cc.game = /** @lends cc.game# */{
         director.setDisplayStats(config[CONFIG_KEY.showFPS]);
 
         callback = function () {
+            self._intervalId = 0;
             if (!self._paused) {
                 director.mainLoop();
-                if(self._intervalId)
-                    window.cancelAnimationFrame(self._intervalId);
-                self._intervalId = window.requestAnimFrame(callback);
+                // pause/resume inside mainLoop may already have queued a frame.
+                if (!self._paused && !self._intervalId) {
+                    self._intervalId = window.requestAnimFrame(callback);
+                }
             }
         };
 
-        window.requestAnimFrame(callback);
+        if (self._intervalId) { window.cancelAnimationFrame(self._intervalId); }
         self._paused = false;
+        self._intervalId = window.requestAnimFrame(callback);
     },
 
 //  @Game loading section

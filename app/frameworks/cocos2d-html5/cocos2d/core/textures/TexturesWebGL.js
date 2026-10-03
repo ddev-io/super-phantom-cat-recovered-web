@@ -82,7 +82,9 @@ cc._tmp.WebGLTexture2D = function () {
          */
         releaseTexture: function () {
             if (this._webTextureObj)
-                cc._renderContext.deleteTexture(this._webTextureObj);
+                cc.glDeleteTexture(this._webTextureObj);
+            this._webTextureObj = null;
+            this._textureLoaded = false;
             cc.loader.release(this.url);
         },
 
@@ -255,7 +257,8 @@ cc._tmp.WebGLTexture2D = function () {
                 gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
             }
 
-            self._webTextureObj = gl.createTexture();
+            if (!self._webTextureObj)
+                self._webTextureObj = gl.createTexture();
             cc.glBindTexture2D(self);
 
             gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
@@ -308,6 +311,7 @@ cc._tmp.WebGLTexture2D = function () {
             self.shaderProgram = cc.shaderCache.programForKey(cc.SHADER_POSITION_TEXTURE);
 
             self._textureLoaded = true;
+            self._applySamplerParameters();
 
             return true;
         },
@@ -418,7 +422,8 @@ cc._tmp.WebGLTexture2D = function () {
         initWithElement: function (element) {
             if (!element)
                 return;
-            this._webTextureObj = cc._renderContext.createTexture();
+            if (!this._webTextureObj)
+                this._webTextureObj = cc._renderContext.createTexture();
             this._htmlElementObj = element;
             this._textureLoaded = true;
         },
@@ -490,6 +495,10 @@ cc._tmp.WebGLTexture2D = function () {
 
             self._hasPremultipliedAlpha = premultiplied;
             self._hasMipmaps = false;
+
+            self._textureLoaded = true;
+            self._applySamplerParameters();
+            cc.glBindTexture2D(null);
 
             //dispatch load event to listener.
             self.dispatchEvent("load");
@@ -563,54 +572,61 @@ cc._tmp.WebGLTexture2D = function () {
          * @param {Number} [wrapS]
          * @param {Number} [wrapT]
          */
-        setTexParameters: function (texParams, magFilter, wrapS, wrapT) {
-            var _t = this;
+        // Keep sampler intent on the Texture2D, not in one-shot load listeners.
+        // This also survives canvas updates and decoded-image cache reuploads.
+        _samplerParameters: null,
+        _samplerFilterMode: null,
+
+        _applySamplerParameters: function () {
+            if (!this._webTextureObj || !this._pixelsWide || !this._pixelsHigh)
+                return;
             var gl = cc._renderContext;
-
-            if(magFilter !== undefined)
-                texParams = {minFilter: texParams, magFilter: magFilter, wrapS: wrapS, wrapT: wrapT};
-
-            cc.assert((_t._pixelsWide === cc.NextPOT(_t._pixelsWide) && _t._pixelsHigh === cc.NextPOT(_t._pixelsHigh)) ||
-                (texParams.wrapS === gl.CLAMP_TO_EDGE && texParams.wrapT === gl.CLAMP_TO_EDGE),
+            var p = this._samplerParameters || {};
+            var min = p.minFilter == null ? gl.LINEAR : p.minFilter;
+            var mag = p.magFilter == null ? gl.LINEAR : p.magFilter;
+            if (this._samplerFilterMode === "nearest") {
+                min = this._hasMipmaps ? gl.NEAREST_MIPMAP_NEAREST : gl.NEAREST;
+                mag = gl.NEAREST;
+            } else if (this._samplerFilterMode === "linear") {
+                min = this._hasMipmaps ? gl.LINEAR_MIPMAP_NEAREST : gl.LINEAR;
+                mag = gl.LINEAR;
+            }
+            var wrapS = p.wrapS == null ? gl.CLAMP_TO_EDGE : p.wrapS;
+            var wrapT = p.wrapT == null ? gl.CLAMP_TO_EDGE : p.wrapT;
+            cc.assert((this._pixelsWide === cc.NextPOT(this._pixelsWide) &&
+                this._pixelsHigh === cc.NextPOT(this._pixelsHigh)) ||
+                (wrapS === gl.CLAMP_TO_EDGE && wrapT === gl.CLAMP_TO_EDGE),
                 "WebGLRenderingContext.CLAMP_TO_EDGE should be used in NPOT textures");
-
-            cc.glBindTexture2D(_t);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, texParams.minFilter);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, texParams.magFilter);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, texParams.wrapS);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, texParams.wrapT);
+            cc.glBindTexture2D(this);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, min);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, mag);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, wrapS);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, wrapT);
         },
 
-        /**
-         * sets antialias texture parameters:              <br/>
-         *  - GL_TEXTURE_MIN_FILTER = GL_NEAREST           <br/>
-         *  - GL_TEXTURE_MAG_FILTER = GL_NEAREST
-         */
+        setTexParameters: function (texParams, magFilter, wrapS, wrapT) {
+            if (magFilter !== undefined)
+                texParams = {minFilter: texParams, magFilter: magFilter, wrapS: wrapS, wrapT: wrapT};
+            if (!texParams) return;
+            var previous = this._samplerParameters || {};
+            this._samplerParameters = {
+                minFilter: texParams.minFilter == null ? previous.minFilter : texParams.minFilter,
+                magFilter: texParams.magFilter == null ? previous.magFilter : texParams.magFilter,
+                wrapS: texParams.wrapS == null ? previous.wrapS : texParams.wrapS,
+                wrapT: texParams.wrapT == null ? previous.wrapT : texParams.wrapT
+            };
+            this._samplerFilterMode = null;
+            this._applySamplerParameters();
+        },
+
         setAntiAliasTexParameters: function () {
-            var gl = cc._renderContext;
-
-            cc.glBindTexture2D(this);
-            if (!this._hasMipmaps)
-                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-            else
-                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+            this._samplerFilterMode = "linear";
+            this._applySamplerParameters();
         },
 
-        /**
-         *  sets alias texture parameters:
-         *   GL_TEXTURE_MIN_FILTER = GL_NEAREST
-         *   GL_TEXTURE_MAG_FILTER = GL_NEAREST
-         */
         setAliasTexParameters: function () {
-            var gl = cc._renderContext;
-
-            cc.glBindTexture2D(this);
-            if (!this._hasMipmaps)
-                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-            else
-                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST_MIPMAP_NEAREST);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+            this._samplerFilterMode = "nearest";
+            this._applySamplerParameters();
         },
 
         /**
@@ -825,18 +841,20 @@ cc._tmp.WebGLTextureAtlas = function () {
             _t.dirty = false;
         }
 
-        gl.vertexAttribPointer(cc.VERTEX_ATTRIB_POSITION, 3, gl.FLOAT, false, 24, 0);               // vertices
-        gl.vertexAttribPointer(cc.VERTEX_ATTRIB_COLOR, 4, gl.UNSIGNED_BYTE, true, 24, 12);          // colors
-        gl.vertexAttribPointer(cc.VERTEX_ATTRIB_TEX_COORDS, 2, gl.FLOAT, false, 24, 16);            // tex coords
-
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, _t._buffersVBO[1]);
-
-        if (cc.TEXTURE_ATLAS_USE_TRIANGLE_STRIP)
-            gl.drawElements(gl.TRIANGLE_STRIP, n * 6, gl.UNSIGNED_SHORT, start * 6 * _t._indices.BYTES_PER_ELEMENT);
-        else
-            gl.drawElements(gl.TRIANGLES, n * 6, gl.UNSIGNED_SHORT, start * 6 * _t._indices.BYTES_PER_ELEMENT);
-
-        cc.g_NumberOfDraws++;
+        var mode = cc.TEXTURE_ATLAS_USE_TRIANGLE_STRIP ? gl.TRIANGLE_STRIP : gl.TRIANGLES;
+        var end = start + n;
+        for (var first = start; first < end;) {
+            var baseQuad = Math.floor(first / 16384) * 16384;
+            var count = Math.min(end - first, baseQuad + 16384 - first);
+            var byteOffset = baseQuad * cc.V3F_C4B_T2F_Quad.BYTES_PER_ELEMENT;
+            gl.vertexAttribPointer(cc.VERTEX_ATTRIB_POSITION, 3, gl.FLOAT, false, 24, byteOffset);
+            gl.vertexAttribPointer(cc.VERTEX_ATTRIB_COLOR, 4, gl.UNSIGNED_BYTE, true, 24, byteOffset + 12);
+            gl.vertexAttribPointer(cc.VERTEX_ATTRIB_TEX_COORDS, 2, gl.FLOAT, false, 24, byteOffset + 16);
+            gl.drawElements(mode, count * 6, gl.UNSIGNED_SHORT, first * 6 * _t._indices.BYTES_PER_ELEMENT);
+            cc.g_NumberOfDraws++;
+            first += count;
+        }
         //cc.checkGLErrorDebug();
     };
 };

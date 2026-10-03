@@ -1,6 +1,6 @@
 {
   "id": "com.veewo.supercat.webos",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "vendor": "VeeWo",
   "type": "web",
   "main": "assets/index.webv1.html",

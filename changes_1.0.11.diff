@@ -1,0 +1,809 @@
+--- a/app/appinfo.json
++++ b/app/appinfo.json
+@@ -1,6 +1,6 @@
+ {
+   "id": "com.veewo.supercat.webos",
+-  "version": "1.0.10",
++  "version": "1.0.11",
+   "vendor": "VeeWo",
+   "type": "web",
+   "main": "assets/index.webv1.html",
+--- a/app/assets/index.webv1.html
++++ b/app/assets/index.webv1.html
+@@ -106,11 +106,11 @@
+         report("boot-probe", { message: "index.webv1.html loaded" });
+     })();
+     </script>
+-    <script src="project.webv1.js?v=20260930-render2"></script>
+-    <script src="../frameworks/cocos2d-html5/CCBoot.js?v=20260930-render2"></script>
+-    <script src="image-sizes.js?v=20260930-render2"></script>
+-    <script src="webos-memory.js?v=20260930-render2"></script>
+-    <script src="main.js?v=20260930-render2"></script>
++    <script src="project.webv1.js?v=20261003-perf-story1"></script>
++    <script src="../frameworks/cocos2d-html5/CCBoot.js?v=20261003-perf-story1"></script>
++    <script src="image-sizes.js?v=20261003-perf-story1"></script>
++    <script src="webos-memory.js?v=20261003-perf-story1"></script>
++    <script src="main.js?v=20261003-perf-story1"></script>
+ </head>
+ <body>
+     <canvas id="gameCanvas"></canvas>
+--- a/app/frameworks/cocos2d-html5/CCBoot.js
++++ b/app/frameworks/cocos2d-html5/CCBoot.js
+@@ -2350,16 +2350,19 @@
+         director.setDisplayStats(config[CONFIG_KEY.showFPS]);
+ 
+         callback = function () {
++            self._intervalId = 0;
+             if (!self._paused) {
+                 director.mainLoop();
+-                if(self._intervalId)
+-                    window.cancelAnimationFrame(self._intervalId);
+-                self._intervalId = window.requestAnimFrame(callback);
++                // pause/resume inside mainLoop may already have queued a frame.
++                if (!self._paused && !self._intervalId) {
++                    self._intervalId = window.requestAnimFrame(callback);
++                }
+             }
+         };
+ 
+-        window.requestAnimFrame(callback);
++        if (self._intervalId) { window.cancelAnimationFrame(self._intervalId); }
+         self._paused = false;
++        self._intervalId = window.requestAnimFrame(callback);
+     },
+ 
+ //  @Game loading section
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNodeCanvasRenderCmd.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNodeCanvasRenderCmd.js
+@@ -322,7 +322,7 @@
+         return this._transform;
+     },
+ 
+-    _syncStatus: function (parentCmd) {
++    _syncStatus: function (parentCmd, visitingChildren) {
+         //  In the visit logic does not restore the _dirtyFlag
+         //  Because child elements need parent's _dirtyFlag to change himself
+         var flags = cc.Node._dirtyFlags, locFlag = this._dirtyFlag;
+@@ -361,7 +361,7 @@
+ 
+         if (cc._renderType === cc.game.RENDER_TYPE_WEBGL || locFlag & flags.transformDirty)
+             //update the transform
+-            this.transform(parentCmd, true);
++            this.transform(parentCmd, !visitingChildren);
+ 
+         if (locFlag & flags.orderDirty)
+             this._dirtyFlag = this._dirtyFlag & flags.orderDirty ^ this._dirtyFlag;
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNodeWebGLRenderCmd.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNodeWebGLRenderCmd.js
+@@ -55,7 +55,9 @@
+ 
+         //optimize performance for javascript
+         currentStack.stack.push(currentStack.top);
+-        this._syncStatus(parentCmd);
++        // Each child is visited below. Recursing here transforms every subtree
++        // again at each depth, even when no local transform has changed.
++        this._syncStatus(parentCmd, true);
+         currentStack.top = this._stackMatrix;
+         this.visitChildren();
+         //optimize performance for javascript
+--- a/app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureAtlas.js
++++ b/app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureAtlas.js
+@@ -159,6 +159,19 @@
+             locQuads[index] = new cc.V3F_C4B_T2F_Quad(quad.tl, quad.bl, quad.tr, quad.br, this._quadsArrayBuffer, index * cc.V3F_C4B_T2F_Quad.BYTES_PER_ELEMENT);
+             return;
+         }
++        var target = locQuads[index];
++        if (quad._arrayBuffer && target._arrayBuffer) {
++            if (!quad._copyBytes || quad._copyBytes.buffer !== quad._arrayBuffer ||
++                quad._copyBytes.byteOffset !== quad._offset) {
++                quad._copyBytes = new Uint8Array(quad._arrayBuffer, quad._offset, 96);
++            }
++            if (!target._copyBytes || target._copyBytes.buffer !== target._arrayBuffer ||
++                target._copyBytes.byteOffset !== target._offset) {
++                target._copyBytes = new Uint8Array(target._arrayBuffer, target._offset, 96);
++            }
++            target._copyBytes.set(quad._copyBytes);
++            return;
++        }
+         locQuads[index].bl = quad.bl;
+         locQuads[index].br = quad.br;
+         locQuads[index].tl = quad.tl;
+--- a/app/recovered-src/src/cinema.js
++++ b/app/recovered-src/src/cinema.js
+@@ -1,8 +1,29 @@
++// The supplied cinema.dis omits the deepest anonymous function bodies.
++// Recoverable stages below follow its func1..func8 order. The last jump's
++// storyOver continuation remains the existing port behavior, not a verified
++// reconstruction of that missing callback.
++function __cinemaGuard(callback) {
++  var runId = Cinema._runId;
++  return function () {
++    if (Cinema._runId === runId && !Cinema._finishing) {
++      return callback.apply(this, arguments);
++    }
++  };
++}
++
++function __cinemaCallFunc(callback) {
++  return cc.callFunc(__cinemaGuard(callback));
++}
++
+ function __cinemaCall(obj, methodName) {
+   if (!obj || typeof obj[methodName] !== "function") {
+     return undefined;
+   }
+-  return obj[methodName].apply(obj, Array.prototype.slice.call(arguments, 2));
++  var args = Array.prototype.slice.call(arguments, 2);
++  if (methodName === "playAnimate" && typeof args[1] === "function") {
++    args[1] = __cinemaGuard(args[1]);
++  }
++  return obj[methodName].apply(obj, args);
+ }
+ 
+ function __cinemaPoint(x, y) {
+@@ -84,8 +105,14 @@
+     return;
+   }
+ 
++  if (role.checkPosUpdateFunc) { __cinemaStopCallbacks(role, role.checkPosUpdateFunc); }
++  var runId = Cinema._runId;
+   role.checkPosForCinema = targetPos;
+   role.checkPosUpdateFunc = function () {
++    if (Cinema._runId !== runId || Cinema._finishing) {
++      __cinemaStopCallbacks(role, role.checkPosUpdateFunc);
++      return;
++    }
+     var reachedRight = role._speedX > 0 && role._pos && role._pos.x > role.checkPosForCinema.x;
+     var reachedLeft = role._speedX < 0 && role._pos && role._pos.x < role.checkPosForCinema.x;
+ 
+@@ -118,6 +145,7 @@
+   _smashCallbackStarted: false,
+ 
+   init: function () {
++    this.closeCinema();
+     this.enemy = [];
+     this.smallcat = null;
+     this.phantom = null;
+@@ -165,7 +193,9 @@
+       __cinemaCall(this.phantom, "setElePosition", __cinemaPoint(phantomPos.x + TILE_WIDTH_HALF, phantomPos.y));
+       __cinemaCall(this.phantom, "setJumping", false);
+       this.phantom._speedY = 0;
+-      game.Data.arrUpdateObj.push(this.phantom);
++      if (game.Data.arrUpdateObj.indexOf(this.phantom) < 0) {
++        game.Data.arrUpdateObj.push(this.phantom);
++      }
+     }
+ 
+     __cinemaCall(game.Logic, "deployTileConfig", __cinemaPoint(30, 41));
+@@ -201,7 +231,7 @@
+       if (Cinema.smallcat && Cinema.smallcat._container) {
+         Cinema.smallcat._container.runAction(cc.sequence(
+           cc.moveTo(duration, target),
+-          cc.callFunc(function () {
++          __cinemaCallFunc(function () {
+             __cinemaCall(Cinema.smallcat, "playAnimate", "fright");
+           })
+         ));
+@@ -220,11 +250,11 @@
+ 
+       Cinema.smallcat._container.runAction(cc.sequence(
+         cc.delayTime(0.5),
+-        cc.callFunc(function () {
++        __cinemaCallFunc(function () {
+           Cinema.moveCamera(31, 42, 1.6, Cinema.EaseType.EASEINOUT);
+         }),
+         cc.delayTime(0.8),
+-        cc.callFunc(function () {
++        __cinemaCallFunc(function () {
+           var objects = game.Logic.dynamicObjMap.getObjects();
+           var count = 0;
+ 
+@@ -263,11 +293,11 @@
+           __cinemaCall(vee.Audio, "playMusic", res.bgm_mini_mp3);
+         }),
+         cc.delayTime(0.5),
+-        cc.callFunc(function () {
++        __cinemaCallFunc(function () {
+           __cinemaCall(Cinema.smallcat, "playAnimate", "fright");
+         }),
+         cc.delayTime(0.7),
+-        cc.callFunc(func5)
++        __cinemaCallFunc(func5)
+       ));
+     };
+ 
+@@ -280,14 +310,9 @@
+       if (Cinema.smallcat && Cinema.smallcat._container) {
+         Cinema.smallcat._container.runAction(cc.sequence(
+           cc.moveBy(1.2, __cinemaPoint(TILE_WIDTH * 5 + TILE_WIDTH_HALF, 0)),
+-          cc.callFunc(startFunc4)
++          __cinemaCallFunc(startFunc4)
+         ));
+ 
+-        // Some recovered builds lose the cc.callFunc at the end of this moveBy.
+-        // Keep the visual move, but also start the next cinema stage from scheduler.
+-        if (vee && vee.Utils && vee.Utils.scheduleOnceForTarget) {
+-          vee.Utils.scheduleOnceForTarget(Cinema, startFunc4, 1.25);
+-        }
+       } else {
+         startFunc4();
+       }
+@@ -303,12 +328,12 @@
+         if (Cinema.smallcat && Cinema.smallcat._container) {
+           Cinema.smallcat._container.runAction(cc.sequence(
+             cc.EaseOut.create(cc.moveBy(0.3, __cinemaPoint(0, 60)), 3),
+-            cc.callFunc(function () {
++            __cinemaCallFunc(function () {
+               __cinemaCall(vee.Audio, "playEffect", res.inGame_character_littleDrop_mp3);
+               __cinemaCall(Cinema.smallcat, "playAnimate", "drop");
+             }),
+             cc.moveTo(duration, __cinemaPoint(target.x + TILE_WIDTH_HALF, target.y)),
+-            cc.callFunc(func3)
++            __cinemaCallFunc(func3)
+           ));
+         }
+ 
+@@ -326,20 +351,20 @@
+       if (Cinema.smallcat && Cinema.smallcat._container) {
+         Cinema.smallcat._container.runAction(cc.sequence(
+           cc.moveTo(duration + 2, __cinemaPoint(target.x + TILE_WIDTH_HALF, target.y)),
+-          cc.callFunc(function () {
++          __cinemaCallFunc(function () {
+             __cinemaCall(game.Logic, "checkTileTrigger", __cinemaPoint(22, 22), vee.Direction.Origin, null, Cinema.smallcat);
+             __cinemaCall(game.Logic, "checkTileTrigger", __cinemaPoint(22, 21), vee.Direction.Origin, null, Cinema.smallcat);
+             __cinemaCall(Cinema.smallcat, "playAnimate", "huxi_1");
+           }),
+           cc.delayTime(0.5),
+-          cc.callFunc(func2)
++          __cinemaCallFunc(func2)
+         ));
+       }
+ 
+       if (game.Data.oLyGame && game.Data.oLyGame.lyMap) {
+         game.Data.oLyGame.lyMap.runAction(cc.sequence(
+           cc.delayTime(Cinema.getMoveDur(12)),
+-          cc.callFunc(function () {
++          __cinemaCallFunc(function () {
+             Cinema.moveCamera(22, 22, Cinema.getMoveDur(10));
+           })
+         ));
+@@ -349,7 +374,7 @@
+     if (game.Data.oLyGame && game.Data.oLyGame.lyMapBack) {
+       game.Data.oLyGame.lyMapBack.runAction(cc.sequence(
+         cc.delayTime(0.5),
+-        cc.callFunc(func1)
++        __cinemaCallFunc(func1)
+       ));
+     } else {
+       func1();
+@@ -358,37 +383,10 @@
+     void skipSign;
+   },
+   startEnemySmashWatch: function () {
+-    if (Cinema._smashWatchStarted || Cinema._smashTriggered || Cinema._finishing) {
+-      return;
+-    }
+-
++    if (Cinema._smashWatchStarted || Cinema._smashTriggered || Cinema._finishing) { return; }
+     Cinema._smashWatchStarted = true;
+-    Cinema._enemyWatchStartTime = (Date.now ? Date.now() : (new Date()).getTime());
+-
++    // cinema.dis advances on an enemy crossing checkDogPos, not after 2.25 s.
+     __cinemaSchedule(Cinema, Cinema.updateCheckDog, 0);
+-
+-    var node = game.Data && game.Data.oLyGame &&
+-      (game.Data.oLyGame.lyMapBack || game.Data.oLyGame.lyMap || game.Data.oLyGame.lyContainer);
+-    var pollFromAction = function () {
+-      if (Cinema._smashTriggered || Cinema._finishing) {
+-        return;
+-      }
+-      Cinema.updateCheckDog();
+-      if (!Cinema._smashTriggered && node && node.runAction) {
+-        node.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(pollFromAction)));
+-      }
+-    };
+-    if (node && node.runAction) {
+-      node.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(pollFromAction)));
+-    }
+-
+-    // Backup with the original enemy timing. This is earlier than func5 finish,
+-    // so it does not skip the visible chase like the previous forced fix did.
+-    __cinemaScheduleOnce(Cinema, function () {
+-      if (!Cinema._smashTriggered && !Cinema._finishing) {
+-        Cinema.startSmashStage();
+-      }
+-    }, 2.25, node);
+   },
+ 
+   startSmashStage: function () {
+@@ -410,50 +408,11 @@
+       }
+ 
+       __cinemaCall(Cinema.phantom, "BButtonSmash", false);
+-      Cinema.watchSmashLanding();
++      // ElePlayer.downToBarrier calls smashCallback on actual landing.
++      // No timer may advance this stage while the actor is still in the air.
+     }
+ 
+     __cinemaCall(game.Logic, "checkTileTrigger", __cinemaPoint(14, 40), vee.Direction.Origin, null, Cinema.smallcat);
+-  },
+-
+-  watchSmashLanding: function () {
+-    if (Cinema._smashLandWatchStarted || Cinema._smashCallbackStarted || Cinema._finishing) {
+-      return;
+-    }
+-
+-    Cinema._smashLandWatchStarted = true;
+-    var startedAt = Date.now ? Date.now() : (new Date()).getTime();
+-    var node = Cinema.phantom && Cinema.phantom._container ? Cinema.phantom._container :
+-      (game.Data && game.Data.oLyGame && (game.Data.oLyGame.lyMapBack || game.Data.oLyGame.lyMap || game.Data.oLyGame.lyContainer));
+-
+-    var poll = function () {
+-      if (Cinema._smashCallbackStarted || Cinema._finishing) {
+-        return;
+-      }
+-
+-      var now = Date.now ? Date.now() : (new Date()).getTime();
+-      var elapsed = (now - startedAt) / 1000;
+-      var phantom = Cinema.phantom;
+-      var state = phantom ? phantom._moveState : null;
+-      var smashShake = (typeof MoveState !== "undefined" && state === MoveState.SmashShake);
+-      var notSmashingAnymore = phantom && phantom.isSmashing && !phantom.isSmashing() && elapsed > 0.4;
+-      var stoppedAtGround = phantom && phantom.isSmashing && phantom.isSmashing() &&
+-        typeof MoveState !== "undefined" && state === MoveState.Smash &&
+-        elapsed > 0.7 && Math.abs(phantom._speedY || 0) < 1;
+-
+-      if (smashShake || notSmashingAnymore || stoppedAtGround || elapsed > 2.2) {
+-        Cinema.smashCallback();
+-        return;
+-      }
+-
+-      if (node && node.runAction) {
+-        node.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(poll)));
+-      } else {
+-        __cinemaScheduleOnce(Cinema, poll, 0.05);
+-      }
+-    };
+-
+-    __cinemaScheduleOnce(Cinema, poll, 0.05, node);
+   },
+ 
+   updateCheckDog: function () {
+@@ -468,9 +427,7 @@
+         continue;
+       }
+ 
+-      var enemyPos = __cinemaGetObjPos(enemy);
+-      var enemyGrid = enemy._grid || null;
+-      if ((enemyPos && enemyPos.x < thresholdX) || (enemyGrid && enemyGrid.x <= 21)) {
++      if (enemy._pos && enemy._pos.x < thresholdX) {
+         Cinema.startSmashStage();
+         break;
+       }
+@@ -524,7 +481,7 @@
+       if (Cinema.smallcat && Cinema.smallcat._container) {
+         __cinemaRunAction(Cinema.smallcat._container, cc.sequence(
+           cc.delayTime(0.2),
+-          cc.callFunc(function () {
++          __cinemaCallFunc(function () {
+             __cinemaSetVisible(Cinema.smallcat._container, true);
+             Cinema.smallcat._container.setPosition(game.Logic.getTilePosCenterByGrid(__cinemaPoint(16, 44)));
+             if (Cinema.enemy[0]) {
+@@ -532,18 +489,30 @@
+             }
+           }),
+           cc.delayTime(0.3),
+-          cc.callFunc(function () {
++          __cinemaCallFunc(continueWithBombRun),
++          cc.delayTime(0.3),
++          __cinemaCallFunc(function () {
++            __cinemaCall(Cinema.phantom, "BButtonBullet");
++          })
++        ));
++      }
++
++      Cinema.moveCamera(30, 42, Cinema.getMoveDur(12), Cinema.EaseType.EASEINOUT);
++    };
++
++    // func6 in cinema.dis. It runs BEFORE func7, not inside it.
++    var hesitateBeforeTeleport = function () {
+             Cinema.moveBy(Cinema.phantom, 10);
+             __cinemaRunAction(Cinema.smallcat._container, cc.sequence(
+-              cc.callFunc(function () {
++              __cinemaCallFunc(function () {
+                 __cinemaCall(Cinema.smallcat, "playAnimate", "run");
+               }),
+               cc.moveBy(0.2, __cinemaPoint(32, 0)),
+-              cc.callFunc(function () {
++              __cinemaCallFunc(function () {
+                 __cinemaCall(Cinema.smallcat, "playAnimate", "shiver");
+               }),
+               cc.delayTime(0.5),
+-              cc.callFunc(function () {
++              __cinemaCallFunc(function () {
+                 if (Cinema.enemy[1]) {
+                   Cinema.enemy[1]._dashing = true;
+                   Cinema.enemy[1]._speedXLimit = 450;
+@@ -552,7 +521,7 @@
+                   if (Cinema.enemy[1]._container) {
+                     Cinema.enemy[1]._container.runAction(cc.sequence(
+                       cc.delayTime(0.5),
+-                      cc.callFunc(function () {
++                      __cinemaCallFunc(function () {
+                         if (!Cinema.enemy[1]) {
+                           return;
+                         }
+@@ -564,7 +533,9 @@
+                           __cinemaCall(Cinema.enemy[1], "playAnimate", "get", function () {
+                             if (Cinema.enemy[1]) {
+                               Cinema.enemy[1].hitByStar = function () {};
+-                              Cinema.moveToGrid(Cinema.enemy[1], __cinemaPoint(28, 44), continueWithBombRun);
++                              // The deepest callback is absent in cinema.dis; this enemy
++                              // must not start func8 a second time.
++                              Cinema.moveToGrid(Cinema.enemy[1], __cinemaPoint(28, 44), function () {});
+                               __cinemaCall(Cinema.enemy[1], "playAnimate", "eat");
+                               Cinema.enemy[1]._speedXLimit = 520;
+                             }
+@@ -576,17 +547,8 @@
+                 }
+               }),
+               cc.delayTime(0.9),
+-              cc.callFunc(continueWithBombRun)
++              __cinemaCallFunc(teleportSmallCat)
+             ));
+-          }),
+-          cc.delayTime(0.3),
+-          cc.callFunc(function () {
+-            __cinemaCall(Cinema.phantom, "BButtonBullet");
+-          })
+-        ));
+-      }
+-
+-      Cinema.moveCamera(30, 42, Cinema.getMoveDur(12), Cinema.EaseType.EASEINOUT);
+     };
+ 
+     var enemyToRemove = Cinema.enemy[2];
+@@ -609,7 +571,7 @@
+       if (enemy._container) {
+         enemy._container.runAction(cc.sequence(
+           cc.EaseExponentialOut.create(cc.moveBy(0.5, __cinemaPoint(30, 60))),
+-          cc.callFunc(function () {})
++          __cinemaCallFunc(function () { this._stopY = false; }.bind(enemy))
+         ));
+       }
+     }
+@@ -622,18 +584,19 @@
+     if (Cinema.smallcat && Cinema.smallcat._container) {
+       Cinema.smallcat._container.runAction(cc.sequence(
+         cc.delayTime(0.6),
+-        cc.callFunc(function () {
+-          __cinemaCall(Cinema.smallcat, "playAnimate", "run");
++        __cinemaCallFunc(function () {
++          __cinemaCall(Cinema.smallcat, "setFaceTo", vee.Direction.Right);
++          __cinemaCall(Cinema.smallcat, "playAnimate", "escape");
+         }),
+         cc.moveTo(duration, __cinemaPoint(target.x - 15, target.y)),
+-        cc.callFunc(function () {
+-          __cinemaCall(Cinema.smallcat, "playAnimate", "huxi_1");
++        __cinemaCallFunc(function () {
++          __cinemaCall(Cinema.smallcat, "playAnimate", "shiver");
+         }),
+         cc.delayTime(0.4),
+-        cc.callFunc(teleportSmallCat)
++        __cinemaCallFunc(hesitateBeforeTeleport)
+       ));
+     } else {
+-      teleportSmallCat();
++      hesitateBeforeTeleport();
+     }
+   },
+ 
+@@ -728,7 +691,7 @@
+     var done = callback || function () {};
+ 
+     __cinemaCall(role, "playAnimate", "run");
+-    role._container.runAction(cc.sequence(cc.moveTo(duration, targetPos), cc.callFunc(done)));
++    role._container.runAction(cc.sequence(cc.moveTo(duration, targetPos), __cinemaCallFunc(done)));
+   },
+ 
+   JumpRole: function (role, gridX, gridY, heightInTiles, callback) {
+@@ -750,11 +713,11 @@
+ 
+     role._container.runAction(cc.sequence(
+       cc.delayTime(0),
+-      cc.callFunc(function () {
++      __cinemaCallFunc(function () {
+         __cinemaCall(role, "playAnimate", "run_jump_up");
+       }),
+       cc.jumpTo(duration, targetPos.x, targetPos.y, height, 1),
+-      cc.callFunc(done)
++      __cinemaCallFunc(done)
+     ));
+   },
+ 
+@@ -764,6 +727,7 @@
+     }
+ 
+     Cinema._storyOverStarted = true;
++    __cinemaStopCallbacks(Cinema, Cinema.updateSmallCatPos);
+ 
+     if (this.analyseTag && vee.Analytics && vee.Analytics.logMissionCompleted) {
+       cc.log("记录结束");
+@@ -785,8 +749,8 @@
+     );
+ 
+     Cinema.smallcat._container.runAction(cc.sequence(
+-      cc.delayTime(0.85),
+-      cc.callFunc(function () {
++      cc.delayTime(0.6),
++      __cinemaCallFunc(function () {
+         Cinema.finishToTutorial();
+       })
+     ));
+@@ -796,12 +760,22 @@
+   },
+ 
+   closeCinema: function () {
++    Cinema._runId = (Cinema._runId || 0) + 1;
+     __cinemaStopCallbacks(Cinema);
+     for (var i = 0; i < Cinema.enemy.length; i++) {
+       __cinemaStopCallbacks(Cinema.enemy[i]);
+     }
+     __cinemaStopCallbacks(Cinema.smallcat);
+     __cinemaStopCallbacks(Cinema.phantom);
++    var actors = [Cinema.smallcat, Cinema.phantom].concat(Cinema.enemy);
++    for (var j = 0; j < actors.length; j++) {
++      if (actors[j]) { __cinemaCall(actors[j]._container, "stopAllActions"); }
++    }
++    if (game.Data && game.Data.oLyGame) {
++      __cinemaCall(game.Data.oLyGame.lyContainer, "stopAllActions");
++      __cinemaCall(game.Data.oLyGame.lyMap, "stopAllActions");
++      __cinemaCall(game.Data.oLyGame.lyMapBack, "stopAllActions");
++    }
+   }
+ };
+ 
+@@ -826,7 +800,9 @@
+     cc.log("SuperCat: closeCinema skipped: " + err);
+   }
+ 
++  var finishingRunId = Cinema._runId;
+   vee.Transition.out(res.MapTransition_ccbi, function () {
++    if (Cinema._runId !== finishingRunId || !Cinema._finishing) { return; }
+     vee.PopMgr.closeAll();
+     if (cc.director && cc.director.purgeCachedData) {
+       cc.director.purgeCachedData();
+--- a/app/recovered-src/src/gameLogic.js
++++ b/app/recovered-src/src/gameLogic.js
+@@ -1467,7 +1467,12 @@
+     });
+   },
+   checkTileGridValid: function (arg0) {
+-    return arg0.x < this._tmxMapSize.width && arg0.x >= 0 && arg0.y < this._tmxMapSize.height && arg0.y >= 0;
++    return !!(arg0 && this._tmxMapSize &&
++      typeof arg0.x === "number" && typeof arg0.y === "number" &&
++      isFinite(arg0.x) && isFinite(arg0.y) &&
++      arg0.x === Math.floor(arg0.x) && arg0.y === Math.floor(arg0.y) &&
++      arg0.x < this._tmxMapSize.width && arg0.x >= 0 &&
++      arg0.y < this._tmxMapSize.height && arg0.y >= 0);
+   },
+   getTileGridByPos: function (arg0) {
+     var local0 = Math.floor(arg0.x / this._tmxTileSize.width);
+@@ -1511,7 +1516,8 @@
+   },
+   _missingTileInfoGids: {},
+   getTileDataByGid: function (arg0, arg1, arg2) {
+-    if (!arg0) {
++    // Validate before construction/init (which can create items or animations).
++    if (!arg0 || !this.checkTileGridValid(arg1)) {
+       return null;
+     }
+     var local0 = TileData.createTileData(arg0);
+--- a/app/recovered-src/src/lyGame.js
++++ b/app/recovered-src/src/lyGame.js
+@@ -952,7 +952,7 @@
+     }
+     this._lastUpdateClock = now;
+     game.Data._lastLyGameUpdateClock = now;
+-    if (parseFloat(dt.toFixed(3)) > 0.02) {
++    if (dt >= 0.0205) {
+       dt = 0.02;
+     }
+ 
+@@ -964,7 +964,9 @@
+     if (game.Logic && game.Logic.dynamicObjMap && game.Logic.dynamicObjMap.getObjects) {
+       objects = game.Logic.dynamicObjMap.getObjects() || [];
+     }
+-    for (var i = 0; i < objects.length; i++) {
++    // Grid indices can be far apart. Scanning .length visits every empty cell.
++    for (var i in objects) {
++      if (!Object.prototype.hasOwnProperty.call(objects, i)) { continue; }
+       var obj = objects[i];
+       if (obj && !obj.uncheck && obj.updatePos) {
+         obj.updatePos(dt);
+--- a/app/recovered-src/src/tileInfo.js
++++ b/app/recovered-src/src/tileInfo.js
+@@ -1057,8 +1057,18 @@
+   FINAL_TILEID_BOTTOMRIGHT: 145,
+   _isStopCamera: false,
+   init: function () {
+-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
+-    this.refreshSign = false;
++    this.childBlocks = [];
++    this.parentBlock = null;
++    this._isAnimating = false;
++    this._isScaleUp = false;
++    this._isStopCamera = false;
++    // Expanded corner tiles must not run the base tile's configuration again.
++    var config = this.gid === this.FINAL_TILEID_BASE && game.Logic.configMap &&
++      game.Logic.configMap.getObject(this.grid);
++    if (config) {
++      this._scaleDir = parseInt(config.name, 10);
++      this.scaleUp(null, this._scaleDir);
++    }
+   },
+   collide: function (ele, dir) {
+     if (!ele || !ele._pos || this._isAnimating) { return; }
+@@ -1091,41 +1101,131 @@
+         break;
+     }
+   },
+-  checkUpByDir: function (arg0) {
+-    return arg0 === vee.Direction.Top || arg0 === vee.Direction.TopLeft || arg0 === vee.Direction.TopRight;
+-  },
+-  scaleBlock: function (arg0, arg1) {
+-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
+-    if (arg0 > 0) { this.scaleUp(); } else { this.scaleDown(); }
+-  },
+-  scaleUp: function (arg0, arg1) {
+-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
+-    this._scaleState = 1;
+-    this.createBlocks && this.createBlocks();
+-  },
+-  scaleDown: function (arg0, arg1) {
+-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
+-    this._scaleState = 0;
+-    this.createBlocks && this.createBlocks();
++  _getScaleGrids: function (dir) {
++    var d = vee.Direction;
++    if (!this.grid || (dir !== d.TopLeft && dir !== d.TopRight &&
++        dir !== d.BottomLeft && dir !== d.BottomRight)) { return null; }
++    var offset = d.direction2Point(dir);
++    return [cc.p(this.grid.x + offset.x, this.grid.y),
++      cc.p(this.grid.x, this.grid.y + offset.y),
++      cc.p(this.grid.x + offset.x, this.grid.y + offset.y)];
++  },
++  checkUpByDir: function (dir) {
++    var grids = this._getScaleGrids(dir);
++    if (!grids || !this.layer || !game.Logic.checkTileGridValid(this.grid)) { return false; }
++    for (var i = 0; i < grids.length; i++) {
++      if (!game.Logic.checkTileGridValid(grids[i]) || game.Logic.map.getObject(grids[i])) {
++        return false;
++      }
++    }
++    return true;
++  },
++  scaleBlock: function (pos, dir) {
++    // tileInfo.dis: select by _isScaleUp, not by comparing a position object to 0.
++    if (this._isAnimating) { return false; }
++    return this._isScaleUp ? this.scaleDown(pos, dir) : this.scaleUp(pos, dir);
++  },
++  scaleUp: function (pos, dir) {
++    if (this._isAnimating || this._isScaleUp || !this.checkUpByDir(dir)) { return false; }
++    this._scaleDir = this._lastScaleDir = dir;
++    this._isScaleUp = this._isAnimating = true;
++    this.layer.setTileGID(0, this.grid);
++    var self = this, map = game.Logic.map;
++    ItemScaleBlock.show(this.grid, dir, true, function () {
++      if (game.Logic.map === map) { self.createBlocks(); }
++    });
++    return true;
++  },
++  scaleDown: function (pos, dir) {
++    if (this._isAnimating) { return false; }
++    if (this.parentBlock) {
++      if (this._isStopCamera) {
++        this.parentBlock._isStopCamera = true;
++        game.Data.isEnableCameraYOff = false;
++      }
++      return this.parentBlock.scaleDown(pos, dir);
++    }
++    if (!this._isScaleUp) { return false; }
++    this._isScaleUp = false;
++    this._isAnimating = true;
++    this.layer.setTileGID(0, this.grid);
++    for (var i = 0; i < this.childBlocks.length; i++) {
++      var child = this.childBlocks[i];
++      this.layer.setTileGID(0, child.grid);
++      game.Logic.map.removeObject(child.grid);
++    }
++    this.childBlocks = [];
++    var self = this, map = game.Logic.map;
++    ItemScaleBlock.show(this.grid, this._lastScaleDir, false, function () {
++      if (game.Logic.map !== map) { return; }
++      self.layer.setTileGID(self.FINAL_TILEID_BASE, self.grid);
++      self.gid = self.FINAL_TILEID_BASE;
++      self._isAnimating = false;
++      if (self._isStopCamera) {
++        self._isStopCamera = false;
++        game.Data.isEnableCameraYOff = true;
++      }
++    });
++    return true;
+   },
+   createBlocks: function () {
+-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
+-    this.createChildBlocks && this.createChildBlocks();
++    // Recheck after animation: never overwrite a tile created in the meantime.
++    if (!this.checkUpByDir(this._scaleDir)) {
++      this._isAnimating = this._isScaleUp = false;
++      this.gid = this.FINAL_TILEID_BASE;
++      this.layer.setTileGID(this.gid, this.grid);
++      return false;
++    }
++    this.childBlocks = [];
++    var grids = this._getScaleGrids(this._scaleDir);
++    this.gid = this.getBaseBlockScaleUpGid();
++    this.layer.setTileGID(this.gid, this.grid);
++    for (var i = 0; i < grids.length; i++) {
++      var child = this.createChildBlocks(grids[i]);
++      if (child) { this.childBlocks.push(child); }
++    }
++    this._isAnimating = false;
++    return true;
+   },
+   getBaseBlockScaleUpGid: function () {
+-    return this.gid;
+-  },
+-  getNewGidByGrid: function (arg0) {
+-    return this.getBaseBlockScaleUpGid();
+-  },
+-  createChildBlocks: function (arg0) {
+-    var local0 = this.getNewGidByGrid(arg0);
+-    var local1 = game.Logic.getTileDataByGid(local0, arg0, this.layer);
+-    local1.parentBlock = this;
+-    local1._isScaleUp = true;
+-    game.Logic.map.setObject(local1, arg0);
+-    this.layer.setTileGID(local0, arg0);
+-    return local1;
++    switch (this._scaleDir) {
++      case vee.Direction.TopRight: return this.FINAL_TILEID_BOTTOMLEFT;
++      case vee.Direction.TopLeft: return this.FINAL_TILEID_BOTTOMRIGHT;
++      case vee.Direction.BottomRight: return this.FINAL_TILEID_TOPLEFT;
++      case vee.Direction.BottomLeft: return this.FINAL_TILEID_TOPRIGHT;
++    }
++    return this.FINAL_TILEID_BASE;
++  },
++  getNewGidByGrid: function (grid) {
++    if (!grid) { return 0; }
++    var dir = vee.Direction.pointToDirection(vee.Utils.pSub(grid, this.grid));
++    var d = vee.Direction;
++    switch (this.gid) {
++      case this.FINAL_TILEID_TOPLEFT:
++        return dir === d.Right ? this.FINAL_TILEID_TOPRIGHT :
++          dir === d.Bottom ? this.FINAL_TILEID_BOTTOMLEFT : this.FINAL_TILEID_BOTTOMRIGHT;
++      case this.FINAL_TILEID_TOPRIGHT:
++        return dir === d.Left ? this.FINAL_TILEID_TOPLEFT :
++          dir === d.Bottom ? this.FINAL_TILEID_BOTTOMRIGHT : this.FINAL_TILEID_BOTTOMLEFT;
++      case this.FINAL_TILEID_BOTTOMLEFT:
++        return dir === d.Right ? this.FINAL_TILEID_BOTTOMRIGHT :
++          dir === d.Top ? this.FINAL_TILEID_TOPLEFT : this.FINAL_TILEID_TOPRIGHT;
++      case this.FINAL_TILEID_BOTTOMRIGHT:
++        return dir === d.Left ? this.FINAL_TILEID_BOTTOMLEFT :
++          dir === d.Top ? this.FINAL_TILEID_TOPRIGHT : this.FINAL_TILEID_TOPLEFT;
++    }
++    return 0;
++  },
++  createChildBlocks: function (grid) {
++    if (!game.Logic.checkTileGridValid(grid)) { return null; }
++    var gid = this.getNewGidByGrid(grid);
++    var child = game.Logic.getTileDataByGid(gid, grid, this.layer);
++    if (!child) { return null; }
++    child.parentBlock = this;
++    child._isScaleUp = true;
++    game.Logic.map.setObject(child, grid);
++    this.layer.setTileGID(gid, grid);
++    return child;
+   }
+ });
+ TileData.RunBackwardBlockData = TileData.BlockData.extend({

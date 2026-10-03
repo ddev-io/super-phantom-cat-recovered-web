@@ -34,6 +34,7 @@ if (cc.ENABLE_GL_STATE_CACHE) {
 
     cc._currentShaderProgram = -1;
     cc._currentBoundTexture = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+    cc._currentBoundTextureHandle = [];
     cc._blendingSource = -1;
     cc._blendingDest = -1;
     cc._GLServerState = 0;
@@ -58,6 +59,7 @@ cc.glInvalidateStateCache = function () {
         cc._currentShaderProgram = -1;
         for (var i = 0; i < cc.MAX_ACTIVETEXTURE; i++) {
             cc._currentBoundTexture[i] = -1;
+            cc._currentBoundTextureHandle[i] = -1;
         }
         cc._blendingSource = -1;
         cc._blendingDest = -1;
@@ -240,16 +242,16 @@ cc.glBindTexture2D = function (textureId) {
  * @param {cc.Texture2D} textureId
  */
 cc.glBindTexture2DN = function (textureUnit, textureId) {
-    if (cc._currentBoundTexture[textureUnit] === textureId)
+    var ctx = cc._renderContext;
+    var handle = textureId ? textureId._webTextureObj : null;
+    // Parameter/upload callers need the requested unit active even on a cache hit.
+    ctx.activeTexture(ctx.TEXTURE0 + textureUnit);
+    if (cc._currentBoundTexture[textureUnit] === textureId &&
+        cc._currentBoundTextureHandle[textureUnit] === handle)
         return;
     cc._currentBoundTexture[textureUnit] = textureId;
-
-    var ctx = cc._renderContext;
-    ctx.activeTexture(ctx.TEXTURE0 + textureUnit);
-    if(textureId)
-        ctx.bindTexture(ctx.TEXTURE_2D, textureId._webTextureObj);
-    else
-        ctx.bindTexture(ctx.TEXTURE_2D, null);
+    cc._currentBoundTextureHandle[textureUnit] = handle;
+    ctx.bindTexture(ctx.TEXTURE_2D, handle);
 };
 if (!cc.ENABLE_GL_STATE_CACHE){
     cc.glBindTexture2DN = function (textureUnit, textureId) {
@@ -281,8 +283,14 @@ cc.glDeleteTexture = function (textureId) {
  */
 cc.glDeleteTextureN = function (textureUnit, textureId) {
     if (cc.ENABLE_GL_STATE_CACHE) {
-        if (textureId === cc._currentBoundTexture[ textureUnit ])
-            cc._currentBoundTexture[ textureUnit ] = -1;
+        // A texture may have been used on several units. The cache stores
+        // Texture2D owners, while deleteTexture receives the raw GPU handle.
+        for (var i = 0; i < cc.MAX_ACTIVETEXTURE; i++) {
+            if (cc._currentBoundTextureHandle[i] === textureId || cc._currentBoundTexture[i] === textureId) {
+                cc._currentBoundTexture[i] = -1;
+                cc._currentBoundTextureHandle[i] = -1;
+            }
+        }
     }
     cc._renderContext.deleteTexture(textureId);
 };

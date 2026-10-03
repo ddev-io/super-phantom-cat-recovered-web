@@ -1,0 +1,65 @@
+{
+  "version": "1.0.11",
+  "patch_requires": "Provided webos.zip (app version 1.0.10)",
+  "source_archives": {
+    "webos.zip": "e498cca78fbacbbae5284e82de3f5431f284d1569b80ab3a90f92c9b47d3ada4",
+    "dis.zip": "86590018354082df82ed13a28efda904b6703c3fe034df210ed6ea3133d26940"
+  },
+  "source_profile": {
+    "name": "Profile-20260930T234857.json",
+    "sha256": "b9191c87971818e905124aa3e4ec72025145df62001a46afb8a8c7839b62d253"
+  },
+  "changed_files": [
+    {
+      "path": "app/appinfo.json",
+      "before_sha256": "e1191784266e654359e1c8ef2252b365065cf0104f7ba17921e8a4a46ca29eda",
+      "after_sha256": "8c1b64f78612f6eeabb993394bc573221923f2ed2717034286e2c59426ed5d5e"
+    },
+    {
+      "path": "app/assets/index.webv1.html",
+      "before_sha256": "32bb8b451f5b8c219e3546f9877b29dab05bd04717e078224fe02ebd41892cfc",
+      "after_sha256": "51edefd3d2387fbc8707f73ca72dfd666461f785be655de36081f0704d234078"
+    },
+    {
+      "path": "app/frameworks/cocos2d-html5/CCBoot.js",
+      "before_sha256": "984e44b4da20becd7ccd9f7adc7aa7fc429ecb979b72db7c4d34656ca79757f5",
+      "after_sha256": "100ed69d3afd4e01c2e86ea11a76b104b27fad54f2bb719676a7d9dd6d3f1fd3"
+    },
+    {
+      "path": "app/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNodeCanvasRenderCmd.js",
+      "before_sha256": "4223dd5918a633e5c2ecac5b7779b90f88a315404ed381b20f342c8ddb9519df",
+      "after_sha256": "201b9b80cbc85f9ef49280780b39423535d113621f233869b04c742772b9cc21"
+    },
+    {
+      "path": "app/frameworks/cocos2d-html5/cocos2d/core/base-nodes/CCNodeWebGLRenderCmd.js",
+      "before_sha256": "603447188ae60f79a833f0f71a3a958f589aa5ba005c735da35aa4957704357a",
+      "after_sha256": "5f4bf4063897a0c8a275b5bf89f8062b241cc7a976faf20b255c67feb11e3550"
+    },
+    {
+      "path": "app/frameworks/cocos2d-html5/cocos2d/core/textures/CCTextureAtlas.js",
+      "before_sha256": "17f44f41c324fce85c1fbdf56f70d5d08834ad4d119ac945b2ad5e43f218040a",
+      "after_sha256": "fb3daefea387b4faad26e8375002d16e99f6438c3c1d657b3a058bcdab29ee36"
+    },
+    {
+      "path": "app/recovered-src/src/cinema.js",
+      "before_sha256": "c869e1a3fae244ca343cc50ea3e22611bf37661e3a4b86729458b16222b40016",
+      "after_sha256": "6f143f51cfad23dd9047c9ca9ab1c42a44d6c34c123308bd86ad49f5340f174b"
+    },
+    {
+      "path": "app/recovered-src/src/gameLogic.js",
+      "before_sha256": "2551dfb122caf4340224e4da9121190c45b794c079da630425ba72fc6038dc19",
+      "after_sha256": "2b46a239f7b427ff5ed65645aa824838e77e08f756653d9998aaaf7d45243f39"
+    },
+    {
+      "path": "app/recovered-src/src/lyGame.js",
+      "before_sha256": "558d8ab10eb36381739fadd15687c930daf88ac9034963dc877a7c340da37e2a",
+      "after_sha256": "62cf32fd613830cc125361c1cdfd639b8cbf54cbfa3a4cbd614bdb9d9e9a3fed"
+    },
+    {
+      "path": "app/recovered-src/src/tileInfo.js",
+      "before_sha256": "fd2bf1d63714a9d3f182e0d4821a92eabb6fbe0fbf8d1e6e3c54141562ab9700",
+      "after_sha256": "43ad33f097d4b57d3d4114b4e28acc8130414d4aaa4ea3f5bbde27a9a227458e"
+    }
+  ],
+  "resource_policy": "Merge with original project. No game resource/font files included or modified."
+}

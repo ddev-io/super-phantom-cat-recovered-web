@@ -1,8 +1,29 @@
+// The supplied cinema.dis omits the deepest anonymous function bodies.
+// Recoverable stages below follow its func1..func8 order. The last jump's
+// storyOver continuation remains the existing port behavior, not a verified
+// reconstruction of that missing callback.
+function __cinemaGuard(callback) {
+  var runId = Cinema._runId;
+  return function () {
+    if (Cinema._runId === runId && !Cinema._finishing) {
+      return callback.apply(this, arguments);
+    }
+  };
+}
+
+function __cinemaCallFunc(callback) {
+  return cc.callFunc(__cinemaGuard(callback));
+}
+
 function __cinemaCall(obj, methodName) {
   if (!obj || typeof obj[methodName] !== "function") {
     return undefined;
   }
-  return obj[methodName].apply(obj, Array.prototype.slice.call(arguments, 2));
+  var args = Array.prototype.slice.call(arguments, 2);
+  if (methodName === "playAnimate" && typeof args[1] === "function") {
+    args[1] = __cinemaGuard(args[1]);
+  }
+  return obj[methodName].apply(obj, args);
 }
 
 function __cinemaPoint(x, y) {
@@ -84,8 +105,14 @@ function __cinemaInstallMoveStopCheck(role, targetPos, callback) {
     return;
   }
 
+  if (role.checkPosUpdateFunc) { __cinemaStopCallbacks(role, role.checkPosUpdateFunc); }
+  var runId = Cinema._runId;
   role.checkPosForCinema = targetPos;
   role.checkPosUpdateFunc = function () {
+    if (Cinema._runId !== runId || Cinema._finishing) {
+      __cinemaStopCallbacks(role, role.checkPosUpdateFunc);
+      return;
+    }
     var reachedRight = role._speedX > 0 && role._pos && role._pos.x > role.checkPosForCinema.x;
     var reachedLeft = role._speedX < 0 && role._pos && role._pos.x < role.checkPosForCinema.x;
 
@@ -118,6 +145,7 @@ var Cinema = {
   _smashCallbackStarted: false,
 
   init: function () {
+    this.closeCinema();
     this.enemy = [];
     this.smallcat = null;
     this.phantom = null;
@@ -165,7 +193,9 @@ var Cinema = {
       __cinemaCall(this.phantom, "setElePosition", __cinemaPoint(phantomPos.x + TILE_WIDTH_HALF, phantomPos.y));
       __cinemaCall(this.phantom, "setJumping", false);
       this.phantom._speedY = 0;
-      game.Data.arrUpdateObj.push(this.phantom);
+      if (game.Data.arrUpdateObj.indexOf(this.phantom) < 0) {
+        game.Data.arrUpdateObj.push(this.phantom);
+      }
     }
 
     __cinemaCall(game.Logic, "deployTileConfig", __cinemaPoint(30, 41));
@@ -201,7 +231,7 @@ var Cinema = {
       if (Cinema.smallcat && Cinema.smallcat._container) {
         Cinema.smallcat._container.runAction(cc.sequence(
           cc.moveTo(duration, target),
-          cc.callFunc(function () {
+          __cinemaCallFunc(function () {
             __cinemaCall(Cinema.smallcat, "playAnimate", "fright");
           })
         ));
@@ -220,11 +250,11 @@ var Cinema = {
 
       Cinema.smallcat._container.runAction(cc.sequence(
         cc.delayTime(0.5),
-        cc.callFunc(function () {
+        __cinemaCallFunc(function () {
           Cinema.moveCamera(31, 42, 1.6, Cinema.EaseType.EASEINOUT);
         }),
         cc.delayTime(0.8),
-        cc.callFunc(function () {
+        __cinemaCallFunc(function () {
           var objects = game.Logic.dynamicObjMap.getObjects();
           var count = 0;
 
@@ -263,11 +293,11 @@ var Cinema = {
           __cinemaCall(vee.Audio, "playMusic", res.bgm_mini_mp3);
         }),
         cc.delayTime(0.5),
-        cc.callFunc(function () {
+        __cinemaCallFunc(function () {
           __cinemaCall(Cinema.smallcat, "playAnimate", "fright");
         }),
         cc.delayTime(0.7),
-        cc.callFunc(func5)
+        __cinemaCallFunc(func5)
       ));
     };
 
@@ -280,14 +310,9 @@ var Cinema = {
       if (Cinema.smallcat && Cinema.smallcat._container) {
         Cinema.smallcat._container.runAction(cc.sequence(
           cc.moveBy(1.2, __cinemaPoint(TILE_WIDTH * 5 + TILE_WIDTH_HALF, 0)),
-          cc.callFunc(startFunc4)
+          __cinemaCallFunc(startFunc4)
         ));
 
-        // Some recovered builds lose the cc.callFunc at the end of this moveBy.
-        // Keep the visual move, but also start the next cinema stage from scheduler.
-        if (vee && vee.Utils && vee.Utils.scheduleOnceForTarget) {
-          vee.Utils.scheduleOnceForTarget(Cinema, startFunc4, 1.25);
-        }
       } else {
         startFunc4();
       }
@@ -303,12 +328,12 @@ var Cinema = {
         if (Cinema.smallcat && Cinema.smallcat._container) {
           Cinema.smallcat._container.runAction(cc.sequence(
             cc.EaseOut.create(cc.moveBy(0.3, __cinemaPoint(0, 60)), 3),
-            cc.callFunc(function () {
+            __cinemaCallFunc(function () {
               __cinemaCall(vee.Audio, "playEffect", res.inGame_character_littleDrop_mp3);
               __cinemaCall(Cinema.smallcat, "playAnimate", "drop");
             }),
             cc.moveTo(duration, __cinemaPoint(target.x + TILE_WIDTH_HALF, target.y)),
-            cc.callFunc(func3)
+            __cinemaCallFunc(func3)
           ));
         }
 
@@ -326,20 +351,20 @@ var Cinema = {
       if (Cinema.smallcat && Cinema.smallcat._container) {
         Cinema.smallcat._container.runAction(cc.sequence(
           cc.moveTo(duration + 2, __cinemaPoint(target.x + TILE_WIDTH_HALF, target.y)),
-          cc.callFunc(function () {
+          __cinemaCallFunc(function () {
             __cinemaCall(game.Logic, "checkTileTrigger", __cinemaPoint(22, 22), vee.Direction.Origin, null, Cinema.smallcat);
             __cinemaCall(game.Logic, "checkTileTrigger", __cinemaPoint(22, 21), vee.Direction.Origin, null, Cinema.smallcat);
             __cinemaCall(Cinema.smallcat, "playAnimate", "huxi_1");
           }),
           cc.delayTime(0.5),
-          cc.callFunc(func2)
+          __cinemaCallFunc(func2)
         ));
       }
 
       if (game.Data.oLyGame && game.Data.oLyGame.lyMap) {
         game.Data.oLyGame.lyMap.runAction(cc.sequence(
           cc.delayTime(Cinema.getMoveDur(12)),
-          cc.callFunc(function () {
+          __cinemaCallFunc(function () {
             Cinema.moveCamera(22, 22, Cinema.getMoveDur(10));
           })
         ));
@@ -349,7 +374,7 @@ var Cinema = {
     if (game.Data.oLyGame && game.Data.oLyGame.lyMapBack) {
       game.Data.oLyGame.lyMapBack.runAction(cc.sequence(
         cc.delayTime(0.5),
-        cc.callFunc(func1)
+        __cinemaCallFunc(func1)
       ));
     } else {
       func1();
@@ -358,37 +383,10 @@ var Cinema = {
     void skipSign;
   },
   startEnemySmashWatch: function () {
-    if (Cinema._smashWatchStarted || Cinema._smashTriggered || Cinema._finishing) {
-      return;
-    }
-
+    if (Cinema._smashWatchStarted || Cinema._smashTriggered || Cinema._finishing) { return; }
     Cinema._smashWatchStarted = true;
-    Cinema._enemyWatchStartTime = (Date.now ? Date.now() : (new Date()).getTime());
-
+    // cinema.dis advances on an enemy crossing checkDogPos, not after 2.25 s.
     __cinemaSchedule(Cinema, Cinema.updateCheckDog, 0);
-
-    var node = game.Data && game.Data.oLyGame &&
-      (game.Data.oLyGame.lyMapBack || game.Data.oLyGame.lyMap || game.Data.oLyGame.lyContainer);
-    var pollFromAction = function () {
-      if (Cinema._smashTriggered || Cinema._finishing) {
-        return;
-      }
-      Cinema.updateCheckDog();
-      if (!Cinema._smashTriggered && node && node.runAction) {
-        node.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(pollFromAction)));
-      }
-    };
-    if (node && node.runAction) {
-      node.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(pollFromAction)));
-    }
-
-    // Backup with the original enemy timing. This is earlier than func5 finish,
-    // so it does not skip the visible chase like the previous forced fix did.
-    __cinemaScheduleOnce(Cinema, function () {
-      if (!Cinema._smashTriggered && !Cinema._finishing) {
-        Cinema.startSmashStage();
-      }
-    }, 2.25, node);
   },
 
   startSmashStage: function () {
@@ -410,50 +408,11 @@ var Cinema = {
       }
 
       __cinemaCall(Cinema.phantom, "BButtonSmash", false);
-      Cinema.watchSmashLanding();
+      // ElePlayer.downToBarrier calls smashCallback on actual landing.
+      // No timer may advance this stage while the actor is still in the air.
     }
 
     __cinemaCall(game.Logic, "checkTileTrigger", __cinemaPoint(14, 40), vee.Direction.Origin, null, Cinema.smallcat);
-  },
-
-  watchSmashLanding: function () {
-    if (Cinema._smashLandWatchStarted || Cinema._smashCallbackStarted || Cinema._finishing) {
-      return;
-    }
-
-    Cinema._smashLandWatchStarted = true;
-    var startedAt = Date.now ? Date.now() : (new Date()).getTime();
-    var node = Cinema.phantom && Cinema.phantom._container ? Cinema.phantom._container :
-      (game.Data && game.Data.oLyGame && (game.Data.oLyGame.lyMapBack || game.Data.oLyGame.lyMap || game.Data.oLyGame.lyContainer));
-
-    var poll = function () {
-      if (Cinema._smashCallbackStarted || Cinema._finishing) {
-        return;
-      }
-
-      var now = Date.now ? Date.now() : (new Date()).getTime();
-      var elapsed = (now - startedAt) / 1000;
-      var phantom = Cinema.phantom;
-      var state = phantom ? phantom._moveState : null;
-      var smashShake = (typeof MoveState !== "undefined" && state === MoveState.SmashShake);
-      var notSmashingAnymore = phantom && phantom.isSmashing && !phantom.isSmashing() && elapsed > 0.4;
-      var stoppedAtGround = phantom && phantom.isSmashing && phantom.isSmashing() &&
-        typeof MoveState !== "undefined" && state === MoveState.Smash &&
-        elapsed > 0.7 && Math.abs(phantom._speedY || 0) < 1;
-
-      if (smashShake || notSmashingAnymore || stoppedAtGround || elapsed > 2.2) {
-        Cinema.smashCallback();
-        return;
-      }
-
-      if (node && node.runAction) {
-        node.runAction(cc.sequence(cc.delayTime(0.05), cc.callFunc(poll)));
-      } else {
-        __cinemaScheduleOnce(Cinema, poll, 0.05);
-      }
-    };
-
-    __cinemaScheduleOnce(Cinema, poll, 0.05, node);
   },
 
   updateCheckDog: function () {
@@ -468,9 +427,7 @@ var Cinema = {
         continue;
       }
 
-      var enemyPos = __cinemaGetObjPos(enemy);
-      var enemyGrid = enemy._grid || null;
-      if ((enemyPos && enemyPos.x < thresholdX) || (enemyGrid && enemyGrid.x <= 21)) {
+      if (enemy._pos && enemy._pos.x < thresholdX) {
         Cinema.startSmashStage();
         break;
       }
@@ -524,7 +481,7 @@ var Cinema = {
       if (Cinema.smallcat && Cinema.smallcat._container) {
         __cinemaRunAction(Cinema.smallcat._container, cc.sequence(
           cc.delayTime(0.2),
-          cc.callFunc(function () {
+          __cinemaCallFunc(function () {
             __cinemaSetVisible(Cinema.smallcat._container, true);
             Cinema.smallcat._container.setPosition(game.Logic.getTilePosCenterByGrid(__cinemaPoint(16, 44)));
             if (Cinema.enemy[0]) {
@@ -532,18 +489,30 @@ var Cinema = {
             }
           }),
           cc.delayTime(0.3),
-          cc.callFunc(function () {
+          __cinemaCallFunc(continueWithBombRun),
+          cc.delayTime(0.3),
+          __cinemaCallFunc(function () {
+            __cinemaCall(Cinema.phantom, "BButtonBullet");
+          })
+        ));
+      }
+
+      Cinema.moveCamera(30, 42, Cinema.getMoveDur(12), Cinema.EaseType.EASEINOUT);
+    };
+
+    // func6 in cinema.dis. It runs BEFORE func7, not inside it.
+    var hesitateBeforeTeleport = function () {
             Cinema.moveBy(Cinema.phantom, 10);
             __cinemaRunAction(Cinema.smallcat._container, cc.sequence(
-              cc.callFunc(function () {
+              __cinemaCallFunc(function () {
                 __cinemaCall(Cinema.smallcat, "playAnimate", "run");
               }),
               cc.moveBy(0.2, __cinemaPoint(32, 0)),
-              cc.callFunc(function () {
+              __cinemaCallFunc(function () {
                 __cinemaCall(Cinema.smallcat, "playAnimate", "shiver");
               }),
               cc.delayTime(0.5),
-              cc.callFunc(function () {
+              __cinemaCallFunc(function () {
                 if (Cinema.enemy[1]) {
                   Cinema.enemy[1]._dashing = true;
                   Cinema.enemy[1]._speedXLimit = 450;
@@ -552,7 +521,7 @@ var Cinema = {
                   if (Cinema.enemy[1]._container) {
                     Cinema.enemy[1]._container.runAction(cc.sequence(
                       cc.delayTime(0.5),
-                      cc.callFunc(function () {
+                      __cinemaCallFunc(function () {
                         if (!Cinema.enemy[1]) {
                           return;
                         }
@@ -564,7 +533,9 @@ var Cinema = {
                           __cinemaCall(Cinema.enemy[1], "playAnimate", "get", function () {
                             if (Cinema.enemy[1]) {
                               Cinema.enemy[1].hitByStar = function () {};
-                              Cinema.moveToGrid(Cinema.enemy[1], __cinemaPoint(28, 44), continueWithBombRun);
+                              // The deepest callback is absent in cinema.dis; this enemy
+                              // must not start func8 a second time.
+                              Cinema.moveToGrid(Cinema.enemy[1], __cinemaPoint(28, 44), function () {});
                               __cinemaCall(Cinema.enemy[1], "playAnimate", "eat");
                               Cinema.enemy[1]._speedXLimit = 520;
                             }
@@ -576,17 +547,8 @@ var Cinema = {
                 }
               }),
               cc.delayTime(0.9),
-              cc.callFunc(continueWithBombRun)
+              __cinemaCallFunc(teleportSmallCat)
             ));
-          }),
-          cc.delayTime(0.3),
-          cc.callFunc(function () {
-            __cinemaCall(Cinema.phantom, "BButtonBullet");
-          })
-        ));
-      }
-
-      Cinema.moveCamera(30, 42, Cinema.getMoveDur(12), Cinema.EaseType.EASEINOUT);
     };
 
     var enemyToRemove = Cinema.enemy[2];
@@ -609,7 +571,7 @@ var Cinema = {
       if (enemy._container) {
         enemy._container.runAction(cc.sequence(
           cc.EaseExponentialOut.create(cc.moveBy(0.5, __cinemaPoint(30, 60))),
-          cc.callFunc(function () {})
+          __cinemaCallFunc(function () { this._stopY = false; }.bind(enemy))
         ));
       }
     }
@@ -622,18 +584,19 @@ var Cinema = {
     if (Cinema.smallcat && Cinema.smallcat._container) {
       Cinema.smallcat._container.runAction(cc.sequence(
         cc.delayTime(0.6),
-        cc.callFunc(function () {
-          __cinemaCall(Cinema.smallcat, "playAnimate", "run");
+        __cinemaCallFunc(function () {
+          __cinemaCall(Cinema.smallcat, "setFaceTo", vee.Direction.Right);
+          __cinemaCall(Cinema.smallcat, "playAnimate", "escape");
         }),
         cc.moveTo(duration, __cinemaPoint(target.x - 15, target.y)),
-        cc.callFunc(function () {
-          __cinemaCall(Cinema.smallcat, "playAnimate", "huxi_1");
+        __cinemaCallFunc(function () {
+          __cinemaCall(Cinema.smallcat, "playAnimate", "shiver");
         }),
         cc.delayTime(0.4),
-        cc.callFunc(teleportSmallCat)
+        __cinemaCallFunc(hesitateBeforeTeleport)
       ));
     } else {
-      teleportSmallCat();
+      hesitateBeforeTeleport();
     }
   },
 
@@ -728,7 +691,7 @@ var Cinema = {
     var done = callback || function () {};
 
     __cinemaCall(role, "playAnimate", "run");
-    role._container.runAction(cc.sequence(cc.moveTo(duration, targetPos), cc.callFunc(done)));
+    role._container.runAction(cc.sequence(cc.moveTo(duration, targetPos), __cinemaCallFunc(done)));
   },
 
   JumpRole: function (role, gridX, gridY, heightInTiles, callback) {
@@ -750,11 +713,11 @@ var Cinema = {
 
     role._container.runAction(cc.sequence(
       cc.delayTime(0),
-      cc.callFunc(function () {
+      __cinemaCallFunc(function () {
         __cinemaCall(role, "playAnimate", "run_jump_up");
       }),
       cc.jumpTo(duration, targetPos.x, targetPos.y, height, 1),
-      cc.callFunc(done)
+      __cinemaCallFunc(done)
     ));
   },
 
@@ -764,6 +727,7 @@ var Cinema = {
     }
 
     Cinema._storyOverStarted = true;
+    __cinemaStopCallbacks(Cinema, Cinema.updateSmallCatPos);
 
     if (this.analyseTag && vee.Analytics && vee.Analytics.logMissionCompleted) {
       cc.log("记录结束");
@@ -785,8 +749,8 @@ var Cinema = {
     );
 
     Cinema.smallcat._container.runAction(cc.sequence(
-      cc.delayTime(0.85),
-      cc.callFunc(function () {
+      cc.delayTime(0.6),
+      __cinemaCallFunc(function () {
         Cinema.finishToTutorial();
       })
     ));
@@ -796,12 +760,22 @@ var Cinema = {
   },
 
   closeCinema: function () {
+    Cinema._runId = (Cinema._runId || 0) + 1;
     __cinemaStopCallbacks(Cinema);
     for (var i = 0; i < Cinema.enemy.length; i++) {
       __cinemaStopCallbacks(Cinema.enemy[i]);
     }
     __cinemaStopCallbacks(Cinema.smallcat);
     __cinemaStopCallbacks(Cinema.phantom);
+    var actors = [Cinema.smallcat, Cinema.phantom].concat(Cinema.enemy);
+    for (var j = 0; j < actors.length; j++) {
+      if (actors[j]) { __cinemaCall(actors[j]._container, "stopAllActions"); }
+    }
+    if (game.Data && game.Data.oLyGame) {
+      __cinemaCall(game.Data.oLyGame.lyContainer, "stopAllActions");
+      __cinemaCall(game.Data.oLyGame.lyMap, "stopAllActions");
+      __cinemaCall(game.Data.oLyGame.lyMapBack, "stopAllActions");
+    }
   }
 };
 
@@ -826,7 +800,9 @@ Cinema.finishToTutorial = function () {
     cc.log("SuperCat: closeCinema skipped: " + err);
   }
 
+  var finishingRunId = Cinema._runId;
   vee.Transition.out(res.MapTransition_ccbi, function () {
+    if (Cinema._runId !== finishingRunId || !Cinema._finishing) { return; }
     vee.PopMgr.closeAll();
     if (cc.director && cc.director.purgeCachedData) {
       cc.director.purgeCachedData();

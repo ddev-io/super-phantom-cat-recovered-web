@@ -1057,8 +1057,18 @@ TileData.BlockScaleData = TileData.BlockData.extend({
   FINAL_TILEID_BOTTOMRIGHT: 145,
   _isStopCamera: false,
   init: function () {
-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
-    this.refreshSign = false;
+    this.childBlocks = [];
+    this.parentBlock = null;
+    this._isAnimating = false;
+    this._isScaleUp = false;
+    this._isStopCamera = false;
+    // Expanded corner tiles must not run the base tile's configuration again.
+    var config = this.gid === this.FINAL_TILEID_BASE && game.Logic.configMap &&
+      game.Logic.configMap.getObject(this.grid);
+    if (config) {
+      this._scaleDir = parseInt(config.name, 10);
+      this.scaleUp(null, this._scaleDir);
+    }
   },
   collide: function (ele, dir) {
     if (!ele || !ele._pos || this._isAnimating) { return; }
@@ -1091,41 +1101,131 @@ TileData.BlockScaleData = TileData.BlockData.extend({
         break;
     }
   },
-  checkUpByDir: function (arg0) {
-    return arg0 === vee.Direction.Top || arg0 === vee.Direction.TopLeft || arg0 === vee.Direction.TopRight;
+  _getScaleGrids: function (dir) {
+    var d = vee.Direction;
+    if (!this.grid || (dir !== d.TopLeft && dir !== d.TopRight &&
+        dir !== d.BottomLeft && dir !== d.BottomRight)) { return null; }
+    var offset = d.direction2Point(dir);
+    return [cc.p(this.grid.x + offset.x, this.grid.y),
+      cc.p(this.grid.x, this.grid.y + offset.y),
+      cc.p(this.grid.x + offset.x, this.grid.y + offset.y)];
   },
-  scaleBlock: function (arg0, arg1) {
-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
-    if (arg0 > 0) { this.scaleUp(); } else { this.scaleDown(); }
+  checkUpByDir: function (dir) {
+    var grids = this._getScaleGrids(dir);
+    if (!grids || !this.layer || !game.Logic.checkTileGridValid(this.grid)) { return false; }
+    for (var i = 0; i < grids.length; i++) {
+      if (!game.Logic.checkTileGridValid(grids[i]) || game.Logic.map.getObject(grids[i])) {
+        return false;
+      }
+    }
+    return true;
   },
-  scaleUp: function (arg0, arg1) {
-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
-    this._scaleState = 1;
-    this.createBlocks && this.createBlocks();
+  scaleBlock: function (pos, dir) {
+    // tileInfo.dis: select by _isScaleUp, not by comparing a position object to 0.
+    if (this._isAnimating) { return false; }
+    return this._isScaleUp ? this.scaleDown(pos, dir) : this.scaleUp(pos, dir);
   },
-  scaleDown: function (arg0, arg1) {
-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
-    this._scaleState = 0;
-    this.createBlocks && this.createBlocks();
+  scaleUp: function (pos, dir) {
+    if (this._isAnimating || this._isScaleUp || !this.checkUpByDir(dir)) { return false; }
+    this._scaleDir = this._lastScaleDir = dir;
+    this._isScaleUp = this._isAnimating = true;
+    this.layer.setTileGID(0, this.grid);
+    var self = this, map = game.Logic.map;
+    ItemScaleBlock.show(this.grid, dir, true, function () {
+      if (game.Logic.map === map) { self.createBlocks(); }
+    });
+    return true;
+  },
+  scaleDown: function (pos, dir) {
+    if (this._isAnimating) { return false; }
+    if (this.parentBlock) {
+      if (this._isStopCamera) {
+        this.parentBlock._isStopCamera = true;
+        game.Data.isEnableCameraYOff = false;
+      }
+      return this.parentBlock.scaleDown(pos, dir);
+    }
+    if (!this._isScaleUp) { return false; }
+    this._isScaleUp = false;
+    this._isAnimating = true;
+    this.layer.setTileGID(0, this.grid);
+    for (var i = 0; i < this.childBlocks.length; i++) {
+      var child = this.childBlocks[i];
+      this.layer.setTileGID(0, child.grid);
+      game.Logic.map.removeObject(child.grid);
+    }
+    this.childBlocks = [];
+    var self = this, map = game.Logic.map;
+    ItemScaleBlock.show(this.grid, this._lastScaleDir, false, function () {
+      if (game.Logic.map !== map) { return; }
+      self.layer.setTileGID(self.FINAL_TILEID_BASE, self.grid);
+      self.gid = self.FINAL_TILEID_BASE;
+      self._isAnimating = false;
+      if (self._isStopCamera) {
+        self._isStopCamera = false;
+        game.Data.isEnableCameraYOff = true;
+      }
+    });
+    return true;
   },
   createBlocks: function () {
-    // RECOVERY_UNCERTAIN_TILEINFO: reconstructed from bytecode; verify collision behavior for this tile type.
-    this.createChildBlocks && this.createChildBlocks();
+    // Recheck after animation: never overwrite a tile created in the meantime.
+    if (!this.checkUpByDir(this._scaleDir)) {
+      this._isAnimating = this._isScaleUp = false;
+      this.gid = this.FINAL_TILEID_BASE;
+      this.layer.setTileGID(this.gid, this.grid);
+      return false;
+    }
+    this.childBlocks = [];
+    var grids = this._getScaleGrids(this._scaleDir);
+    this.gid = this.getBaseBlockScaleUpGid();
+    this.layer.setTileGID(this.gid, this.grid);
+    for (var i = 0; i < grids.length; i++) {
+      var child = this.createChildBlocks(grids[i]);
+      if (child) { this.childBlocks.push(child); }
+    }
+    this._isAnimating = false;
+    return true;
   },
   getBaseBlockScaleUpGid: function () {
-    return this.gid;
+    switch (this._scaleDir) {
+      case vee.Direction.TopRight: return this.FINAL_TILEID_BOTTOMLEFT;
+      case vee.Direction.TopLeft: return this.FINAL_TILEID_BOTTOMRIGHT;
+      case vee.Direction.BottomRight: return this.FINAL_TILEID_TOPLEFT;
+      case vee.Direction.BottomLeft: return this.FINAL_TILEID_TOPRIGHT;
+    }
+    return this.FINAL_TILEID_BASE;
   },
-  getNewGidByGrid: function (arg0) {
-    return this.getBaseBlockScaleUpGid();
+  getNewGidByGrid: function (grid) {
+    if (!grid) { return 0; }
+    var dir = vee.Direction.pointToDirection(vee.Utils.pSub(grid, this.grid));
+    var d = vee.Direction;
+    switch (this.gid) {
+      case this.FINAL_TILEID_TOPLEFT:
+        return dir === d.Right ? this.FINAL_TILEID_TOPRIGHT :
+          dir === d.Bottom ? this.FINAL_TILEID_BOTTOMLEFT : this.FINAL_TILEID_BOTTOMRIGHT;
+      case this.FINAL_TILEID_TOPRIGHT:
+        return dir === d.Left ? this.FINAL_TILEID_TOPLEFT :
+          dir === d.Bottom ? this.FINAL_TILEID_BOTTOMRIGHT : this.FINAL_TILEID_BOTTOMLEFT;
+      case this.FINAL_TILEID_BOTTOMLEFT:
+        return dir === d.Right ? this.FINAL_TILEID_BOTTOMRIGHT :
+          dir === d.Top ? this.FINAL_TILEID_TOPLEFT : this.FINAL_TILEID_TOPRIGHT;
+      case this.FINAL_TILEID_BOTTOMRIGHT:
+        return dir === d.Left ? this.FINAL_TILEID_BOTTOMLEFT :
+          dir === d.Top ? this.FINAL_TILEID_TOPRIGHT : this.FINAL_TILEID_TOPLEFT;
+    }
+    return 0;
   },
-  createChildBlocks: function (arg0) {
-    var local0 = this.getNewGidByGrid(arg0);
-    var local1 = game.Logic.getTileDataByGid(local0, arg0, this.layer);
-    local1.parentBlock = this;
-    local1._isScaleUp = true;
-    game.Logic.map.setObject(local1, arg0);
-    this.layer.setTileGID(local0, arg0);
-    return local1;
+  createChildBlocks: function (grid) {
+    if (!game.Logic.checkTileGridValid(grid)) { return null; }
+    var gid = this.getNewGidByGrid(grid);
+    var child = game.Logic.getTileDataByGid(gid, grid, this.layer);
+    if (!child) { return null; }
+    child.parentBlock = this;
+    child._isScaleUp = true;
+    game.Logic.map.setObject(child, grid);
+    this.layer.setTileGID(gid, grid);
+    return child;
   }
 });
 TileData.RunBackwardBlockData = TileData.BlockData.extend({

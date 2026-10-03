@@ -159,6 +159,19 @@ cc.TextureAtlas = cc.Class.extend(/** @lends cc.TextureAtlas# */{  //WebGL only
             locQuads[index] = new cc.V3F_C4B_T2F_Quad(quad.tl, quad.bl, quad.tr, quad.br, this._quadsArrayBuffer, index * cc.V3F_C4B_T2F_Quad.BYTES_PER_ELEMENT);
             return;
         }
+        var target = locQuads[index];
+        if (quad._arrayBuffer && target._arrayBuffer) {
+            if (!quad._copyBytes || quad._copyBytes.buffer !== quad._arrayBuffer ||
+                quad._copyBytes.byteOffset !== quad._offset) {
+                quad._copyBytes = new Uint8Array(quad._arrayBuffer, quad._offset, 96);
+            }
+            if (!target._copyBytes || target._copyBytes.buffer !== target._arrayBuffer ||
+                target._copyBytes.byteOffset !== target._offset) {
+                target._copyBytes = new Uint8Array(target._arrayBuffer, target._offset, 96);
+            }
+            target._copyBytes.set(quad._copyBytes);
+            return;
+        }
         locQuads[index].bl = quad.bl;
         locQuads[index].br = quad.br;
         locQuads[index].tl = quad.tl;
@@ -178,22 +191,23 @@ cc.TextureAtlas = cc.Class.extend(/** @lends cc.TextureAtlas# */{  //WebGL only
             return;
         var locIndices = this._indices, locCapacity = this._capacity;
         for (var i = 0; i < locCapacity; i++) {
+            var vertexBase = (i % 16384) * 4;
             if (cc.TEXTURE_ATLAS_USE_TRIANGLE_STRIP) {
-                locIndices[i * 6 + 0] = i * 4 + 0;
-                locIndices[i * 6 + 1] = i * 4 + 0;
-                locIndices[i * 6 + 2] = i * 4 + 2;
-                locIndices[i * 6 + 3] = i * 4 + 1;
-                locIndices[i * 6 + 4] = i * 4 + 3;
-                locIndices[i * 6 + 5] = i * 4 + 3;
+                locIndices[i * 6 + 0] = vertexBase + 0;
+                locIndices[i * 6 + 1] = vertexBase + 0;
+                locIndices[i * 6 + 2] = vertexBase + 2;
+                locIndices[i * 6 + 3] = vertexBase + 1;
+                locIndices[i * 6 + 4] = vertexBase + 3;
+                locIndices[i * 6 + 5] = vertexBase + 3;
             } else {
-                locIndices[i * 6 + 0] = i * 4 + 0;
-                locIndices[i * 6 + 1] = i * 4 + 1;
-                locIndices[i * 6 + 2] = i * 4 + 2;
+                locIndices[i * 6 + 0] = vertexBase + 0;
+                locIndices[i * 6 + 1] = vertexBase + 1;
+                locIndices[i * 6 + 2] = vertexBase + 2;
 
                 // inverted index. issue #179
-                locIndices[i * 6 + 3] = i * 4 + 3;
-                locIndices[i * 6 + 4] = i * 4 + 2;
-                locIndices[i * 6 + 5] = i * 4 + 1;
+                locIndices[i * 6 + 3] = vertexBase + 3;
+                locIndices[i * 6 + 4] = vertexBase + 2;
+                locIndices[i * 6 + 5] = vertexBase + 1;
             }
         }
     },

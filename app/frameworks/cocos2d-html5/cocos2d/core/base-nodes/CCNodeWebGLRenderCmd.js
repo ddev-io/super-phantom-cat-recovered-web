@@ -55,7 +55,9 @@
 
         //optimize performance for javascript
         currentStack.stack.push(currentStack.top);
-        this._syncStatus(parentCmd);
+        // Each child is visited below. Recursing here transforms every subtree
+        // again at each depth, even when no local transform has changed.
+        this._syncStatus(parentCmd, true);
         currentStack.top = this._stackMatrix;
         this.visitChildren();
         //optimize performance for javascript

@@ -257,10 +257,14 @@ cc.TMXLayer = cc.SpriteBatchNode.extend(/** @lends cc.TMXLayer# */{
      * @return {Boolean}
      */
     initWithTilesetInfo:function (tilesetInfo, layerInfo, mapInfo) {
-        // XXX: is 35% a good estimate ?
         var size = layerInfo._layerSize;
-        var totalNumberOfTiles = parseInt(size.width * size.height);
-        var capacity = totalNumberOfTiles * 0.35 + 1; // 35 percent is occupied ?
+        var occupied = 0;
+        var sourceTiles = layerInfo._tiles || [];
+        for (var tileIndex = 0; tileIndex < sourceTiles.length; tileIndex++) {
+            if (sourceTiles[tileIndex] !== 0) occupied++;
+        }
+        // Keep one spare slot for the batch API; dynamic insertions still grow it.
+        var capacity = occupied + 1;
         var texture;
         if (tilesetInfo) {
             texture = cc.textureCache.addImage(tilesetInfo.sourceImage);
@@ -368,11 +372,7 @@ cc.TMXLayer = cc.SpriteBatchNode.extend(/** @lends cc.TMXLayer# */{
             tile = new cc.Sprite();
             tile.initWithTexture(this.texture, rect);
             tile.batchNode = this;
-            tile.setPosition(this.getPositionAt(pos));
-            tile.vertexZ = this._vertexZForPos(pos);
-            tile.anchorX = 0;
-	        tile.anchorY = 0;
-            tile.opacity = this._opacity;
+            this._setupTileSprite(tile, pos, this.tiles[z]);
 
             var indexForZ = this._atlasIndexForExistantZ(z);
             this.addSpriteWithoutQuad(tile, indexForZ, z);
@@ -485,7 +485,7 @@ cc.TMXLayer = cc.SpriteBatchNode.extend(/** @lends cc.TMXLayer# */{
                     var rect = this.tileset.rectForGID(gid);
                     rect = cc.rectPixelsToPoints(rect);
 
-                    sprite.setTextureRect(rect, false);
+                    this._applyTileTextureRect(sprite, gidAndFlags);
                     if (flags != null)
                         this._setupTileSprite(sprite, pos, gidAndFlags);
 
@@ -800,7 +800,25 @@ cc.TMXLayer = cc.SpriteBatchNode.extend(/** @lends cc.TMXLayer# */{
         }
     },
 
+    _applyTileTextureRect:function (sprite, gid) {
+        var rect = this.tileset.rectForGID(gid);
+        var name = this.tileset.sourceImage.replace(/\\/g, "/").split("/").pop();
+        var solid = cc.TMXLayer._supercatSolidTiles[name];
+        var localID = ((gid & cc.TMX_TILE_FLIPPED_MASK) >>> 0) - this.tileset.firstGid;
+        var crop = this._mapTileSize.width === 64 && this._mapTileSize.height === 64 &&
+            rect.width === 70 && rect.height === 70 && solid && solid.indexOf(localID) !== -1;
+        sprite._supercatInsetTexels = !!crop;
+        var fullSize = cc.sizePixelsToPoints(cc.size(rect.width, rect.height));
+        if (crop) {
+            // Trim transparent packing padding but preserve the original 70x70
+            // layout/anchor box. The visible 64x64 cores now share exact edges.
+            rect.x += 3; rect.y += 3; rect.width -= 6; rect.height -= 6;
+        }
+        sprite.setTextureRect(cc.rectPixelsToPoints(rect), false, fullSize);
+    },
+
     _setupTileSprite:function (sprite, pos, gid) {
+        this._applyTileTextureRect(sprite, gid);
         var z = pos.x + pos.y * this._layerSize.width;
         sprite.setPosition(this.getPositionAt(pos));
         if (cc._renderType === cc.game.RENDER_TYPE_WEBGL)
@@ -931,3 +949,6 @@ cc.defineGetterSetter(_p, "tileHeight", _p._getTileHeight, _p._setTileHeight);
 cc.TMXLayer.create = function (tilesetInfo, layerInfo, mapInfo) {
     return new cc.TMXLayer(tilesetInfo, layerInfo, mapInfo);
 };
+
+// Zero-based tile IDs verified against the original PNG alpha channels.
+cc.TMXLayer._supercatSolidTiles = {"forest.png":[0,1,2,3,4,5,6,7,8,9,12,13,14,15,16,17,18,19,37,38,39,60,61,65,78,79,90,91,93,94,95,106,107,108,109,121],"forest10.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,78,79,90,91,93,94,95,106,109,121],"forest1_1.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,69,78,79,90,91,93,94,95,106,109,121],"forest1_3.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,37,38,39,60,61,78,79,90,91,93,94,95,106,107,108,109],"forest2.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,68,78,79,90,91,93,94,95,106,107,108,109,121],"forest2_2.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,68,78,79,90,91,93,94,95,106,107,108,109,121],"forest3.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,68,78,79,90,91,93,94,95,106,107,108,109,121],"forest4.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,20,21,22,23,38,39,60,61,68,69,78,79,90,91,93,94,95,106,107,108,109,121],"forest5_1.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,37,38,39,60,61,78,79,90,91,93,94,95,106,107,108,109],"forest6.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,69,78,79,90,91,93,94,95,106,109,121],"forest7.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,68,78,79,90,91,93,94,95,106,107,108,109,121,133],"forest8.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,68,78,79,90,91,93,94,95,106,109,121],"forest9.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,37,38,39,60,61,78,79,90,91,93,94,95,106,107,108,109,121],"forestChildren.png":[0,1,2,3,4,5,6,17,18,19,36,37,38,39,60,61,65,68,78,79,90,91,93,94,95,107,108,109,121],"forest_intro.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,37,38,39,60,61,65,78,79,90,91,93,94,95,106,107,108,109,121],"forest_intro_2.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,38,39,60,61,65,76,78,79,90,91,93,94,95,107,108,109],"forest_moon.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,37,38,39,60,61,78,79,90,91,93,94,95,106,107,108,109,121,140,141,142,143,144],"forest_spring1.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,65,69,78,79,90,91,93,94,95,106,109,121],"forest_spring2.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,36,37,38,39,60,61,69,78,79,90,91,93,94,95,106,109,121],"forest_spring3.png":[0,1,2,3,4,5,6,7,8,9,14,15,16,17,18,19,20,21,22,23,38,39,60,61,68,69,78,79,90,91,93,94,95,106,107,108,109,121],"forest_story.png":[0,1,2,3,4,5,6,7,8,9,12,13,14,15,16,17,18,19,36,37,38,39,60,61,65,68,78,79,90,91,93,94,95,106,109,121]};
