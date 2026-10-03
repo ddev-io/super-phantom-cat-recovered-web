@@ -63,4 +63,4 @@ jobs:
           path: ${{ steps.app.outputs.package }}
           archive: false
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 90

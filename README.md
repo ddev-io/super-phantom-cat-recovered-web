@@ -20,7 +20,7 @@ The workflow also runs automatically when the application, Linux build script,
 or workflow changes on `main`.
 
 After a successful run, download the `.ipk` from the run's **Artifacts** section.
-Artifacts are retained for 30 days. The package version comes from
+Artifacts are retained for 90 days. The package version comes from
 `app/appinfo.json`. The build uses the webOS TV profile and skips minification
 to preserve the recovered runtime. Only `app/` is packaged; repository-level
 tests and documentation are not included.
